@@ -2,8 +2,7 @@
 #include<stdlib.h>
 int main (){
     char ch='%';
-    int number_1, number_2;
-    int pl,mi,mu;
+    int number_1, number_2, pl,mi,mu;
     printf("Please enter the first number:\n");
     scanf("%d",&number_1);
     printf("Please enter the second number:\n");

@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Courses/Embedded_Systems_Course/Code/Session-02/Salary",
-      "program": "d:/Courses/Embedded_Systems_Course/Code/Session-02/Salary/build/Debug/outDebug",
+      "cwd": "d:/Courses/Embedded_Systems_Course/Embedded_Code/Session-02/Assignments/Assignment01-printing%",
+      "program": "d:/Courses/Embedded_Systems_Course/Embedded_Code/Session-02/Assignments/Assignment01-printing%/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
