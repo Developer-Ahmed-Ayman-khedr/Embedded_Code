@@ -8,5 +8,6 @@ int main(){
         printf("Hello:\nIf you want to repeat please enter 1:\n");
         scanf("%d",&number);
     }
+    printf("Final.\n");
     return 0;
 }
