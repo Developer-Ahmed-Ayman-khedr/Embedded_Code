@@ -4,11 +4,15 @@ int main(){
     int number;
     printf("Please enter number of hellos to print:\n");
     scanf("%d",&number);
-    do
+    if (number==0){}
+    else
     {
-        printf("Hello.\n");
-        number--;
-    }while(number>=1);
-    printf("Final.\n");
+        do
+        {
+            printf("Hello.\n");
+            number--;
+        }while(number>=1);
+        printf("Final.\n");
+    }
     return 0;
 }
