@@ -8,8 +8,7 @@ int main(){
     {
         printf("Hello.\n");
         number--;
-    }
-    while(number>=1);
+    }while(number>=1);
     printf("Final.\n");
     return 0;
 }
