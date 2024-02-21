@@ -13,6 +13,5 @@ int main(){
 }
 
 int fun(int num_1,int num_2){
-    int iterations=num_1+num_2;
-    return iterations;
+    return num_1+num_2;
 }
