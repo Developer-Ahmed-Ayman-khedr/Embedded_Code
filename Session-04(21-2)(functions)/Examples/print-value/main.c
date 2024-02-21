@@ -6,7 +6,9 @@ void fun(int number){
 }
 
 int main(){
-    fun(4);
+    int num;
+    scanf("%d",&num);
     fun(6);
+    fun(num);
     return 0;
 }
