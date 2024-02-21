@@ -1,17 +1,18 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void fun();
+int fun(int num_1,int num_2);
 
 int main(){
-    printf("1.\n");
-    fun();
-    printf("2.\n");
-    fun();
-    fun();
+    int n_1,n_2;
+    printf("Enter two numbers:\n");
+    scanf("%d%d",&n_1,&n_2);
+    int ret=fun(n_1,n_2);
+    printf("%d",ret);
     return 0;
 }
 
-void fun(){
-    printf("Hello.\n");
+int fun(int num_1,int num_2){
+    int iterations=num_1+num_2;
+    return iterations;
 }
