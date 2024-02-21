@@ -7,7 +7,9 @@ int fun(int num_1,int num_2){
 }
 
 int main(){
-    int n_1=10,n_2=20;
+    int n_1,n_2;
+    printf("Enter two numbers:\n");
+    scanf("%d%d",&n_1,&n_2);
     int ret=fun(n_1,n_2);
     printf("%d",ret);
     return 0;
