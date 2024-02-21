@@ -13,7 +13,6 @@ int main(){
         }
         else
         {
-            
             if (i==2)
             {
                 printf("blocking.\n");
