@@ -1,8 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 int main(){
-    int pass=1, check, i=0;
-    while (i<3)
+    int pass=1, check;
+    for (int i=0;i<3;i++)
     {
         printf("Enter password\n");
         scanf("%d",&check);
@@ -13,12 +13,14 @@ int main(){
         }
         else
         {
-            i++;
+            
+            if (i==2)
+            {
+                printf("blocking.\n");
+                break;
+            }
+            printf("Try again:\n");
         }
-    }
-    if (i==3)
-    {
-        printf("blocking.\n");
     }
     return 0;
 }
