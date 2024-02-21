@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Courses/Embedded_Systems_Course/Embedded_Code/Session-02(16-2)/temp-changer",
-      "program": "d:/Courses/Embedded_Systems_Course/Embedded_Code/Session-02(16-2)/temp-changer/build/Debug/outDebug",
+      "cwd": "d:/Courses/Embedded_Systems_Course/Embedded_Code/Session-04(21-2)(functions)/Tasks/01-return-plus",
+      "program": "d:/Courses/Embedded_Systems_Course/Embedded_Code/Session-04(21-2)(functions)/Tasks/01-return-plus/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
