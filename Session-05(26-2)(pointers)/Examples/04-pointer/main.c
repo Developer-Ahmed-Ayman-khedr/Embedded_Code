@@ -12,7 +12,7 @@ int main(){
     printf("Value = %d\n",*ptr); // reference (what the address holds).
     *ptr=20; // change the value in the address that was saved in the pointer.
     printf("\nAddress = %d\n",ptr);
-    printf("Address = %d\n",&numb);
+    printf("Address = %x\n",&numb); // print address in hexa-disimal.
     printf("Value = %d\n",*ptr); // reference (what the address holds).
     return 0;
 }
