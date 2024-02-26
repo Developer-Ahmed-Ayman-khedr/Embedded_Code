@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include "func.h"
 
+extern int x;
 
 int main(){
     int y=1;

@@ -1,4 +1,4 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int x=0;
+static int x=0;
