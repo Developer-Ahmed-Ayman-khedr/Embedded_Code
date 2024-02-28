@@ -6,3 +6,5 @@
 void Welcome();
 
 void hello();
+
+void callback( void (*ptrfunc) () );

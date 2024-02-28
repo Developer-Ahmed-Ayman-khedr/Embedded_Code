@@ -8,3 +8,7 @@ void hello(){
 void Welcome(){
     printf("Welcome.\n");
 }
+
+void callback( void (*ptrfunc) () ){
+    (*ptrfunc) (); // call to a function.
+}

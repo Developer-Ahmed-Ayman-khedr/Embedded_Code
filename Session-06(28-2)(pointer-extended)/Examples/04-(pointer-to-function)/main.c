@@ -8,5 +8,6 @@ int main(){
     (*ptr)();
     ptr=&hello; // changing the address in the pointer to hold the hello function.
     (*ptr)();
+    callback(&hello);
     return 0;
 }
