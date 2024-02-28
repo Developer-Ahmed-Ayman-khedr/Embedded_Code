@@ -6,7 +6,7 @@ int main(){
     Welcome();
     void (*ptr)() = &Welcome; // pointer to function.
     (*ptr)();
-    ptr=&hello;
+    ptr=&hello; // changing the address in the pointer to hold the hello function.
     (*ptr)();
     return 0;
 }
