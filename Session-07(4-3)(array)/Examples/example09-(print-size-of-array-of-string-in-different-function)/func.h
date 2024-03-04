@@ -3,4 +3,4 @@
 
 #include "func.c"
 
-void fun(char* ptrarr);
+int fun(char* ptrarr);
