@@ -3,4 +3,4 @@
 
 #include "func.c"
 
-void fun(int* ptrarr, int* summ, int* aver);
+void fun(int* ptrarr, int size, int* summ, int* aver);
