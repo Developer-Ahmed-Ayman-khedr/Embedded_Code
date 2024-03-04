@@ -3,4 +3,4 @@
 
 #include "func.c"
 
-void edit(int* numb);
+void edit(int numb[]);
