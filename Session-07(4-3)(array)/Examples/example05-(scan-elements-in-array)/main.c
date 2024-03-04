@@ -3,12 +3,12 @@
 #include "func.h"
 
 int main(){
-    int arr[4] = {10,20,30,40};
-    for (int i = 0; i < 4; i++)
+    int arr[4] = {10,20,30,40},i;
+    for (i = 0; i < 4; i++)
     {
         scanf("%d",&arr[i]);
     }
-    for (int i = 0; i < 4; i++)
+    for (i = 0; i < 4; i++)
     {
         printf("%d\n",arr[i]);
     }
