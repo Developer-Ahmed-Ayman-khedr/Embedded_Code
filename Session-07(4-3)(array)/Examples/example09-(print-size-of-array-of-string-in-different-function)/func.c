@@ -3,7 +3,7 @@
 
 void fun(char* ptrarr, int* rete){
     int i=0;
-    while (ptrarr[i]!=0)
+    while (ptrarr[i]!='\0')
     {
         i++;
     }
