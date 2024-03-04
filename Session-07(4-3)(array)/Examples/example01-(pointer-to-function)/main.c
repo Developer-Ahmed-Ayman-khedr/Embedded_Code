@@ -3,5 +3,7 @@
 #include "func.h"
 
 int main(){
+    void (*ptr)() = &fun;
+    (*ptr)();
     return 0;
 }

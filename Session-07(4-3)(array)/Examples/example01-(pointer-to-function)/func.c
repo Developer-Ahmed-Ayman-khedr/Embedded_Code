@@ -1,4 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void fun(){}
+void fun(){
+    printf("Hello.\n");
+}
