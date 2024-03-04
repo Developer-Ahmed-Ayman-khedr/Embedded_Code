@@ -3,7 +3,7 @@
 
 #include "func.c"
 
-void stampa(void (*ptr)());
+void callback(void (*ptr)());
 
 void userfunc1();
 

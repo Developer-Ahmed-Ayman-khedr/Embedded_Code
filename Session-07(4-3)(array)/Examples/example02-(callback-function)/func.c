@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void stampa(void (*ptr)()){
+void callback(void (*ptr)()){
     printf("Hello.\n");
     // (*ptr)(); // the address in the pointer is an address to a function.
     ptr();
