@@ -4,7 +4,8 @@
 
 int main(){
     char arr[6] = "Ahmed";
-    int ret = fun(arr);
+    int ret;
+    fun(arr,&ret);
     printf("%d\n",ret);
     return 0;
 }

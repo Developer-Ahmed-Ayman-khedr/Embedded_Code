@@ -3,4 +3,4 @@
 
 #include "func.c"
 
-int fun(char* ptrarr);
+void fun(char* ptrarr, int* rete);
