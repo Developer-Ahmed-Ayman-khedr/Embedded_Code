@@ -3,4 +3,4 @@
 
 #include "func.c"
 
-void fun();
+void fun(int number, int power, int* retu);
