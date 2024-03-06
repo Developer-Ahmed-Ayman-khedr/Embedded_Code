@@ -9,11 +9,11 @@ int main(){
     arr[0] = &x;
     arr[1] = &y;
 
-    printf("%d\n",arr[0]);
-    printf("%d\n",*arr[0]);
+    printf("%d\n",arr[0]);// print the address of x.
+    printf("%d\n",*arr[0]);// print what is inside the address of x.
 
-    printf("%d\n",arr[1]);
-    printf("%d\n",*arr[1]);
+    printf("%d\n",arr[1]);// print the address of x.
+    printf("%d\n",*arr[1]);// print what is inside the address of y.
 
     int* ptr1;
     char* ptr2;
