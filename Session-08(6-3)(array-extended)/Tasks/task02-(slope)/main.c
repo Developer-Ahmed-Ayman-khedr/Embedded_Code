@@ -18,7 +18,7 @@ int main(){
     scanf("%d",&p2.x);
     printf("Enter y2:\n");
     scanf("%d",&p2.y);
-    float result = (p2.y-p1.y)/(p2.x-p1.x);
+    float result = (float)(p2.y-p1.y)/(p2.x-p1.x);
     printf("%f\n",result);
     return 0;
 }

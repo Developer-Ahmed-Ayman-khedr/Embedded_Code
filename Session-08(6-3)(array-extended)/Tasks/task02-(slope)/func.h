@@ -3,4 +3,4 @@
 
 #include "func.c"
 
-void fun(int ptr[][3]);
+void fun();
