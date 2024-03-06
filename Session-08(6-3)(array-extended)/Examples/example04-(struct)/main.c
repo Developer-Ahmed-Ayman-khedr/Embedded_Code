@@ -10,6 +10,8 @@ struct student{
 
 int main(){
     struct student s1 = {"Ahmed",22,1};
-    printf("%d",s1.age);
+    printf("%s\n",s1.name);
+    printf("%d\n",s1.age);
+    printf("%d\n",s1.id);
     return 0;
 }
