@@ -13,5 +13,9 @@ int main(){
     printf("%s\n",s1.name);
     printf("%d\n",s1.age);
     printf("%d\n",s1.id);
+    s1.age = 23;
+    printf("%s\n",s1.name);
+    printf("%d\n",s1.age);
+    printf("%d\n",s1.id);
     return 0;
 }
