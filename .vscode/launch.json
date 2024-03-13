@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Courses/Embedded_Systems_Course/Embedded_Code/Session-10(3-13)(struct-extended)/Examples/example01-()",
-      "program": "d:/Courses/Embedded_Systems_Course/Embedded_Code/Session-10(3-13)(struct-extended)/Examples/example01-()/build/Debug/outDebug",
+      "cwd": "d:/Courses/Embedded_Systems_Course/Embedded_Code/Session-06(28-2)()/Tasks/01-(addition-in-a-call-by-refference-int-function)",
+      "program": "d:/Courses/Embedded_Systems_Course/Embedded_Code/Session-06(28-2)()/Tasks/01-(addition-in-a-call-by-refference-int-function)/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
