@@ -2,13 +2,13 @@
 #include<stdlib.h>
 #include "func.h"
 
-union BIT{
+union un{
     unsigned char ch_1 ;
     unsigned int num_1 ;
 };
 
 int main(){
-    union BIT b1;
+    union un b1;
     b1.num_1 = 511;
     printf("%d\n",b1.num_1);
     printf("%d\n",b1.ch_1);
