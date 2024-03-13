@@ -6,14 +6,15 @@ int binary_search(int* arrptr,int end, int find){
     while (end>=start)
     {
         mid=(start+end)/2;
-        if (find<arrptr[mid])
+        if (find>arrptr[mid])
         {
-            end=mid-1;
+            
+            start=mid+1;
             
         }
-        else if (find>arrptr[mid])
+        else if (find<arrptr[mid])
         {
-            start=mid+1;
+            end=mid-1;
         }
         else
         {
