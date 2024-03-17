@@ -7,6 +7,8 @@ void SDB_action (uint8 choice){
     uint32 id;
     switch (choice)
     {
+    case 0:
+        break;
     case 1:
         SDB_AddEntry();
         break;
@@ -38,6 +40,7 @@ void SDB_action (uint8 choice){
         printf("Wrong choice.\n");
         break;
     }
+    return;
 }
 
 void SDB_APP (){
@@ -53,5 +56,7 @@ void SDB_APP (){
         printf("To check if database is full, enter 7\n");
         printf("To exit enter 0\n");
         scanf("%d",&choise);
+        SDB_action(choise);
     } while (choise != 0);
+    return;
 }
