@@ -13,7 +13,8 @@ void SDB_action (uint8 choice){
         SDB_AddEntry();
         break;
     case 2:
-        SDB_GetUsedSize();
+        uint32 result=SDB_GetUsedSize();
+        printf("The used size in the database: %d",result);
         break;
     case 3:
         printf("Enter student id:\n");
@@ -21,7 +22,13 @@ void SDB_action (uint8 choice){
         SDB_ReadEntry(id);
         break;
     case 4:
-        // SDB_GetList();
+        uint32 l1[10];
+        uint8 count,i;
+        SDB_GetList(&count, l1);
+        for ( i = 0; i < count; i++)
+        {
+            printf("ID%d: %d\n",i,l1[i]);
+        }
         break;
     case 5:
         printf("Enter student id:\n");
@@ -34,7 +41,15 @@ void SDB_action (uint8 choice){
         SDB_DeletEntry(id);
         break;
     case 7:
-        SDB_IsFull();
+        BOOL res =SDB_IsFull();
+        if (res)
+        {
+            printf("The database is full.\n");
+        }
+        else
+        {
+            printf("The database is not full.\n");
+        }
         break;
     default:
         printf("Wrong choice.\n");
