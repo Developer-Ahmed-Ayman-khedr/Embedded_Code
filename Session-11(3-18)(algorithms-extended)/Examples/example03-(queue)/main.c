@@ -11,6 +11,11 @@ void enqueue(int num){
         end=0;
         arr[end]=num;
     }
+    else if (end==sizeof(arr)-1)
+    {
+        printf("The queue is full.\n");
+        return;
+    }
     else
     {
         end++;
