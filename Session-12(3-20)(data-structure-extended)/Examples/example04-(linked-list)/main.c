@@ -7,17 +7,49 @@ typedef struct Node{
     struct Node* next;
 }node;
 
+node* head = NULL;
+
+void addnodestart(int num){
+    node* newnode = (node*)malloc(1*sizeof(node));
+    newnode->value = num;
+    newnode->next = head;
+    head = newnode;
+}
+
+void addnodesend(int num){
+    if (head==NULL)
+    {
+        addnodestart(num);
+        return;
+    }
+    node* newnode = (node*)malloc(1*sizeof(node));
+    newnode->value = num;
+    node* current=head;
+    while (current->next!=NULL)
+    {
+        current=current->next;
+    }
+    current->next=newnode;
+    newnode->next=NULL;
+}
+
+void printlinkedlist(){
+    node* current = head;
+    current=head;
+    while (current!=NULL)
+    {
+        printf("%d ",current->value);
+        current=current->next;
+    }
+    printf("\n");
+}
 int main(){
-    node* one=(node*)malloc(1*sizeof(node));
-    node* two=(node*)malloc(1*sizeof(node));
-    node* three=(node*)malloc(1*sizeof(node));
-    one->value = 10;
-    one->next = two;
-    two->value = 20;
-    two->next = three;
-    three->value = 30;
-    printf("%d\n",one->value);
-    printf("%d\n",one->next->value);
-    printf("%d\n",one->next->next->value);
+    addnodestart(10);
+    addnodestart(20);
+    printlinkedlist();
+    addnodestart(30);
+    addnodesend(5);
+    printlinkedlist();
+    
     return 0;
 }
