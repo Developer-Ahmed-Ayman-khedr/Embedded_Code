@@ -8,6 +8,7 @@ int main(){
     ptr[1]=20;
     char* ptr2=(char*)calloc(2,1);//calulate allocation(nummber of elements, size in bytes) and zero the elements.
     int* ptr3=(int*)calloc(2,2*sizeof(int));//calulate allocation(nummber of elements, size in bytes) and zero the elements.
-    free(ptr);
+    free(ptr);// frees the space on the heap.
+    int *ptr4=(int*)realloc(ptr2,5);// reallocate the ptr2 into ptr3 to make it have 5 bytes.not used allot.
     return 0;
 }
