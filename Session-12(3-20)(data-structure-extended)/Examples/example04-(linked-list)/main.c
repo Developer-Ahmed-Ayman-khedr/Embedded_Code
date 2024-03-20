@@ -42,7 +42,44 @@ void printlinkedlist(){
         current=current->next;
     }
     printf("\n");
+    return;
 }
+
+void searchlinkedlist(int ser){
+    node* current = head;
+    current=head;
+    while (current->next!=NULL && current->value!=ser)
+    {
+        current=current->next;
+    }
+    if (current->value!=ser)
+    {
+        printf("Not found.\n");
+        return;
+    }
+    printf("%d ",current->value);
+    printf("\n");
+    return;
+}
+
+void delletenode(int dell){
+    node* prev = head;
+    node* current = head->next;
+    while (prev->next->value!=dell)
+    {
+        prev=prev->next;
+    }
+    current=prev->next;
+    if (current->value==dell)
+    {
+        prev->next=current->next;
+        free(current);
+        return;
+    }
+    printf("Not found.\n");
+    return;
+}
+
 int main(){
     addnodestart(30);
     addnodestart(20);
@@ -53,6 +90,6 @@ int main(){
     addnodesend(50);
     addnodesend(60);
     printlinkedlist();
-    
+    searchlinkedlist(70);
     return 0;
 }
