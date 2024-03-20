@@ -44,11 +44,14 @@ void printlinkedlist(){
     printf("\n");
 }
 int main(){
-    addnodestart(10);
-    addnodestart(20);
-    printlinkedlist();
     addnodestart(30);
-    addnodesend(5);
+    addnodestart(20);
+    addnodestart(10);
+    printlinkedlist();
+    
+    addnodesend(40);
+    addnodesend(50);
+    addnodesend(60);
     printlinkedlist();
     
     return 0;
