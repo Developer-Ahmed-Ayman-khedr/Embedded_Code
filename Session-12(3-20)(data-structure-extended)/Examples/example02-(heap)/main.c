@@ -7,7 +7,7 @@ int main(){
     ptr[0]=10;
     ptr[1]=20;
     char* ptr2=(char*)calloc(2,1);//calulate allocation(nummber of elements, size in bytes) and zero the elements.
-    int* ptr2=(int*)calloc(2,2*sizeof(int));//calulate allocation(nummber of elements, size in bytes) and zero the elements.
-    
+    int* ptr3=(int*)calloc(2,2*sizeof(int));//calulate allocation(nummber of elements, size in bytes) and zero the elements.
+    free(ptr);
     return 0;
 }
