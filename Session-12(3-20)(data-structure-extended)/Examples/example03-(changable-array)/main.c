@@ -5,7 +5,7 @@
 int main(){
     int size,i;
     scanf("%d",&size);
-    int* ptr= malloc(size);
+    int* ptr= (int*)malloc(size*sizeof(int));
     printf("Enter %d elements:\n",size);
     for ( i = 0; i < size; i++)
     {
@@ -14,7 +14,7 @@ int main(){
     printf("\n");
     for ( i = 0; i < size; i++)
     {
-        printf("%d",ptr[i]);
+        printf("%d ",ptr[i]);
     }
     return 0;
 }
