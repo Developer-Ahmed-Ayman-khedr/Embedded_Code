@@ -2,50 +2,9 @@
 #include<stdlib.h>
 
 #include"SDB.h"
-
-void BUBBLE_SORT(){
-    uint8 i,k;
-    uint32 size=sizeof(s);
-    student temp={0};
-    for ( i = 0; i < size; i++)
-    {
-        for ( k = 0; k < size-i-1; k++)
-        {
-            if (s[k].Student_ID>s[k+1].Student_ID)
-            {
-                temp=s[k];
-                s[k]=s[k+1];
-                s[k+1]=temp;
-            }
-        }
-    }
-    return;
-}
-
-uint8 BINARY_SEARSH(uint32 id){
-    uint8 start=0,mid;
-    uint32 end=sizeof(s);
-    while (start<=end)
-    {
-        mid=(start+end)/2;
-        if (s[mid].Student_ID==id)
-        {
-            return mid;
-        }
-        else if (s[mid].Student_ID<=id)
-        {
-            start=mid+1;
-        }
-        else
-        {
-            end=mid-1;
-        }
-    }
-    return -1;
-}
-
-BOOL SDB_IsFull (){
-    if (s[10].Used==TRUE)
+//return if linked list is embty.
+BOOL SDB_IsEmbty (){
+    if (Head==NULL)
     {
         return TRUE;
     }
@@ -55,24 +14,30 @@ BOOL SDB_IsFull (){
     }
 }
 
+//return size of linked list.
 uint8 SDB_GetUsedSize(){
-    uint8 result=0, i;
-    uint32 size=sizeof(s);
-    for ( i = 0; i < size; i++)
+    uint32 i=0;
+    if (SDB_IsEmbty())
     {
-        if (s[i].Used==TRUE)
-        {
-            result++;
-        }
-        else
-        {
-            break;
-        }
+        printf("The database is embty.\n");
+        return 0;
     }
-    return result;
+    node* current=Head;
+    while (current!=NULL)
+    {
+        i++;
+        current=current->next;
+    }
+    return i;
 }
+
 //search for an id.
 BOOL SDB_IsIdExist (uint32 id){
+    if (SDB_IsEmbty())
+    {
+        printf("The database is embty.\n");
+        return FALSE;
+    }
     node* current = Head;
     uint32 counter=0;
     current = Head;
@@ -103,11 +68,11 @@ BOOL SDB_AddEntry(uint32 s_id,uint32 s_year,uint32 c_1_id,uint32 c_1_grade,uint3
     newnode->Course3_ID = c_3_id;
     newnode->Course3_grade = c_3_grade;
     newnode->Used = TRUE;
-    if (Head==NULL)
+    if (SDB_IsEmbty())
     {
         newnode->next = Head;
         Head = newnode;
-        return;
+        return TRUE;
     }
     node* current=Head;
     while (current->next!=NULL)
@@ -125,9 +90,14 @@ BOOL SDB_AddEntry(uint32 s_id,uint32 s_year,uint32 c_1_id,uint32 c_1_grade,uint3
 
 //dellete node end.
 void SDB_DeletEntry (uint32 id){
+    if (SDB_IsEmbty())
+    {
+        printf("The database is embty.\n");
+        return;
+    }
     node* prev = Head;
     node* current = Head->next;
-    while (prev->Student_ID!=id)
+    while (prev->Student_ID!=id && prev!= NULL)
     {
         prev=prev->next;
     }
@@ -140,28 +110,38 @@ void SDB_DeletEntry (uint32 id){
     }
     printf("Not found.\n");
     return;
-    return;
+    
 }
 
+//search and print node.
 BOOL SDB_ReadEntry (uint32 id){
-    printf("3\n");
-    int result = BINARY_SEARSH(id);
-    if (result>=0)
+    if (SDB_IsEmbty())
     {
-        printf("Student ID: %d\n",s[result].Student_ID);
-        printf("Student year: %d\n",s[result].Student_year);
-        printf("Course 1 id: %d\n",s[result].Course1_ID);
-        printf("Course 1 grade: %d\n",s[result].Course1_grade);
-        printf("Course 2 id: %d\n",s[result].Course2_ID);
-        printf("Course 2 grade: %d\n",s[result].Course2_grade);
-        printf("Course 3 id: %d\n",s[result].Course3_ID);
-        printf("Course 3 grade: %d\n",s[result].Course3_grade);
-        return TRUE;
-    }
-    else
-    {
+        printf("The database is embty.\n");
         return FALSE;
     }
+    node* current = Head;
+    uint32 counter=0;
+    current = Head;
+    while (current->next!=NULL && current->Student_ID!=id)
+    {
+        current=current->next;
+        counter++;
+    }
+    if (current->Student_ID!=id)
+    {
+        printf("Not found.\n");
+        return FALSE;
+    }
+    printf("Student ID: %d\n",current->Student_ID);
+    printf("Student year: %d\n",current->Student_year);
+    printf("Course 1 id: %d\n",current->Course1_ID);
+    printf("Course 1 grade: %d\n",current->Course1_grade);
+    printf("Course 2 id: %d\n",current->Course2_ID);
+    printf("Course 2 grade: %d\n",current->Course2_grade);
+    printf("Course 3 id: %d\n",current->Course3_ID);
+    printf("Course 3 grade: %d\n",current->Course3_grade);
+    return TRUE;
 }
 
 //get linked ist.
