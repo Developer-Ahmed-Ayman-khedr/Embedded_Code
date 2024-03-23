@@ -1,6 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+
+//Declaring the data types(the typedefs).
 typedef unsigned char uint8;
 typedef char int8;
 typedef unsigned short int uint16;

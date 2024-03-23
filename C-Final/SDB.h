@@ -3,6 +3,7 @@
 
 #include"STD.h"
 
+//Declaring the structure.
 typedef struct Node
 {
     uint32 Student_ID;
@@ -17,4 +18,5 @@ typedef struct Node
     struct Node* next;
 } node;
 
+//Declaring the first node in the linked list,
 node* Head = NULL;
