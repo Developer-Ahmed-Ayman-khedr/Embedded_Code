@@ -3,6 +3,7 @@
 
 #include"SDB.c"
 
+//Do the actions the user entered.
 void SDB_action (uint8 choice){
     uint32 id;
     switch (choice)
@@ -10,7 +11,7 @@ void SDB_action (uint8 choice){
     case 0:
         break;
     case 1:
-    uint32 s_id, s_year, c_1_id, c_1_grade, c_2_id, c_2_grade, c_3_id, c_3_grade;
+        uint32 s_id, s_year, c_1_id, c_1_grade, c_2_id, c_2_grade, c_3_id, c_3_grade;
         printf("Enter student ID:\n");
         scanf("%d",&s_id);
         printf("Enter student year:\n");
@@ -31,7 +32,7 @@ void SDB_action (uint8 choice){
         break;
     case 2:
         uint32 result=SDB_GetUsedSize();
-        printf("The used size in the database: %d\n",result);
+        printf("The used size in the database: %d.\n",result);
         break;
     case 3:
         printf("Enter student id:\n");
@@ -44,7 +45,7 @@ void SDB_action (uint8 choice){
         SDB_GetList(&count, l1);
         for ( i = 0; i < count; i++)
         {
-            printf("ID%d: %d\n",i,l1[i]);
+            printf("ID %d: %d.\n",i,l1[i]);
         }
         break;
     case 5:
@@ -64,6 +65,7 @@ void SDB_action (uint8 choice){
     return;
 }
 
+//Display the options for the user.
 void SDB_APP (){
     uint8 choise = 1;
     do

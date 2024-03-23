@@ -2,7 +2,8 @@
 #include<stdlib.h>
 
 #include"SDB.h"
-//return if linked list is embty.
+
+//Check if linked list is embty: if true return TRUE and if false return FALSE.
 BOOL SDB_IsEmbty (){
     if (Head==NULL)
     {
@@ -14,7 +15,7 @@ BOOL SDB_IsEmbty (){
     }
 }
 
-//return size of linked list.
+//Return the size of the linked list.
 uint8 SDB_GetUsedSize(){
     uint32 i=0;
     if (SDB_IsEmbty())
@@ -31,7 +32,7 @@ uint8 SDB_GetUsedSize(){
     return i;
 }
 
-//search for an id.
+//Search for an id in the linked list.
 BOOL SDB_IsIdExist (uint32 id){
     if (SDB_IsEmbty())
     {
@@ -56,7 +57,7 @@ BOOL SDB_IsIdExist (uint32 id){
     return TRUE;
 }
 
-//add node end.
+//Add a node to the linked list.
 BOOL SDB_AddEntry(uint32 s_id,uint32 s_year,uint32 c_1_id,uint32 c_1_grade,uint32 c_2_id,uint32 c_2_grade,uint32 c_3_id,uint32 c_3_grade){
     node* newnode = (node*)malloc(1*sizeof(node));
     newnode->Student_ID = s_id;
@@ -88,23 +89,31 @@ BOOL SDB_AddEntry(uint32 s_id,uint32 s_year,uint32 c_1_id,uint32 c_1_grade,uint3
     return TRUE;
 }
 
-//dellete node end.
+//Delete a node from the linked list.
 void SDB_DeletEntry (uint32 id){
     if (SDB_IsEmbty())
     {
         printf("The database is embty.\n");
         return;
     }
-    node* prev = Head;
-    node* current = Head->next;
-    while (prev->Student_ID!=id && prev!= NULL)
-    {
-        prev=prev->next;
-    }
-    current=prev->next;
+    node* current;
+    current = Head;
     if (current->Student_ID==id)
     {
-        prev->next=current->next;
+        Head=current->next;
+        free(current);
+        return;
+    }
+    current = current->next;
+    node* prev = Head;
+    while (current->Student_ID!=id)
+    {
+        current = current->next;
+        prev = prev->next;
+    }
+    if (current->Student_ID==id)
+    {
+        prev->next = current->next;
         free(current);
         return;
     }
@@ -113,7 +122,7 @@ void SDB_DeletEntry (uint32 id){
     
 }
 
-//search and print node.
+//Search and print node using the studint's id.
 BOOL SDB_ReadEntry (uint32 id){
     if (SDB_IsEmbty())
     {
@@ -133,18 +142,18 @@ BOOL SDB_ReadEntry (uint32 id){
         printf("Not found.\n");
         return FALSE;
     }
-    printf("Student ID: %d\n",current->Student_ID);
-    printf("Student year: %d\n",current->Student_year);
-    printf("Course 1 id: %d\n",current->Course1_ID);
-    printf("Course 1 grade: %d\n",current->Course1_grade);
-    printf("Course 2 id: %d\n",current->Course2_ID);
-    printf("Course 2 grade: %d\n",current->Course2_grade);
-    printf("Course 3 id: %d\n",current->Course3_ID);
-    printf("Course 3 grade: %d\n",current->Course3_grade);
+    printf("Student ID: %d.\n",current->Student_ID);
+    printf("Student year: %d.\n",current->Student_year);
+    printf("Course 1 id: %d.\n",current->Course1_ID);
+    printf("Course 1 grade: %d.\n",current->Course1_grade);
+    printf("Course 2 id: %d.\n",current->Course2_ID);
+    printf("Course 2 grade: %d.\n",current->Course2_grade);
+    printf("Course 3 id: %d.\n",current->Course3_ID);
+    printf("Course 3 grade: %d.\n",current->Course3_grade);
     return TRUE;
 }
 
-//get linked ist.
+//Save the student's id in every node in an array and print it in the file SDB_APP.c.
 void SDB_GetList (uint8 * count, uint32 * list){
     if (Head==NULL)
     {
