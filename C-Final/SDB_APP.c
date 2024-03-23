@@ -10,11 +10,28 @@ void SDB_action (uint8 choice){
     case 0:
         break;
     case 1:
-        SDB_AddEntry();
+    uint32 s_id, s_year, c_1_id, c_1_grade, c_2_id, c_2_grade, c_3_id, c_3_grade;
+        printf("Enter student ID:\n");
+        scanf("%d",&s_id);
+        printf("Enter student year:\n");
+        scanf("%d",&s_year);
+        printf("Enter course 1 ID :\n");
+        scanf("%d",&c_1_id);
+        printf("Enter course 1 grade :\n");
+        scanf("%d",&c_1_grade);
+        printf("Enter course 2 ID :\n");
+        scanf("%d",&c_2_id);
+        printf("Enter course 2 grade :\n");
+        scanf("%d",&c_2_grade);
+        printf("Enter course 3 ID :\n");
+        scanf("%d",&c_3_id);
+        printf("Enter course 3 grade :\n");
+        scanf("%d",&c_3_grade);
+        SDB_AddEntry(s_id, s_year, c_1_id, c_1_grade, c_2_id, c_2_grade, c_3_id, c_3_grade);
         break;
     case 2:
         uint32 result=SDB_GetUsedSize();
-        printf("The used size in the database: %d",result);
+        printf("The used size in the database: %d\n",result);
         break;
     case 3:
         printf("Enter student id:\n");
@@ -40,17 +57,6 @@ void SDB_action (uint8 choice){
         scanf("%d",&id);
         SDB_DeletEntry(id);
         break;
-    case 7:
-        BOOL res =SDB_IsFull();
-        if (res)
-        {
-            printf("The database is full.\n");
-        }
-        else
-        {
-            printf("The database is not full.\n");
-        }
-        break;
     default:
         printf("Wrong choice.\n");
         break;
@@ -68,7 +74,6 @@ void SDB_APP (){
         printf("To get the list of all student IDs, enter 4\n");
         printf("To check if ID exists, enter 5\n");
         printf("To delete student data, enter 6\n");
-        printf("To check if database is full, enter 7\n");
         printf("To exit enter 0\n");
         scanf("%d",&choise);
         SDB_action(choise);
