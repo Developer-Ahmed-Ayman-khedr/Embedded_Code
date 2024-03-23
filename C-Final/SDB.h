@@ -3,7 +3,7 @@
 
 #include"STD.h"
 
-typedef struct SimpleDb
+typedef struct Node
 {
     uint32 Student_ID;
     uint32 Student_year;
@@ -14,14 +14,7 @@ typedef struct SimpleDb
     uint32 Course3_ID;
     uint32 Course3_grade;
     BOOL Used;
-} student;
+    struct Node* next;
+} node;
 
-student s[10];
-
-void Start_the_student(){
-    uint8 i;
-    for ( i = 0; i < 10; i++)
-    {
-        s[i].Used=FALSE;
-    }
-}
+node* Head = NULL;

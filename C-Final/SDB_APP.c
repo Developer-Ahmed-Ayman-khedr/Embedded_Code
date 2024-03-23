@@ -10,6 +10,22 @@ void SDB_action (uint8 choice){
     case 0:
         break;
     case 1:
+        printf("Enter student ID:\n");
+    //         scanf("%d",&s[i].Student_ID);
+    //         printf("Enter student year:\n");
+    //         scanf("%d",&s[i].Student_year);
+    //         printf("Enter course 1 ID :\n");
+    //         scanf("%d",&s[i].Course1_ID);
+    //         printf("Enter course 1 grade :\n");
+    //         scanf("%d",&s[i].Course1_grade);
+    //         printf("Enter course 2 ID :\n");
+    //         scanf("%d",&s[i].Course2_ID);
+    //         printf("Enter course 2 grade :\n");
+    //         scanf("%d",&s[i].Course2_grade);
+    //         printf("Enter course 3 ID :\n");
+    //         scanf("%d",&s[i].Course3_ID);
+    //         printf("Enter course 3 grade :\n");
+    //         scanf("%d",&s[i].Course3_grade);
         SDB_AddEntry();
         break;
     case 2:
