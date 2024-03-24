@@ -1,6 +1,6 @@
 # Embedded
 Hello:
-Embedded Systems Course at AMIT
+Embedded Systems Course at AMIT.
 This is the C Final project:
 1. Add student data.
 2. Get used size in the Database.
