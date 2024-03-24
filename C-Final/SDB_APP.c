@@ -3,6 +3,28 @@
 
 #include"SDB.c"
 
+//add an entry to the linked list(the database).
+void add_entry(){
+    uint32 s_id, s_year, c_1_id, c_1_grade, c_2_id, c_2_grade, c_3_id, c_3_grade;
+    printf("Enter student ID:\n");
+    scanf("%d",&s_id);
+    printf("Enter student year:\n");
+    scanf("%d",&s_year);
+    printf("Enter course 1 ID :\n");
+    scanf("%d",&c_1_id);
+    printf("Enter course 1 grade :\n");
+    scanf("%d",&c_1_grade);
+    printf("Enter course 2 ID :\n");
+    scanf("%d",&c_2_id);
+    printf("Enter course 2 grade :\n");
+    scanf("%d",&c_2_grade);
+    printf("Enter course 3 ID :\n");
+    scanf("%d",&c_3_id);
+    printf("Enter course 3 grade :\n");
+    scanf("%d",&c_3_grade);
+    SDB_AddEntry(s_id, s_year, c_1_id, c_1_grade, c_2_id, c_2_grade, c_3_id, c_3_grade);
+}
+
 //Do the actions the user entered.
 void SDB_action (uint8 choice){
     uint32 id;
@@ -11,24 +33,7 @@ void SDB_action (uint8 choice){
     case 0:
         break;
     case 1:
-        uint32 s_id, s_year, c_1_id, c_1_grade, c_2_id, c_2_grade, c_3_id, c_3_grade;
-        printf("Enter student ID:\n");
-        scanf("%d",&s_id);
-        printf("Enter student year:\n");
-        scanf("%d",&s_year);
-        printf("Enter course 1 ID :\n");
-        scanf("%d",&c_1_id);
-        printf("Enter course 1 grade :\n");
-        scanf("%d",&c_1_grade);
-        printf("Enter course 2 ID :\n");
-        scanf("%d",&c_2_id);
-        printf("Enter course 2 grade :\n");
-        scanf("%d",&c_2_grade);
-        printf("Enter course 3 ID :\n");
-        scanf("%d",&c_3_id);
-        printf("Enter course 3 grade :\n");
-        scanf("%d",&c_3_grade);
-        SDB_AddEntry(s_id, s_year, c_1_id, c_1_grade, c_2_id, c_2_grade, c_3_id, c_3_grade);
+        add_entry();
         break;
     case 2:
         uint32 result=SDB_GetUsedSize();
