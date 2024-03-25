@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Courses/Embedded_Systems_Course/Embedded_Code/Session-10(3-13)(struct-extended)/Examples/example01-(bit-field)",
-      "program": "d:/Courses/Embedded_Systems_Course/Embedded_Code/Session-10(3-13)(struct-extended)/Examples/example01-(bit-field)/build/Debug/outDebug",
+      "cwd": "d:/Courses/Programming/Embedded_Systems_Course/Embedded_Code/C-Final",
+      "program": "d:/Courses/Programming/Embedded_Systems_Course/Embedded_Code/C-Final/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
