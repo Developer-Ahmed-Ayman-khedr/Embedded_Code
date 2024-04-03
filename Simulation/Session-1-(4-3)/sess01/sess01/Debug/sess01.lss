@@ -17,15 +17,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   6 .debug_abbrev 000005b2  00000000  00000000  000007e1  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   00000264  00000000  00000000  00000d93  2**0
+  7 .debug_line   00000266  00000000  00000000  00000d93  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000024  00000000  00000000  00000ff8  2**2
+  8 .debug_frame  00000024  00000000  00000000  00000ffc  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    0000035c  00000000  00000000  0000101c  2**0
+  9 .debug_str    0000036c  00000000  00000000  00001020  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    00000048  00000000  00000000  00001378  2**0
+ 10 .debug_loc    00000048  00000000  00000000  0000138c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000010  00000000  00000000  000013c0  2**0
+ 11 .debug_ranges 00000010  00000000  00000000  000013d4  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -89,22 +89,22 @@ int main(void)
 
 	__builtin_avr_delay_cycles(__ticks_dc);
   78:	2f ef       	ldi	r18, 0xFF	; 255
-  7a:	80 e7       	ldi	r24, 0x70	; 112
-  7c:	92 e0       	ldi	r25, 0x02	; 2
+  7a:	83 e2       	ldi	r24, 0x23	; 35
+  7c:	94 ef       	ldi	r25, 0xF4	; 244
   7e:	21 50       	subi	r18, 0x01	; 1
   80:	80 40       	sbci	r24, 0x00	; 0
   82:	90 40       	sbci	r25, 0x00	; 0
   84:	e1 f7       	brne	.-8      	; 0x7e <main+0x12>
   86:	00 c0       	rjmp	.+0      	; 0x88 <main+0x1c>
   88:	00 00       	nop
-		_delay_ms(500);
+		_delay_ms(5000);
 		CLEAR_BIT(*ptrPORTC,7);
   8a:	85 b3       	in	r24, 0x15	; 21
   8c:	8f 77       	andi	r24, 0x7F	; 127
   8e:	85 bb       	out	0x15, r24	; 21
   90:	2f ef       	ldi	r18, 0xFF	; 255
-  92:	80 e7       	ldi	r24, 0x70	; 112
-  94:	92 e0       	ldi	r25, 0x02	; 2
+  92:	83 e2       	ldi	r24, 0x23	; 35
+  94:	94 ef       	ldi	r25, 0xF4	; 244
   96:	21 50       	subi	r18, 0x01	; 1
   98:	80 40       	sbci	r24, 0x00	; 0
   9a:	90 40       	sbci	r25, 0x00	; 0
