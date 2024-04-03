@@ -6,7 +6,7 @@
  */ 
 #include "BIT_MATH.h"
 #include "STD_TYPES.h"
-#define F_CPU 1600000UL
+#define F_CPU 16000000UL
 #include<util/delay.h>
 
 int main(void)
@@ -17,9 +17,9 @@ int main(void)
     while (1) 
     {
 		SET_BIT(*ptrPORTC,7);
-		_delay_ms(500);
+		_delay_ms(5000);
 		CLEAR_BIT(*ptrPORTC,7);
-		_delay_ms(500);
+		_delay_ms(5000);
     }
 }
 
