@@ -5,5 +5,9 @@
  * Author : ahmed
  */ 
 
-#include "Sess-16(4-8)/ses.h"
+#include "Sess16/Task/ses.h"
 
+int main(){
+	test_code();
+	return 0;
+}
