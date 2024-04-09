@@ -31,7 +31,7 @@ int test_code()
 		if (DIO_readPinValue(DIO_PINA2)==DIO_LOW)
 		{
 			counter++;
-			_delay_ms(500);
+			_delay_ms(300);
 		}
 		//reset button is pressed
 		if (DIO_readPinValue(DIO_PINB6)==DIO_LOW)
@@ -40,13 +40,14 @@ int test_code()
 		}
 		switch(counter){
 			case 0:
-				DIO_setPinValue(DIO_PINC1,DIO_HIGH);
-				DIO_setPinValue(DIO_PINC2,DIO_HIGH);
-				DIO_setPinValue(DIO_PINC3,DIO_HIGH);
-				DIO_setPinValue(DIO_PINC4,DIO_HIGH);
-				DIO_setPinValue(DIO_PINC5,DIO_HIGH);
-				DIO_setPinValue(DIO_PINC6,DIO_HIGH);
-				DIO_setPinValue(DIO_PINC7,DIO_HIGH);
+				DIO_setPinValue(DIO_PINC1,DIO_LOW);
+				DIO_setPinValue(DIO_PINC2,DIO_LOW);
+				DIO_setPinValue(DIO_PINC3,DIO_LOW);
+				DIO_setPinValue(DIO_PINC4,DIO_LOW);
+				DIO_setPinValue(DIO_PINC5,DIO_LOW);
+				DIO_setPinValue(DIO_PINC6,DIO_LOW);
+				DIO_setPinValue(DIO_PINC7,DIO_LOW);
+				break;
 			case 1:
 				DIO_setPinValue(DIO_PINC1,DIO_LOW);
 				DIO_setPinValue(DIO_PINC2,DIO_HIGH);

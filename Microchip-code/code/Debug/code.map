@@ -195,7 +195,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x610
+.text           0x00000000      0x612
  *(.vectors)
  .vectors       0x00000000       0x54 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
                 0x00000000                __vector_default
@@ -278,27 +278,27 @@ END GROUP
  .text.main     0x00000080        0xa APP/main.o
                 0x00000080                main
  .text.test_code
-                0x0000008a      0x2d6 APP/Sess16/Task/ses.o
+                0x0000008a      0x2d8 APP/Sess16/Task/ses.o
                 0x0000008a                test_code
  .text.DIO_setPinDir
-                0x00000360      0x116 MCAL/DIO/DIO_PROG.o
-                0x00000360                DIO_setPinDir
+                0x00000362      0x116 MCAL/DIO/DIO_PROG.o
+                0x00000362                DIO_setPinDir
  .text.DIO_setPinValue
-                0x00000476      0x116 MCAL/DIO/DIO_PROG.o
-                0x00000476                DIO_setPinValue
+                0x00000478      0x116 MCAL/DIO/DIO_PROG.o
+                0x00000478                DIO_setPinValue
  .text.DIO_readPinValue
-                0x0000058c       0x6c MCAL/DIO/DIO_PROG.o
-                0x0000058c                DIO_readPinValue
+                0x0000058e       0x6c MCAL/DIO/DIO_PROG.o
+                0x0000058e                DIO_readPinValue
  .text.DIO_setPullUp
-                0x000005f8        0x8 MCAL/DIO/DIO_PROG.o
-                0x000005f8                DIO_setPullUp
- .text.libgcc   0x00000600        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
-                0x00000600                __tablejump2__
-                0x0000060c                . = ALIGN (0x2)
+                0x000005fa        0x8 MCAL/DIO/DIO_PROG.o
+                0x000005fa                DIO_setPullUp
+ .text.libgcc   0x00000602        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+                0x00000602                __tablejump2__
+                0x0000060e                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000060c        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x0000060c                _exit
-                0x0000060c                exit
+ .fini9         0x0000060e        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x0000060e                _exit
+                0x0000060e                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -317,11 +317,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000060c        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x0000060e        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000610                _etext = .
+                0x00000612                _etext = .
 
-.data           0x00800060        0x0 load address 0x00000610
+.data           0x00800060        0x0 load address 0x00000612
                 [!provide]                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -339,8 +339,8 @@ END GROUP
  *(.bss*)
  *(COMMON)
                 [!provide]                PROVIDE (__bss_end, .)
-                0x00000610                __data_load_start = LOADADDR (.data)
-                0x00000610                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000612                __data_load_start = LOADADDR (.data)
+                0x00000612                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800060        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -439,12 +439,12 @@ END GROUP
  .debug_abbrev  0x0000051e      0x110 APP/Sess16/Task/ses.o
  .debug_abbrev  0x0000062e       0xc9 MCAL/DIO/DIO_PROG.o
 
-.debug_line     0x00000000      0x6bb
+.debug_line     0x00000000      0x6c1
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x116 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_line    0x00000116       0x47 APP/main.o
- .debug_line    0x0000015d      0x389 APP/Sess16/Task/ses.o
- .debug_line    0x000004e6      0x1d5 MCAL/DIO/DIO_PROG.o
+ .debug_line    0x0000015d      0x38f APP/Sess16/Task/ses.o
+ .debug_line    0x000004ec      0x1d5 MCAL/DIO/DIO_PROG.o
 
 .debug_frame    0x00000000       0xb4
  *(.debug_frame)
@@ -462,10 +462,10 @@ END GROUP
  .debug_str     0x000003ae       0x37 MCAL/DIO/DIO_PROG.o
                                 0x1ba (size before relaxing)
 
-.debug_loc      0x00000000      0x50a
+.debug_loc      0x00000000      0x520
  *(.debug_loc)
- .debug_loc     0x00000000      0x117 APP/Sess16/Task/ses.o
- .debug_loc     0x00000117      0x3f3 MCAL/DIO/DIO_PROG.o
+ .debug_loc     0x00000000      0x12d APP/Sess16/Task/ses.o
+ .debug_loc     0x0000012d      0x3f3 MCAL/DIO/DIO_PROG.o
 
 .debug_macinfo
  *(.debug_macinfo)
