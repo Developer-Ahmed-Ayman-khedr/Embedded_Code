@@ -6,6 +6,7 @@
  */ 
 
 #include "DIO_INT.h"
+
 void DIO_setPinDir(u8 pinNum, u8 dir){
 	//PORTA
 	if (pinNum>=0 && pinNum<=7) 
