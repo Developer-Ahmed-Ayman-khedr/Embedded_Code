@@ -2,7 +2,7 @@
  * BIT_MATH.h
  *
  * Created: 4/4/2024 12:41:15 PM
- *  Author: ahmed
+ *  Author: Ahmed
  */ 
 
 
