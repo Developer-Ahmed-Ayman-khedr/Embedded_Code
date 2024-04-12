@@ -199,7 +199,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x71c
+.text           0x00000000      0x8aa
  *(.vectors)
  .vectors       0x00000000       0x54 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
                 0x00000000                __vector_default
@@ -207,37 +207,37 @@ END GROUP
  *(.vectors)
  *(.progmem.gcc*)
  .progmem.gcc_sw_table.test_code
-                0x00000054       0x14 APP/Sess16/Task/ses.o
-                0x00000068                . = ALIGN (0x2)
-                0x00000068                __trampolines_start = .
+                0x00000054       0x20 APP/Sess16/Task/ses.o
+                0x00000074                . = ALIGN (0x2)
+                0x00000074                __trampolines_start = .
  *(.trampolines)
- .trampolines   0x00000068        0x0 linker stubs
+ .trampolines   0x00000074        0x0 linker stubs
  *(.trampolines*)
-                0x00000068                __trampolines_end = .
+                0x00000074                __trampolines_end = .
  *libprintf_flt.a:*(.progmem.data)
  *libc.a:*(.progmem.data)
  *(.progmem*)
-                0x00000068                . = ALIGN (0x2)
+                0x00000074                . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
  *(.lowtext*)
-                0x00000068                __ctors_start = .
+                0x00000074                __ctors_start = .
  *(.ctors)
-                0x00000068                __ctors_end = .
-                0x00000068                __dtors_start = .
+                0x00000074                __ctors_end = .
+                0x00000074                __dtors_start = .
  *(.dtors)
-                0x00000068                __dtors_end = .
+                0x00000074                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x00000068        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
-                0x00000068                __init
+ .init0         0x00000074        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
+                0x00000074                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x00000068        0xc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
+ .init2         0x00000074        0xc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  *(.init2)
  *(.init3)
  *(.init3)
@@ -252,63 +252,63 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x00000074        0x8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
+ .init9         0x00000080        0x8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  *(.init9)
  *(.text)
- .text          0x0000007c        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
-                0x0000007c                __vector_1
-                0x0000007c                __vector_12
-                0x0000007c                __bad_interrupt
-                0x0000007c                __vector_6
-                0x0000007c                __vector_3
-                0x0000007c                __vector_11
-                0x0000007c                __vector_13
-                0x0000007c                __vector_17
-                0x0000007c                __vector_19
-                0x0000007c                __vector_7
-                0x0000007c                __vector_5
-                0x0000007c                __vector_4
-                0x0000007c                __vector_9
-                0x0000007c                __vector_2
-                0x0000007c                __vector_15
-                0x0000007c                __vector_8
-                0x0000007c                __vector_14
-                0x0000007c                __vector_10
-                0x0000007c                __vector_16
-                0x0000007c                __vector_18
-                0x0000007c                __vector_20
-                0x00000080                . = ALIGN (0x2)
+ .text          0x00000088        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
+                0x00000088                __vector_1
+                0x00000088                __vector_12
+                0x00000088                __bad_interrupt
+                0x00000088                __vector_6
+                0x00000088                __vector_3
+                0x00000088                __vector_11
+                0x00000088                __vector_13
+                0x00000088                __vector_17
+                0x00000088                __vector_19
+                0x00000088                __vector_7
+                0x00000088                __vector_5
+                0x00000088                __vector_4
+                0x00000088                __vector_9
+                0x00000088                __vector_2
+                0x00000088                __vector_15
+                0x00000088                __vector_8
+                0x00000088                __vector_14
+                0x00000088                __vector_10
+                0x00000088                __vector_16
+                0x00000088                __vector_18
+                0x00000088                __vector_20
+                0x0000008c                . = ALIGN (0x2)
  *(.text.*)
- .text.main     0x00000080        0xa APP/main.o
-                0x00000080                main
+ .text.main     0x0000008c        0xa APP/main.o
+                0x0000008c                main
  .text.test_code
-                0x0000008a      0x31e APP/Sess16/Task/ses.o
-                0x0000008a                test_code
+                0x00000096      0x4a0 APP/Sess16/Task/ses.o
+                0x00000096                test_code
  .text.seven_seg_set
-                0x000003a8       0x62 HAL/7seg/SEVEN_SEG_PROG.o
-                0x000003a8                seven_seg_set
+                0x00000536       0x62 HAL/7seg/SEVEN_SEG_PROG.o
+                0x00000536                seven_seg_set
  .text.seven_seg_out
-                0x0000040a       0x62 HAL/7seg/SEVEN_SEG_PROG.o
-                0x0000040a                seven_seg_out
+                0x00000598       0x62 HAL/7seg/SEVEN_SEG_PROG.o
+                0x00000598                seven_seg_out
  .text.DIO_setPinDir
-                0x0000046c      0x116 MCAL/DIO/DIO_PROG.o
-                0x0000046c                DIO_setPinDir
+                0x000005fa      0x116 MCAL/DIO/DIO_PROG.o
+                0x000005fa                DIO_setPinDir
  .text.DIO_setPinValue
-                0x00000582      0x116 MCAL/DIO/DIO_PROG.o
-                0x00000582                DIO_setPinValue
+                0x00000710      0x116 MCAL/DIO/DIO_PROG.o
+                0x00000710                DIO_setPinValue
  .text.DIO_readPinValue
-                0x00000698       0x6c MCAL/DIO/DIO_PROG.o
-                0x00000698                DIO_readPinValue
+                0x00000826       0x6c MCAL/DIO/DIO_PROG.o
+                0x00000826                DIO_readPinValue
  .text.DIO_setPullUp
-                0x00000704        0x8 MCAL/DIO/DIO_PROG.o
-                0x00000704                DIO_setPullUp
- .text.libgcc   0x0000070c        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
-                0x0000070c                __tablejump2__
-                0x00000718                . = ALIGN (0x2)
+                0x00000892        0x8 MCAL/DIO/DIO_PROG.o
+                0x00000892                DIO_setPullUp
+ .text.libgcc   0x0000089a        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+                0x0000089a                __tablejump2__
+                0x000008a6                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000718        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x00000718                _exit
-                0x00000718                exit
+ .fini9         0x000008a6        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x000008a6                _exit
+                0x000008a6                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -327,11 +327,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000718        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x000008a6        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000071c                _etext = .
+                0x000008aa                _etext = .
 
-.data           0x00800060        0x0 load address 0x0000071c
+.data           0x00800060        0x0 load address 0x000008aa
                 [!provide]                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -349,8 +349,8 @@ END GROUP
  *(.bss*)
  *(COMMON)
                 [!provide]                PROVIDE (__bss_end, .)
-                0x0000071c                __data_load_start = LOADADDR (.data)
-                0x0000071c                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000008aa                __data_load_start = LOADADDR (.data)
+                0x000008aa                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800060        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -438,13 +438,13 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0xfa2
+.debug_info     0x00000000     0x112a
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_info    0x000004e6       0xb7 APP/main.o
- .debug_info    0x0000059d      0x4b9 APP/Sess16/Task/ses.o
- .debug_info    0x00000a56      0x3c4 HAL/7seg/SEVEN_SEG_PROG.o
- .debug_info    0x00000e1a      0x188 MCAL/DIO/DIO_PROG.o
+ .debug_info    0x0000059d      0x641 APP/Sess16/Task/ses.o
+ .debug_info    0x00000bde      0x3c4 HAL/7seg/SEVEN_SEG_PROG.o
+ .debug_info    0x00000fa2      0x188 MCAL/DIO/DIO_PROG.o
 
 .debug_abbrev   0x00000000      0x79e
  *(.debug_abbrev)
@@ -454,20 +454,20 @@ END GROUP
  .debug_abbrev  0x0000062e       0xa7 HAL/7seg/SEVEN_SEG_PROG.o
  .debug_abbrev  0x000006d5       0xc9 MCAL/DIO/DIO_PROG.o
 
-.debug_line     0x00000000      0x63d
+.debug_line     0x00000000      0x685
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x116 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_line    0x00000116       0x47 APP/main.o
- .debug_line    0x0000015d      0x222 APP/Sess16/Task/ses.o
- .debug_line    0x0000037f       0xe9 HAL/7seg/SEVEN_SEG_PROG.o
- .debug_line    0x00000468      0x1d5 MCAL/DIO/DIO_PROG.o
+ .debug_line    0x0000015d      0x26a APP/Sess16/Task/ses.o
+ .debug_line    0x000003c7       0xe9 HAL/7seg/SEVEN_SEG_PROG.o
+ .debug_line    0x000004b0      0x1d5 MCAL/DIO/DIO_PROG.o
 
-.debug_frame    0x00000000      0x210
+.debug_frame    0x00000000      0x27c
  *(.debug_frame)
  .debug_frame   0x00000000       0x24 APP/main.o
- .debug_frame   0x00000024       0xec APP/Sess16/Task/ses.o
- .debug_frame   0x00000110       0x94 HAL/7seg/SEVEN_SEG_PROG.o
- .debug_frame   0x000001a4       0x6c MCAL/DIO/DIO_PROG.o
+ .debug_frame   0x00000024      0x158 APP/Sess16/Task/ses.o
+ .debug_frame   0x0000017c       0x94 HAL/7seg/SEVEN_SEG_PROG.o
+ .debug_frame   0x00000210       0x6c MCAL/DIO/DIO_PROG.o
 
 .debug_str      0x00000000      0x4aa
  *(.debug_str)
@@ -481,11 +481,11 @@ END GROUP
  .debug_str     0x00000473       0x37 MCAL/DIO/DIO_PROG.o
                                 0x1ba (size before relaxing)
 
-.debug_loc      0x00000000      0xc39
+.debug_loc      0x00000000      0xe91
  *(.debug_loc)
- .debug_loc     0x00000000      0x49c APP/Sess16/Task/ses.o
- .debug_loc     0x0000049c      0x3aa HAL/7seg/SEVEN_SEG_PROG.o
- .debug_loc     0x00000846      0x3f3 MCAL/DIO/DIO_PROG.o
+ .debug_loc     0x00000000      0x6f4 APP/Sess16/Task/ses.o
+ .debug_loc     0x000006f4      0x3aa HAL/7seg/SEVEN_SEG_PROG.o
+ .debug_loc     0x00000a9e      0x3f3 MCAL/DIO/DIO_PROG.o
 
 .debug_macinfo
  *(.debug_macinfo)
