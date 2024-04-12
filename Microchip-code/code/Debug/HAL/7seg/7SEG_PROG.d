@@ -1,0 +1,11 @@
+HAL/7seg/7SEG_PROG.d HAL/7seg/7SEG_PROG.o: ../HAL/7seg/7SEG_PROG.c \
+ ../HAL/7seg/7SEG_INT.h ../MCAL/DIO/DIO_INT.h ../LIB/STD_TYPES.h \
+ ../LIB/BIT_MATH.h
+
+../HAL/7seg/7SEG_INT.h:
+
+../MCAL/DIO/DIO_INT.h:
+
+../LIB/STD_TYPES.h:
+
+../LIB/BIT_MATH.h:
