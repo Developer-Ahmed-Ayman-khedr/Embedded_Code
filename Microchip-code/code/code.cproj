@@ -142,10 +142,16 @@
     <Compile Include="APP\Sess16\Task\ses.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="HAL\7seg\SEVEN_SEG_INT.h">
+    <Compile Include="APP\Sess18\ses.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="HAL\7seg\SEVEN_SEG_PROG.c">
+    <Compile Include="APP\Sess18\ses.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\7seg\SS_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\7seg\SS_PROG.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="LIB\BIT_MATH.h">
@@ -163,6 +169,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="APP" />
+    <Folder Include="APP\Sess18" />
     <Folder Include="APP\Sess15" />
     <Folder Include="APP\Sess16" />
     <Folder Include="APP\Sess16\Task" />
