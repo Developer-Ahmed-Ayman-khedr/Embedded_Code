@@ -8,7 +8,9 @@ APP\Sess16\ses.c
 
 APP\Sess16\Task\ses.c
 
-HAL\7seg\SEVEN_SEG_PROG.c
+APP\Sess18\ses.c
+
+HAL\7seg\SS_PROG.c
 
 MCAL\DIO\DIO_PROG.c
 

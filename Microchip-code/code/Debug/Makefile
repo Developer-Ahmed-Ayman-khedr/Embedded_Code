@@ -34,6 +34,7 @@ LINKER_SCRIPT_DEP:=
 # Every subdirectory with source files must be described here
 SUBDIRS :=  \
 ../APP \
+../APP/Sess18 \
 ../APP/Sess15 \
 ../APP/Sess16 \
 ../APP/Sess16/Task \
@@ -50,7 +51,8 @@ C_SRCS +=  \
 ../APP/main.c \
 ../APP/Sess16/ses.c \
 ../APP/Sess16/Task/ses.c \
-../HAL/7seg/SEVEN_SEG_PROG.c \
+../APP/Sess18/ses.c \
+../HAL/7seg/SS_PROG.c \
 ../MCAL/DIO/DIO_PROG.c
 
 
@@ -64,28 +66,32 @@ OBJS +=  \
 APP/main.o \
 APP/Sess16/ses.o \
 APP/Sess16/Task/ses.o \
-HAL/7seg/SEVEN_SEG_PROG.o \
+APP/Sess18/ses.o \
+HAL/7seg/SS_PROG.o \
 MCAL/DIO/DIO_PROG.o
 
 OBJS_AS_ARGS +=  \
 APP/main.o \
 APP/Sess16/ses.o \
 APP/Sess16/Task/ses.o \
-HAL/7seg/SEVEN_SEG_PROG.o \
+APP/Sess18/ses.o \
+HAL/7seg/SS_PROG.o \
 MCAL/DIO/DIO_PROG.o
 
 C_DEPS +=  \
 APP/main.d \
 APP/Sess16/ses.d \
 APP/Sess16/Task/ses.d \
-HAL/7seg/SEVEN_SEG_PROG.d \
+APP/Sess18/ses.d \
+HAL/7seg/SS_PROG.d \
 MCAL/DIO/DIO_PROG.d
 
 C_DEPS_AS_ARGS +=  \
 APP/main.d \
 APP/Sess16/ses.d \
 APP/Sess16/Task/ses.d \
-HAL/7seg/SEVEN_SEG_PROG.d \
+APP/Sess18/ses.d \
+HAL/7seg/SS_PROG.d \
 MCAL/DIO/DIO_PROG.d
 
 OUTPUT_FILE_PATH +=code.elf
@@ -123,7 +129,14 @@ APP/Sess16/Task/ses.o: ../APP/Sess16/Task/ses.c
 	@echo Finished building: $<
 	
 
-HAL/7seg/SEVEN_SEG_PROG.o: ../HAL/7seg/SEVEN_SEG_PROG.c
+APP/Sess18/ses.o: ../APP/Sess18/ses.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"../LIB" -I"../MCAL/DIO" -I"../APP" -I"../HAL/7seg"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+HAL/7seg/SS_PROG.o: ../HAL/7seg/SS_PROG.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"../LIB" -I"../MCAL/DIO" -I"../APP" -I"../HAL/7seg"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

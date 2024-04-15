@@ -4,7 +4,7 @@
  *
  * Created: 4/9/2024 2:19:51 AM
  *  Author: Ahmed
- */ 
+ 
 
 #include "Sess16/Task/ses.h"
 
@@ -18,68 +18,70 @@ int test_code()
 	DIO_setPinDir(DIO_PINB6,DIO_INPUT);
 	DIO_setPullUp(DIO_PINB6);
 	//7-seg_set
-	seven_seg_set(DIO_PINC1,DIO_OUTPUT,DIO_PINC2,DIO_OUTPUT,DIO_PINC3,DIO_OUTPUT,DIO_PINC4,DIO_OUTPUT,DIO_PINC5,DIO_OUTPUT,DIO_PINC6,DIO_OUTPUT,DIO_PINC7,DIO_OUTPUT);
+	SS_init();
 	while (1)
 	{
 		//When the counter button is pressed
-		if (DIO_readPinValue(DIO_PINA2)==DIO_LOW)
+		u8 counter_state = DIO_readPinValue(DIO_PINA2);
+		if (counter_state==DIO_LOW)
 		{
 			counter++;
-			_delay_ms(300);
+			while (DIO_readPinValue(DIO_PINA2)==DIO_LOW);
 		}
 		//When the reset button is pressed
-		if (DIO_readPinValue(DIO_PINB6)==DIO_LOW)
+		u8 reset_state = DIO_readPinValue(DIO_PINB6);
+		if (reset_state==DIO_LOW)
 		{
 			counter=0;
 		}
 		switch(counter){
 			case 0:
-				seven_seg_out(DIO_PINC1,DIO_LOW,DIO_PINC2,DIO_LOW,DIO_PINC3,DIO_LOW,DIO_PINC4,DIO_LOW,DIO_PINC5,DIO_LOW,DIO_PINC6,DIO_LOW,DIO_PINC7,DIO_LOW);
+				//SS_writeNum();
 				break;
 			case 1:
-				seven_seg_out(DIO_PINC1,DIO_LOW,DIO_PINC2,DIO_HIGH,DIO_PINC3,DIO_HIGH,DIO_PINC4,DIO_LOW,DIO_PINC5,DIO_LOW,DIO_PINC6,DIO_LOW,DIO_PINC7,DIO_LOW);
+				//SS_writeNum();
 				break;
 			case 2:
-				seven_seg_out(DIO_PINC1,DIO_HIGH,DIO_PINC2,DIO_HIGH,DIO_PINC3,DIO_LOW,DIO_PINC4,DIO_HIGH,DIO_PINC5,DIO_HIGH,DIO_PINC6,DIO_LOW,DIO_PINC7,DIO_HIGH);
+				//SS_writeNum();
 				break;
 			case 3:
-				seven_seg_out(DIO_PINC1,DIO_HIGH,DIO_PINC2,DIO_HIGH,DIO_PINC3,DIO_HIGH,DIO_PINC4,DIO_HIGH,DIO_PINC5,DIO_LOW,DIO_PINC6,DIO_LOW,DIO_PINC7,DIO_HIGH);
+				//SS_writeNum();
 				break;
 			case 4:
-				seven_seg_out(DIO_PINC1,DIO_LOW,DIO_PINC2,DIO_HIGH,DIO_PINC3,DIO_HIGH,DIO_PINC4,DIO_LOW,DIO_PINC5,DIO_LOW,DIO_PINC6,DIO_HIGH,DIO_PINC7,DIO_HIGH);
+				//SS_writeNum();
 				break;
 			case 5:
-				seven_seg_out(DIO_PINC1,DIO_HIGH,DIO_PINC2,DIO_LOW,DIO_PINC3,DIO_HIGH,DIO_PINC4,DIO_HIGH,DIO_PINC5,DIO_LOW,DIO_PINC6,DIO_HIGH,DIO_PINC7,DIO_HIGH);
+				//SS_writeNum();
 				break;
 			case 6:
-				seven_seg_out(DIO_PINC1,DIO_HIGH,DIO_PINC2,DIO_LOW,DIO_PINC3,DIO_HIGH,DIO_PINC4,DIO_HIGH,DIO_PINC5,DIO_HIGH,DIO_PINC6,DIO_HIGH,DIO_PINC7,DIO_HIGH);
+				//SS_writeNum();
 				break;
 			case 7:
-				seven_seg_out(DIO_PINC1,DIO_HIGH,DIO_PINC2,DIO_HIGH,DIO_PINC3,DIO_HIGH,DIO_PINC4,DIO_LOW,DIO_PINC5,DIO_LOW,DIO_PINC6,DIO_LOW,DIO_PINC7,DIO_LOW);
+				//SS_writeNum();
 				break;
 			case 8:
-				seven_seg_out(DIO_PINC1,DIO_HIGH,DIO_PINC2,DIO_HIGH,DIO_PINC3,DIO_HIGH,DIO_PINC4,DIO_HIGH,DIO_PINC5,DIO_HIGH,DIO_PINC6,DIO_HIGH,DIO_PINC7,DIO_HIGH);
+				//SS_writeNum();
 				break;
 			case 9:
-				seven_seg_out(DIO_PINC1,DIO_HIGH,DIO_PINC2,DIO_HIGH,DIO_PINC3,DIO_HIGH,DIO_PINC4,DIO_HIGH,DIO_PINC5,DIO_LOW,DIO_PINC6,DIO_HIGH,DIO_PINC7,DIO_HIGH);
+				//SS_writeNum();
 				break;
 			case 10:
-				seven_seg_out(DIO_PINC1,DIO_HIGH,DIO_PINC2,DIO_HIGH,DIO_PINC3,DIO_HIGH,DIO_PINC4,DIO_LOW,DIO_PINC5,DIO_HIGH,DIO_PINC6,DIO_HIGH,DIO_PINC7,DIO_HIGH);
+				//SS_writeNum();
 				break;
 			case 11:
-				seven_seg_out(DIO_PINC1,DIO_LOW,DIO_PINC2,DIO_LOW,DIO_PINC3,DIO_HIGH,DIO_PINC4,DIO_HIGH,DIO_PINC5,DIO_HIGH,DIO_PINC6,DIO_HIGH,DIO_PINC7,DIO_HIGH);
+				//SS_writeNum();
 				break;
 			case 12:
-				seven_seg_out(DIO_PINC1,DIO_HIGH,DIO_PINC2,DIO_LOW,DIO_PINC3,DIO_LOW,DIO_PINC4,DIO_HIGH,DIO_PINC5,DIO_HIGH,DIO_PINC6,DIO_HIGH,DIO_PINC7,DIO_LOW);
+				//SS_writeNum();
 				break;
 			case 13:
-				seven_seg_out(DIO_PINC1,DIO_LOW,DIO_PINC2,DIO_HIGH,DIO_PINC3,DIO_HIGH,DIO_PINC4,DIO_HIGH,DIO_PINC5,DIO_HIGH,DIO_PINC6,DIO_LOW,DIO_PINC7,DIO_HIGH);
+				//SS_writeNum();
 				break;
 			case 14:
-				seven_seg_out(DIO_PINC1,DIO_HIGH,DIO_PINC2,DIO_LOW,DIO_PINC3,DIO_LOW,DIO_PINC4,DIO_HIGH,DIO_PINC5,DIO_HIGH,DIO_PINC6,DIO_HIGH,DIO_PINC7,DIO_HIGH);
+				//SS_writeNum();
 				break;
 			case 15:
-				seven_seg_out(DIO_PINC1,DIO_HIGH,DIO_PINC2,DIO_LOW,DIO_PINC3,DIO_LOW,DIO_PINC4,DIO_LOW,DIO_PINC5,DIO_HIGH,DIO_PINC6,DIO_HIGH,DIO_PINC7,DIO_HIGH);
+				//SS_writeNum();
 				break;
 			default:
 				break;
@@ -87,3 +89,4 @@ int test_code()
 	}
 	return 0;
 }
+*/
