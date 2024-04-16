@@ -164,6 +164,7 @@ int source_code()
   ba:	d0 e0       	ldi	r29, 0x00	; 0
 		}
 		
+		//reverse counter
 		if (timer==500 && flage==2)
   bc:	c4 3f       	cpi	r28, 0xF4	; 244
   be:	81 e0       	ldi	r24, 0x01	; 1
@@ -203,7 +204,7 @@ int source_code()
 			while (DIO_readPinValue(DIO_PINB0)==DIO_HIGH);
 		}
 		
-		//When the reset button is pressed DIO_PIND6
+		//When the reset button is pressed
 		reset_state = DIO_readPinValue(DIO_PIND6);
   e4:	8e e1       	ldi	r24, 0x1E	; 30
   e6:	0e 94 20 02 	call	0x440	; 0x440 <DIO_readPinValue>
@@ -219,7 +220,7 @@ int source_code()
   f0:	0e 94 20 02 	call	0x440	; 0x440 <DIO_readPinValue>
   f4:	81 30       	cpi	r24, 0x01	; 1
   f6:	d9 f3       	breq	.-10     	; 0xee <source_code+0x78>
-		//When the reset button is pressed DIO_PIND6
+		//When the reset button is pressed
 		reset_state = DIO_readPinValue(DIO_PIND6);
 		if (reset_state==DIO_HIGH)
 		{
@@ -228,7 +229,7 @@ int source_code()
   f8:	c0 e0       	ldi	r28, 0x00	; 0
   fa:	d0 e0       	ldi	r29, 0x00	; 0
 		
-		//When the reset button is pressed DIO_PIND6
+		//When the reset button is pressed
 		reset_state = DIO_readPinValue(DIO_PIND6);
 		if (reset_state==DIO_HIGH)
 		{
@@ -240,7 +241,7 @@ int source_code()
 			while (DIO_readPinValue(DIO_PIND6)==DIO_HIGH);
 		}
 		
-		//When the reverse button is pressed DIO_PIND2
+		//When the reverse button is pressed
 		reverse_state = DIO_readPinValue(DIO_PIND2);
  100:	8a e1       	ldi	r24, 0x1A	; 26
  102:	0e 94 20 02 	call	0x440	; 0x440 <DIO_readPinValue>
@@ -255,7 +256,7 @@ int source_code()
  10c:	0e 94 20 02 	call	0x440	; 0x440 <DIO_readPinValue>
  110:	81 30       	cpi	r24, 0x01	; 1
  112:	d9 f3       	breq	.-10     	; 0x10a <source_code+0x94>
-		//When the reverse button is pressed DIO_PIND2
+		//When the reverse button is pressed
 		reverse_state = DIO_readPinValue(DIO_PIND2);
 		if (reverse_state==DIO_HIGH)
 		{
@@ -264,7 +265,7 @@ int source_code()
  114:	c0 e0       	ldi	r28, 0x00	; 0
  116:	d0 e0       	ldi	r29, 0x00	; 0
 		
-		//When the reverse button is pressed DIO_PIND2
+		//When the reverse button is pressed
 		reverse_state = DIO_readPinValue(DIO_PIND2);
 		if (reverse_state==DIO_HIGH)
 		{

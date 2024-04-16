@@ -41,6 +41,7 @@ int source_code()
 			timer = 0;
 		}
 		
+		//reverse counter
 		if (timer==500 && flage==2)
 		{
 			counter--;
@@ -55,7 +56,7 @@ int source_code()
 			while (DIO_readPinValue(DIO_PINB0)==DIO_HIGH);
 		}
 		
-		//When the reset button is pressed DIO_PIND6
+		//When the reset button is pressed
 		reset_state = DIO_readPinValue(DIO_PIND6);
 		if (reset_state==DIO_HIGH)
 		{
@@ -65,7 +66,7 @@ int source_code()
 			while (DIO_readPinValue(DIO_PIND6)==DIO_HIGH);
 		}
 		
-		//When the reverse button is pressed DIO_PIND2
+		//When the reverse button is pressed
 		reverse_state = DIO_readPinValue(DIO_PIND2);
 		if (reverse_state==DIO_HIGH)
 		{
