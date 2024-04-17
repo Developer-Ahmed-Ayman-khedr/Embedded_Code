@@ -10,7 +10,11 @@ APP\Sess16\Task\ses.c
 
 APP\Sess18\ses.c
 
+APP\Sess19\ses.c
+
 HAL\7seg\SS_PROG.c
+
+HAL\LCD\LCD_PROG.c
 
 MCAL\DIO\DIO_PROG.c
 
