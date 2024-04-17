@@ -4,7 +4,7 @@
  *
  * Created: 4/9/2024 2:19:51 AM
  *  Author: Ahmed
- */
+ 
 
 #include "Sess18\ses.h"
 
@@ -15,7 +15,6 @@ int source_code()
 	u32 timer = 0;
 	
 	u8 stop_state, reset_state , reverse_state;
-	
 	
 	//7-seg_set
 	SS_init();
@@ -84,3 +83,4 @@ int source_code()
 	}
 	return 0;
 }
+*/
