@@ -4,13 +4,17 @@
 
 APP\main.c
 
+APP\Sess16\ASG1\ASS_PROG.c
+
 APP\Sess16\ses.c
 
 APP\Sess16\Task\ses.c
 
-APP\Sess18\ses.c
+APP\Sess17\ses.c
 
-APP\Sess19\ses.c
+APP\Sess18\ASG2\ASS_PROG.c
+
+APP\Sess18\ses.c
 
 HAL\7seg\SS_PROG.c
 
