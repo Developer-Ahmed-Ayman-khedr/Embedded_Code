@@ -52,4 +52,8 @@ void LCD_sendFloatNum(f32 num);
 
 void LCD_GoTo(u8 x, u8 y );
 
+void LCD_NewCharacter();
+
+void LCD_Shift();
+
 #endif /* LCD_INT_H_ */
