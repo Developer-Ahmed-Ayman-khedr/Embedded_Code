@@ -25,26 +25,22 @@ int source_code()
 	
 	//clear and start display at 0
 	LCD_clearDis();
-	LCD_sendData(counter+48);
+	LCD_sendNum(counter);
 	while (1)
 	{
 		//Increment button
 		increment_state = DIO_readPinValue(DIO_PIND0);
-		if (increment_state==DIO_HIGH)
+		if (increment_state==DIO_HIGH && counter<9)
 		{
 			counter++;
 			LCD_clearDis();
 			while (DIO_readPinValue(DIO_PIND0)==DIO_HIGH);
-			if (counter==10)
-			{
-				counter=9;
-			}
-			LCD_sendData(counter+48);
+			LCD_sendNum(counter);
 		}
 		
 		//Decrement button
 		decrement_state = DIO_readPinValue(DIO_PIND6);
-		if (decrement_state==DIO_HIGH)
+		if (decrement_state==DIO_HIGH  && counter>0)
 		{
 			counter--;
 			LCD_clearDis();
@@ -53,7 +49,7 @@ int source_code()
 			{
 				counter=0;
 			}
-			LCD_sendData(counter+48);
+			LCD_sendNum(counter);
 		}
 		
 	}

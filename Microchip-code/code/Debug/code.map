@@ -96,8 +96,6 @@ Discarded input sections
  .bss           0x00000000        0x0 HAL/LCD/LCD_PROG.o
  .text.LCD_sendStr
                 0x00000000       0x26 HAL/LCD/LCD_PROG.o
- .text.LCD_sendNum
-                0x00000000       0x90 HAL/LCD/LCD_PROG.o
  .text.LCD_sendFloatNum
                 0x00000000       0x58 HAL/LCD/LCD_PROG.o
  .text.LCD_GoTo
@@ -188,8 +186,6 @@ Discarded input sections
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
  .text.libgcc.mul
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
- .text.libgcc.div
-                0x00000000       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
  .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
  .text.libgcc.prologue
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
@@ -220,8 +216,6 @@ Discarded input sections
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
  .text.libgcc.mul
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
- .text.libgcc.div
-                0x00000000       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
  .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
  .text.libgcc.prologue
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
@@ -366,7 +360,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x550
+.text           0x00000000      0x63c
  *(.vectors)
  .vectors       0x00000000       0x54 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
                 0x00000000                __vector_default
@@ -447,39 +441,49 @@ END GROUP
  .text.main     0x0000006c        0xa APP/main.o
                 0x0000006c                main
  .text.source_code
-                0x00000076       0x72 APP/Sess18/ASG2/ASS_PROG.o
+                0x00000076       0x7e APP/Sess18/ASG2/ASS_PROG.o
                 0x00000076                source_code
  .text.LCD_Instruction
-                0x000000e8       0x2c HAL/LCD/LCD_PROG.o
-                0x000000e8                LCD_Instruction
+                0x000000f4       0x2c HAL/LCD/LCD_PROG.o
+                0x000000f4                LCD_Instruction
  .text.LCD_pulse
-                0x00000114       0x1e HAL/LCD/LCD_PROG.o
-                0x00000114                LCD_pulse
+                0x00000120       0x1e HAL/LCD/LCD_PROG.o
+                0x00000120                LCD_pulse
  .text.LCD_sendData
-                0x00000132       0x76 HAL/LCD/LCD_PROG.o
-                0x00000132                LCD_sendData
+                0x0000013e       0x76 HAL/LCD/LCD_PROG.o
+                0x0000013e                LCD_sendData
  .text.LCD_sendCmd
-                0x000001a8       0x76 HAL/LCD/LCD_PROG.o
-                0x000001a8                LCD_sendCmd
- .text.LCD_int  0x0000021e       0x8e HAL/LCD/LCD_PROG.o
-                0x0000021e                LCD_int
+                0x000001b4       0x76 HAL/LCD/LCD_PROG.o
+                0x000001b4                LCD_sendCmd
+ .text.LCD_int  0x0000022a       0x8e HAL/LCD/LCD_PROG.o
+                0x0000022a                LCD_int
  .text.LCD_clearDis
-                0x000002ac        0x8 HAL/LCD/LCD_PROG.o
-                0x000002ac                LCD_clearDis
+                0x000002b8        0x8 HAL/LCD/LCD_PROG.o
+                0x000002b8                LCD_clearDis
+ .text.LCD_sendNum
+                0x000002c0       0x90 HAL/LCD/LCD_PROG.o
+                0x000002c0                LCD_sendNum
  .text.DIO_setPinDir
-                0x000002b4      0x116 MCAL/DIO/DIO_PROG.o
-                0x000002b4                DIO_setPinDir
+                0x00000350      0x116 MCAL/DIO/DIO_PROG.o
+                0x00000350                DIO_setPinDir
  .text.DIO_setPinValue
-                0x000003ca      0x116 MCAL/DIO/DIO_PROG.o
-                0x000003ca                DIO_setPinValue
+                0x00000466      0x116 MCAL/DIO/DIO_PROG.o
+                0x00000466                DIO_setPinValue
  .text.DIO_readPinValue
-                0x000004e0       0x6c MCAL/DIO/DIO_PROG.o
-                0x000004e0                DIO_readPinValue
-                0x0000054c                . = ALIGN (0x2)
+                0x0000057c       0x6c MCAL/DIO/DIO_PROG.o
+                0x0000057c                DIO_readPinValue
+ .text.libgcc.div
+                0x000005e8       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
+                0x000005e8                _div
+                0x000005e8                __divmodhi4
+ .text.libgcc.div
+                0x00000610       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
+                0x00000610                __udivmodhi4
+                0x00000638                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000054c        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x0000054c                _exit
-                0x0000054c                exit
+ .fini9         0x00000638        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x00000638                _exit
+                0x00000638                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -498,11 +502,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000054c        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x00000638        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000550                _etext = .
+                0x0000063c                _etext = .
 
-.data           0x00800060        0x0 load address 0x00000550
+.data           0x00800060        0x0 load address 0x0000063c
                 [!provide]                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -520,8 +524,8 @@ END GROUP
  *(.bss*)
  *(COMMON)
                 [!provide]                PROVIDE (__bss_end, .)
-                0x00000550                __data_load_start = LOADADDR (.data)
-                0x00000550                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000063c                __data_load_start = LOADADDR (.data)
+                0x0000063c                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800060        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -609,13 +613,13 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x1192
+.debug_info     0x00000000     0x11a8
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_info    0x000004e6       0xb2 APP/main.o
- .debug_info    0x00000598      0x1f7 APP/Sess18/ASG2/ASS_PROG.o
- .debug_info    0x0000078f      0x86d HAL/LCD/LCD_PROG.o
- .debug_info    0x00000ffc      0x196 MCAL/DIO/DIO_PROG.o
+ .debug_info    0x00000598      0x20d APP/Sess18/ASG2/ASS_PROG.o
+ .debug_info    0x000007a5      0x86d HAL/LCD/LCD_PROG.o
+ .debug_info    0x00001012      0x196 MCAL/DIO/DIO_PROG.o
 
 .debug_abbrev   0x00000000      0x837
  *(.debug_abbrev)
@@ -625,13 +629,13 @@ END GROUP
  .debug_abbrev  0x000005ac      0x1c2 HAL/LCD/LCD_PROG.o
  .debug_abbrev  0x0000076e       0xc9 MCAL/DIO/DIO_PROG.o
 
-.debug_line     0x00000000      0x867
+.debug_line     0x00000000      0x873
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x116 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_line    0x00000116       0x67 APP/main.o
- .debug_line    0x0000017d      0x11e APP/Sess18/ASG2/ASS_PROG.o
- .debug_line    0x0000029b      0x3f7 HAL/LCD/LCD_PROG.o
- .debug_line    0x00000692      0x1d5 MCAL/DIO/DIO_PROG.o
+ .debug_line    0x0000017d      0x12a APP/Sess18/ASG2/ASS_PROG.o
+ .debug_line    0x000002a7      0x3f7 HAL/LCD/LCD_PROG.o
+ .debug_line    0x0000069e      0x1d5 MCAL/DIO/DIO_PROG.o
 
 .debug_frame    0x00000000      0x1d4
  *(.debug_frame)
@@ -645,9 +649,9 @@ END GROUP
  .debug_str     0x00000000      0x196 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_str     0x00000196      0x17e APP/main.o
                                 0x1b2 (size before relaxing)
- .debug_str     0x00000314       0x87 APP/Sess18/ASG2/ASS_PROG.o
-                                0x226 (size before relaxing)
- .debug_str     0x0000039b       0xfc HAL/LCD/LCD_PROG.o
+ .debug_str     0x00000314       0x86 APP/Sess18/ASG2/ASS_PROG.o
+                                0x225 (size before relaxing)
+ .debug_str     0x0000039a       0xfd HAL/LCD/LCD_PROG.o
                                 0x2c4 (size before relaxing)
  .debug_str     0x00000497       0x45 MCAL/DIO/DIO_PROG.o
                                 0x1c7 (size before relaxing)
