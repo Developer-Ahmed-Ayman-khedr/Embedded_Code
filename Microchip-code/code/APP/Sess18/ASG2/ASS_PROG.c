@@ -3,7 +3,7 @@
  *
  * Created: 4/19/2024 1:58:53 PM
  *  Author: ahmed
- 
+ */ 
 
 #include "Sess18\ASG2\ASS_INT.h"
 
@@ -22,6 +22,9 @@ int source_code()
 	//Decrement button
 	u8 decrement_state;
 	DIO_setPinDir(DIO_PIND6,DIO_OUTPUT);
+	
+	//clear and start display at 0
+	LCD_clearDis();
 	LCD_sendData(counter+48);
 	while (1)
 	{
@@ -56,4 +59,3 @@ int source_code()
 	}
 	return 0;
 }
-*/ 
