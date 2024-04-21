@@ -31,11 +31,36 @@ void LCD_int(){
 	LCD_sendCmd(0b00000110);
 }
 
+void LCD_Instruction(u8 type){
+	//RS
+	//high -> data
+	//low -> command
+	
+	//RW
+	//low -> write
+	//high -> read
+	
+	//Set registers to send data
+	if (type=='D')
+	{
+		DIO_setPinValue(LCD_RW,DIO_LOW);
+		DIO_setPinValue(LCD_RS,DIO_HIGH);
+	}
+	
+	//Set registers to send command
+	else if (type=='C')
+	{
+		DIO_setPinValue(LCD_RW,DIO_LOW);
+		DIO_setPinValue(LCD_RS,DIO_LOW);
+	}
+}
+
 void LCD_sendData(u8 data){
-	//RS = high -> data 
-	//RW = low -> write
-	DIO_setPinValue(LCD_RW,DIO_LOW);
-	DIO_setPinValue(LCD_RS,DIO_HIGH);
+	
+	LCD_Instruction('D');
+	
+	//DIO_setPinValue(LCD_RW,DIO_LOW);
+	//DIO_setPinValue(LCD_RS,DIO_HIGH);
 	
 	//High bits
 	DIO_setPinValue(LCD_D4,GET_BIT(data,4));
@@ -56,9 +81,10 @@ void LCD_sendData(u8 data){
 }
 
 void LCD_sendCmd(u8 cmd){
-	//RS and RW
-	DIO_setPinValue(LCD_RW,DIO_LOW);
-	DIO_setPinValue(LCD_RS,DIO_LOW);
+	LCD_Instruction('C');
+	
+	//DIO_setPinValue(LCD_RW,DIO_LOW);
+	//DIO_setPinValue(LCD_RS,DIO_LOW);
 	
 	//High bits
 	DIO_setPinValue(LCD_D4,GET_BIT(cmd,4));
