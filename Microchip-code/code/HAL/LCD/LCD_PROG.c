@@ -150,3 +150,11 @@ void LCD_GoTo(u8 x, u8 line ){
 		LCD_sendCmd(0b11000000+x);
 	}
 }
+
+void LCD_NewCharacter(){
+	
+}
+
+void LCD_Shift(){
+	
+}

@@ -111,16 +111,20 @@ Discarded input sections
                 0x00000000       0x58 HAL/LCD/LCD_PROG.o
  .text.LCD_GoTo
                 0x00000000       0x18 HAL/LCD/LCD_PROG.o
- .debug_info    0x00000000      0x7f5 HAL/LCD/LCD_PROG.o
- .debug_abbrev  0x00000000      0x1ac HAL/LCD/LCD_PROG.o
+ .text.LCD_NewCharacter
+                0x00000000        0x2 HAL/LCD/LCD_PROG.o
+ .text.LCD_Shift
+                0x00000000        0x2 HAL/LCD/LCD_PROG.o
+ .debug_info    0x00000000      0x81f HAL/LCD/LCD_PROG.o
+ .debug_abbrev  0x00000000      0x1c2 HAL/LCD/LCD_PROG.o
  .debug_loc     0x00000000      0x4c4 HAL/LCD/LCD_PROG.o
  .debug_aranges
-                0x00000000       0x60 HAL/LCD/LCD_PROG.o
- .debug_ranges  0x00000000       0x50 HAL/LCD/LCD_PROG.o
- .debug_line    0x00000000      0x3ac HAL/LCD/LCD_PROG.o
- .debug_str     0x00000000      0x294 HAL/LCD/LCD_PROG.o
+                0x00000000       0x70 HAL/LCD/LCD_PROG.o
+ .debug_ranges  0x00000000       0x60 HAL/LCD/LCD_PROG.o
+ .debug_line    0x00000000      0x3ce HAL/LCD/LCD_PROG.o
+ .debug_str     0x00000000      0x2af HAL/LCD/LCD_PROG.o
  .comment       0x00000000       0x31 HAL/LCD/LCD_PROG.o
- .debug_frame   0x00000000       0xf0 HAL/LCD/LCD_PROG.o
+ .debug_frame   0x00000000      0x110 HAL/LCD/LCD_PROG.o
  .text          0x00000000        0x0 MCAL/DIO/DIO_PROG.o
  .data          0x00000000        0x0 MCAL/DIO/DIO_PROG.o
  .bss           0x00000000        0x0 MCAL/DIO/DIO_PROG.o
@@ -605,26 +609,26 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0x88b
+.debug_info     0x00000000      0x882
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_info    0x000004e6       0xb2 APP/main.o
- .debug_info    0x00000598      0x15d APP/Sess16/ASG1/ASS_PROG.o
- .debug_info    0x000006f5      0x196 MCAL/DIO/DIO_PROG.o
+ .debug_info    0x000004e6       0xa9 APP/main.o
+ .debug_info    0x0000058f      0x15d APP/Sess16/ASG1/ASS_PROG.o
+ .debug_info    0x000006ec      0x196 MCAL/DIO/DIO_PROG.o
 
-.debug_abbrev   0x00000000      0x6cc
+.debug_abbrev   0x00000000      0x6e4
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x4a3 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_abbrev  0x000004a3       0x63 APP/main.o
- .debug_abbrev  0x00000506       0xfd APP/Sess16/ASG1/ASS_PROG.o
- .debug_abbrev  0x00000603       0xc9 MCAL/DIO/DIO_PROG.o
+ .debug_abbrev  0x000004a3       0x7b APP/main.o
+ .debug_abbrev  0x0000051e       0xfd APP/Sess16/ASG1/ASS_PROG.o
+ .debug_abbrev  0x0000061b       0xc9 MCAL/DIO/DIO_PROG.o
 
-.debug_line     0x00000000      0x49b
+.debug_line     0x00000000      0x47b
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x116 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_line    0x00000116       0x67 APP/main.o
- .debug_line    0x0000017d      0x149 APP/Sess16/ASG1/ASS_PROG.o
- .debug_line    0x000002c6      0x1d5 MCAL/DIO/DIO_PROG.o
+ .debug_line    0x00000116       0x47 APP/main.o
+ .debug_line    0x0000015d      0x149 APP/Sess16/ASG1/ASS_PROG.o
+ .debug_line    0x000002a6      0x1d5 MCAL/DIO/DIO_PROG.o
 
 .debug_frame    0x00000000       0xb4
  *(.debug_frame)
@@ -635,9 +639,9 @@ END GROUP
 .debug_str      0x00000000      0x3ea
  *(.debug_str)
  .debug_str     0x00000000      0x196 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_str     0x00000196      0x17e APP/main.o
-                                0x1b2 (size before relaxing)
- .debug_str     0x00000314       0x83 APP/Sess16/ASG1/ASS_PROG.o
+ .debug_str     0x00000196      0x159 APP/main.o
+                                0x172 (size before relaxing)
+ .debug_str     0x000002ef       0xa8 APP/Sess16/ASG1/ASS_PROG.o
                                 0x222 (size before relaxing)
  .debug_str     0x00000397       0x53 MCAL/DIO/DIO_PROG.o
                                 0x1c7 (size before relaxing)
