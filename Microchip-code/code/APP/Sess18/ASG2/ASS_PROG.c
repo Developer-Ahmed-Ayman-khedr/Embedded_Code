@@ -13,7 +13,7 @@ int source_code()
 	LCD_int();
 	
 	//Counter
-	s8 counter=0;
+	u8 counter=0;
 	
 	//Increment button
 	u8 increment_state;
@@ -45,10 +45,6 @@ int source_code()
 			counter--;
 			LCD_clearDis();
 			while (DIO_readPinValue(DIO_PIND6)==DIO_HIGH);
-			if (counter==-1)
-			{
-				counter=0;
-			}
 			LCD_sendNum(counter);
 		}
 		
