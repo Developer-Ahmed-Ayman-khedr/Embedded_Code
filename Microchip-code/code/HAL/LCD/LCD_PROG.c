@@ -7,7 +7,7 @@
 
 #include "LCD_INT.h"
 
-void LCD_int(){
+void LCD_init(){
 	DIO_setPinDir(LCD_D4,DIO_OUTPUT);
 	DIO_setPinDir(LCD_D5,DIO_OUTPUT);
 	DIO_setPinDir(LCD_D6,DIO_OUTPUT);
@@ -177,10 +177,39 @@ void LCD_GoTo(u8 x, u8 line ){
 	}
 }
 
-void LCD_NewCharacter(){
-	
+void LCD_CreateNewCharacter(u8* ArrCustumCharachter, u8 CharLocation){
+	if (CharLocation<8 && CharLocation>0)
+	{
+		//Initialize the CGRAM to start taking data
+		LCD_sendCmd(0x40+(CharLocation*8));
+		
+		//Send custom Character to the CGRAM
+		u8 i=0;
+		while (i<8)
+		{
+			LCD_sendData(ArrCustumCharachter[i]);
+			i++;
+		}
+		
+		//Reset cursor
+		LCD_GoTo(0,0);
+	}
 }
 
-void LCD_Shift(){
-	
+void LCD_SendNewCharacter(u8 CharLocation){
+	//Show the new character
+	LCD_sendData(CharLocation);
+}
+
+void LCD_Shift(u8 direction){
+	if (direction==LCD_SHIFT_DIS_RIGHT)
+	{
+		//Shift right
+		LCD_sendCmd(0b000001110);
+	}
+	else if (direction==LCD_SHIFT_DIS_LIFT)
+	{
+		//Shift left
+		LCD_sendCmd(0b000001110);
+	}
 }

@@ -32,9 +32,11 @@
 //end configuration
 
 #define LCD_CLEAR_DIS 0b
-#define LCD_SHIFT_DIS 0b
 
-void LCD_int();
+#define LCD_SHIFT_DIS_RIGHT 0
+#define LCD_SHIFT_DIS_LIFT 1
+
+void LCD_init();
 
 void LCD_sendData(u8 data);
 
@@ -52,8 +54,10 @@ void LCD_sendFloatNum(f32 num);
 
 void LCD_GoTo(u8 x, u8 y );
 
-void LCD_NewCharacter();
+void LCD_CreateNewCharacter(u8* ArrCustumCharachter, u8 CharLocation);
 
-void LCD_Shift();
+void LCD_SendNewCharacter(u8 CharLocation);
+
+void LCD_Shift(u8 direction);
 
 #endif /* LCD_INT_H_ */

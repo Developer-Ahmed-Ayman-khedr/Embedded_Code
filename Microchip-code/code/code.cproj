@@ -103,6 +103,7 @@
             <Value>../APP</Value>
             <Value>../HAL/7seg</Value>
             <Value>../HAL/LCD</Value>
+            <Value>../HAL/KBD</Value>
           </ListValues>
         </avrgcc.compiler.directories.IncludePaths>
         <avrgcc.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcc.compiler.optimization.level>
@@ -167,10 +168,40 @@
     <Compile Include="APP\Sess18\ses.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="APP\Sess18\TASKNEWCHARACTER\NEWCHARACTER_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess18\TASKNEWCHARACTER\NEWCHARACTER_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess19\sess_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess19\sess_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess19\TASKCALC\CALC_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess19\TASKCALC\CALC_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess19\TASKLOGINSYSTEM\LOG_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess19\TASKLOGINSYSTEM\LOG_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="HAL\7seg\SS_INT.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="HAL\7seg\SS_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\KBD\KPD_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\KBD\KPD_PROG.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="HAL\LCD\LCD_INT.h">
@@ -194,6 +225,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="APP" />
+    <Folder Include="APP\Sess19" />
     <Folder Include="APP\Sess16\ASG1" />
     <Folder Include="APP\Sess17" />
     <Folder Include="APP\Sess15" />
@@ -201,9 +233,13 @@
     <Folder Include="APP\Sess16\Task" />
     <Folder Include="APP\Sess18" />
     <Folder Include="APP\Sess18\ASG2" />
+    <Folder Include="APP\Sess18\TASKNEWCHARACTER" />
+    <Folder Include="APP\Sess19\TASKCALC" />
+    <Folder Include="APP\Sess19\TASKLOGINSYSTEM" />
     <Folder Include="HAL" />
     <Folder Include="HAL\LCD" />
     <Folder Include="HAL\7seg" />
+    <Folder Include="HAL\KBD" />
     <Folder Include="LIB" />
     <Folder Include="MCAL" />
     <Folder Include="MCAL\DIO" />
