@@ -29,9 +29,11 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o) (__mulsf3x)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
-                              HAL/LCD/LCD_PROG.o (__divmodhi4)
+                              APP/Sess19/TASKCALC/CALC_PROG.o (__divmodhi4)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
                               C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o (exit)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+                              APP/Sess19/TASKCALC/CALC_PROG.o (__do_copy_data)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o) (__udivmodhi4)
 
@@ -69,12 +71,36 @@ Discarded input sections
  .text          0x00000000        0x0 APP/Sess18/ASG2/ASS_PROG.o
  .data          0x00000000        0x0 APP/Sess18/ASG2/ASS_PROG.o
  .bss           0x00000000        0x0 APP/Sess18/ASG2/ASS_PROG.o
+ .debug_line    0x00000000        0x0 APP/Sess18/ASG2/ASS_PROG.o
+ .debug_str     0x00000000      0x120 APP/Sess18/ASG2/ASS_PROG.o
+ .comment       0x00000000       0x31 APP/Sess18/ASG2/ASS_PROG.o
  .text          0x00000000        0x0 APP/Sess18/ses.o
  .data          0x00000000        0x0 APP/Sess18/ses.o
  .bss           0x00000000        0x0 APP/Sess18/ses.o
  .debug_line    0x00000000        0x0 APP/Sess18/ses.o
  .debug_str     0x00000000      0x116 APP/Sess18/ses.o
  .comment       0x00000000       0x31 APP/Sess18/ses.o
+ .text          0x00000000        0x0 APP/Sess18/TASKNEWCHARACTER/NEWCHARACTER_PROG.o
+ .data          0x00000000        0x0 APP/Sess18/TASKNEWCHARACTER/NEWCHARACTER_PROG.o
+ .bss           0x00000000        0x0 APP/Sess18/TASKNEWCHARACTER/NEWCHARACTER_PROG.o
+ .debug_line    0x00000000        0x0 APP/Sess18/TASKNEWCHARACTER/NEWCHARACTER_PROG.o
+ .debug_str     0x00000000      0x135 APP/Sess18/TASKNEWCHARACTER/NEWCHARACTER_PROG.o
+ .comment       0x00000000       0x31 APP/Sess18/TASKNEWCHARACTER/NEWCHARACTER_PROG.o
+ .text          0x00000000        0x0 APP/Sess19/sess_PROG.o
+ .data          0x00000000        0x0 APP/Sess19/sess_PROG.o
+ .bss           0x00000000        0x0 APP/Sess19/sess_PROG.o
+ .debug_line    0x00000000        0x0 APP/Sess19/sess_PROG.o
+ .debug_str     0x00000000      0x11c APP/Sess19/sess_PROG.o
+ .comment       0x00000000       0x31 APP/Sess19/sess_PROG.o
+ .text          0x00000000        0x0 APP/Sess19/TASKCALC/CALC_PROG.o
+ .data          0x00000000        0x0 APP/Sess19/TASKCALC/CALC_PROG.o
+ .bss           0x00000000        0x0 APP/Sess19/TASKCALC/CALC_PROG.o
+ .text          0x00000000        0x0 APP/Sess19/TASKLOGINSYSTEM/LOG_PROG.o
+ .data          0x00000000        0x0 APP/Sess19/TASKLOGINSYSTEM/LOG_PROG.o
+ .bss           0x00000000        0x0 APP/Sess19/TASKLOGINSYSTEM/LOG_PROG.o
+ .debug_line    0x00000000        0x0 APP/Sess19/TASKLOGINSYSTEM/LOG_PROG.o
+ .debug_str     0x00000000      0x12b APP/Sess19/TASKLOGINSYSTEM/LOG_PROG.o
+ .comment       0x00000000       0x31 APP/Sess19/TASKLOGINSYSTEM/LOG_PROG.o
  .text          0x00000000        0x0 HAL/7seg/SS_PROG.o
  .data          0x00000000        0x0 HAL/7seg/SS_PROG.o
  .bss           0x00000000        0x0 HAL/7seg/SS_PROG.o
@@ -91,24 +117,25 @@ Discarded input sections
  .debug_str     0x00000000      0x229 HAL/7seg/SS_PROG.o
  .comment       0x00000000       0x31 HAL/7seg/SS_PROG.o
  .debug_frame   0x00000000       0x44 HAL/7seg/SS_PROG.o
+ .text          0x00000000        0x0 HAL/KBD/KPD_PROG.o
+ .data          0x00000000        0x0 HAL/KBD/KPD_PROG.o
+ .bss           0x00000000        0x0 HAL/KBD/KPD_PROG.o
  .text          0x00000000        0x0 HAL/LCD/LCD_PROG.o
  .data          0x00000000        0x0 HAL/LCD/LCD_PROG.o
  .bss           0x00000000        0x0 HAL/LCD/LCD_PROG.o
- .text.LCD_sendStr
-                0x00000000       0x26 HAL/LCD/LCD_PROG.o
  .text.LCD_sendFloatNum
                 0x00000000       0x58 HAL/LCD/LCD_PROG.o
  .text.LCD_GoTo
                 0x00000000       0x18 HAL/LCD/LCD_PROG.o
- .text.LCD_NewCharacter
-                0x00000000        0x2 HAL/LCD/LCD_PROG.o
+ .text.LCD_CreateNewCharacter
+                0x00000000       0x46 HAL/LCD/LCD_PROG.o
+ .text.LCD_SendNewCharacter
+                0x00000000        0x6 HAL/LCD/LCD_PROG.o
  .text.LCD_Shift
-                0x00000000        0x2 HAL/LCD/LCD_PROG.o
+                0x00000000       0x18 HAL/LCD/LCD_PROG.o
  .text          0x00000000        0x0 MCAL/DIO/DIO_PROG.o
  .data          0x00000000        0x0 MCAL/DIO/DIO_PROG.o
  .bss           0x00000000        0x0 MCAL/DIO/DIO_PROG.o
- .text.DIO_setPullUp
-                0x00000000        0x8 MCAL/DIO/DIO_PROG.o
  .text.DIO_togglePinValue
                 0x00000000       0x18 MCAL/DIO/DIO_PROG.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
@@ -211,6 +238,22 @@ Discarded input sections
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.fixed
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
@@ -248,7 +291,12 @@ LOAD APP/Sess16/Task/ses.o
 LOAD APP/Sess17/ses.o
 LOAD APP/Sess18/ASG2/ASS_PROG.o
 LOAD APP/Sess18/ses.o
+LOAD APP/Sess18/TASKNEWCHARACTER/NEWCHARACTER_PROG.o
+LOAD APP/Sess19/sess_PROG.o
+LOAD APP/Sess19/TASKCALC/CALC_PROG.o
+LOAD APP/Sess19/TASKLOGINSYSTEM/LOG_PROG.o
 LOAD HAL/7seg/SS_PROG.o
+LOAD HAL/KBD/KPD_PROG.o
 LOAD HAL/LCD/LCD_PROG.o
 LOAD MCAL/DIO/DIO_PROG.o
 START GROUP
@@ -360,7 +408,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x62e
+.text           0x00000000      0x8d2
  *(.vectors)
  .vectors       0x00000000       0x54 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
                 0x00000000                __vector_default
@@ -401,6 +449,8 @@ END GROUP
  *(.init3)
  *(.init3)
  *(.init4)
+ .init4         0x00000060       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+                0x00000060                __do_copy_data
  *(.init4)
  *(.init5)
  *(.init5)
@@ -411,79 +461,92 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x00000060        0x8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
+ .init9         0x00000076        0x8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  *(.init9)
  *(.text)
- .text          0x00000068        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
-                0x00000068                __vector_1
-                0x00000068                __vector_12
-                0x00000068                __bad_interrupt
-                0x00000068                __vector_6
-                0x00000068                __vector_3
-                0x00000068                __vector_11
-                0x00000068                __vector_13
-                0x00000068                __vector_17
-                0x00000068                __vector_19
-                0x00000068                __vector_7
-                0x00000068                __vector_5
-                0x00000068                __vector_4
-                0x00000068                __vector_9
-                0x00000068                __vector_2
-                0x00000068                __vector_15
-                0x00000068                __vector_8
-                0x00000068                __vector_14
-                0x00000068                __vector_10
-                0x00000068                __vector_16
-                0x00000068                __vector_18
-                0x00000068                __vector_20
-                0x0000006c                . = ALIGN (0x2)
+ .text          0x0000007e        0x4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
+                0x0000007e                __vector_1
+                0x0000007e                __vector_12
+                0x0000007e                __bad_interrupt
+                0x0000007e                __vector_6
+                0x0000007e                __vector_3
+                0x0000007e                __vector_11
+                0x0000007e                __vector_13
+                0x0000007e                __vector_17
+                0x0000007e                __vector_19
+                0x0000007e                __vector_7
+                0x0000007e                __vector_5
+                0x0000007e                __vector_4
+                0x0000007e                __vector_9
+                0x0000007e                __vector_2
+                0x0000007e                __vector_15
+                0x0000007e                __vector_8
+                0x0000007e                __vector_14
+                0x0000007e                __vector_10
+                0x0000007e                __vector_16
+                0x0000007e                __vector_18
+                0x0000007e                __vector_20
+                0x00000082                . = ALIGN (0x2)
  *(.text.*)
- .text.main     0x0000006c        0xa APP/main.o
-                0x0000006c                main
+ .text.main     0x00000082        0xa APP/main.o
+                0x00000082                main
  .text.source_code
-                0x00000076       0x70 APP/Sess18/ASG2/ASS_PROG.o
-                0x00000076                source_code
+                0x0000008c       0xfc APP/Sess19/TASKCALC/CALC_PROG.o
+                0x0000008c                source_code
+ .text.KPD_init
+                0x00000188       0x5a HAL/KBD/KPD_PROG.o
+                0x00000188                KPD_init
+ .text.KPD_read
+                0x000001e2      0x17a HAL/KBD/KPD_PROG.o
+                0x000001e2                KPD_read
  .text.LCD_Instruction
-                0x000000e6       0x2c HAL/LCD/LCD_PROG.o
-                0x000000e6                LCD_Instruction
+                0x0000035c       0x2c HAL/LCD/LCD_PROG.o
+                0x0000035c                LCD_Instruction
  .text.LCD_pulse
-                0x00000112       0x1e HAL/LCD/LCD_PROG.o
-                0x00000112                LCD_pulse
+                0x00000388       0x1e HAL/LCD/LCD_PROG.o
+                0x00000388                LCD_pulse
  .text.LCD_sendData
-                0x00000130       0x76 HAL/LCD/LCD_PROG.o
-                0x00000130                LCD_sendData
+                0x000003a6       0x76 HAL/LCD/LCD_PROG.o
+                0x000003a6                LCD_sendData
  .text.LCD_sendCmd
-                0x000001a6       0x76 HAL/LCD/LCD_PROG.o
-                0x000001a6                LCD_sendCmd
- .text.LCD_int  0x0000021c       0x8e HAL/LCD/LCD_PROG.o
-                0x0000021c                LCD_int
+                0x0000041c       0x76 HAL/LCD/LCD_PROG.o
+                0x0000041c                LCD_sendCmd
+ .text.LCD_init
+                0x00000492       0x8e HAL/LCD/LCD_PROG.o
+                0x00000492                LCD_init
  .text.LCD_clearDis
-                0x000002aa        0x8 HAL/LCD/LCD_PROG.o
-                0x000002aa                LCD_clearDis
+                0x00000520        0x8 HAL/LCD/LCD_PROG.o
+                0x00000520                LCD_clearDis
+ .text.LCD_sendStr
+                0x00000528       0x26 HAL/LCD/LCD_PROG.o
+                0x00000528                LCD_sendStr
  .text.LCD_sendNum
-                0x000002b2       0x90 HAL/LCD/LCD_PROG.o
-                0x000002b2                LCD_sendNum
+                0x0000054e       0x90 HAL/LCD/LCD_PROG.o
+                0x0000054e                LCD_sendNum
  .text.DIO_setPinDir
-                0x00000342      0x116 MCAL/DIO/DIO_PROG.o
-                0x00000342                DIO_setPinDir
+                0x000005de      0x116 MCAL/DIO/DIO_PROG.o
+                0x000005de                DIO_setPinDir
  .text.DIO_setPinValue
-                0x00000458      0x116 MCAL/DIO/DIO_PROG.o
-                0x00000458                DIO_setPinValue
+                0x000006f4      0x116 MCAL/DIO/DIO_PROG.o
+                0x000006f4                DIO_setPinValue
  .text.DIO_readPinValue
-                0x0000056e       0x6c MCAL/DIO/DIO_PROG.o
-                0x0000056e                DIO_readPinValue
+                0x0000080a       0x6c MCAL/DIO/DIO_PROG.o
+                0x0000080a                DIO_readPinValue
+ .text.DIO_setPullUp
+                0x00000876        0x8 MCAL/DIO/DIO_PROG.o
+                0x00000876                DIO_setPullUp
  .text.libgcc.div
-                0x000005da       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
-                0x000005da                _div
-                0x000005da                __divmodhi4
+                0x0000087e       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
+                0x0000087e                _div
+                0x0000087e                __divmodhi4
  .text.libgcc.div
-                0x00000602       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
-                0x00000602                __udivmodhi4
-                0x0000062a                . = ALIGN (0x2)
+                0x000008a6       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
+                0x000008a6                __udivmodhi4
+                0x000008ce                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000062a        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x0000062a                _exit
-                0x0000062a                exit
+ .fini9         0x000008ce        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x000008ce                _exit
+                0x000008ce                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -502,36 +565,38 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000062a        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x000008ce        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000062e                _etext = .
+                0x000008d2                _etext = .
 
-.data           0x00800060        0x0 load address 0x0000062e
-                [!provide]                PROVIDE (__data_start, .)
+.data           0x00800060        0xe load address 0x000008d2
+                0x00800060                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
  *(.gnu.linkonce.d*)
  *(.rodata)
  *(.rodata*)
+ .rodata.str1.1
+                0x00800060        0xe APP/Sess19/TASKCALC/CALC_PROG.o
  *(.gnu.linkonce.r*)
-                0x00800060                . = ALIGN (0x2)
-                0x00800060                _edata = .
-                [!provide]                PROVIDE (__data_end, .)
+                0x0080006e                . = ALIGN (0x2)
+                0x0080006e                _edata = .
+                0x0080006e                PROVIDE (__data_end, .)
 
-.bss            0x00800060        0x0
+.bss            0x0080006e        0x0
                 [!provide]                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  *(COMMON)
                 [!provide]                PROVIDE (__bss_end, .)
-                0x0000062e                __data_load_start = LOADADDR (.data)
-                0x0000062e                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x000008d2                __data_load_start = LOADADDR (.data)
+                0x000008e0                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800060        0x0
+.noinit         0x0080006e        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x00800060                _end = .
+                0x0080006e                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -575,7 +640,8 @@ END GROUP
  *(.comment)
  .comment       0x00000000       0x30 APP/main.o
                                  0x31 (size before relaxing)
- .comment       0x00000030       0x31 APP/Sess18/ASG2/ASS_PROG.o
+ .comment       0x00000030       0x31 APP/Sess19/TASKCALC/CALC_PROG.o
+ .comment       0x00000030       0x31 HAL/KBD/KPD_PROG.o
  .comment       0x00000030       0x31 HAL/LCD/LCD_PROG.o
  .comment       0x00000030       0x31 MCAL/DIO/DIO_PROG.o
 
@@ -599,68 +665,76 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000       0xf8
+.debug_aranges  0x00000000      0x128
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x20 APP/main.o
  .debug_aranges
-                0x00000020       0x20 APP/Sess18/ASG2/ASS_PROG.o
+                0x00000020       0x20 APP/Sess19/TASKCALC/CALC_PROG.o
  .debug_aranges
-                0x00000040       0x78 HAL/LCD/LCD_PROG.o
+                0x00000040       0x28 HAL/KBD/KPD_PROG.o
  .debug_aranges
-                0x000000b8       0x40 MCAL/DIO/DIO_PROG.o
+                0x00000068       0x80 HAL/LCD/LCD_PROG.o
+ .debug_aranges
+                0x000000e8       0x40 MCAL/DIO/DIO_PROG.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x117a
+.debug_info     0x00000000     0x16ce
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_info    0x000004e6       0xb2 APP/main.o
- .debug_info    0x00000598      0x1df APP/Sess18/ASG2/ASS_PROG.o
- .debug_info    0x00000777      0x86d HAL/LCD/LCD_PROG.o
- .debug_info    0x00000fe4      0x196 MCAL/DIO/DIO_PROG.o
+ .debug_info    0x000004e6       0xa9 APP/main.o
+ .debug_info    0x0000058f      0x1dd APP/Sess19/TASKCALC/CALC_PROG.o
+ .debug_info    0x0000076c      0x48c HAL/KBD/KPD_PROG.o
+ .debug_info    0x00000bf8      0x940 HAL/LCD/LCD_PROG.o
+ .debug_info    0x00001538      0x196 MCAL/DIO/DIO_PROG.o
 
-.debug_abbrev   0x00000000      0x82c
+.debug_abbrev   0x00000000      0x8ff
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x4a3 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_abbrev  0x000004a3       0x63 APP/main.o
- .debug_abbrev  0x00000506       0x9b APP/Sess18/ASG2/ASS_PROG.o
- .debug_abbrev  0x000005a1      0x1c2 HAL/LCD/LCD_PROG.o
- .debug_abbrev  0x00000763       0xc9 MCAL/DIO/DIO_PROG.o
+ .debug_abbrev  0x000004a3       0x7b APP/main.o
+ .debug_abbrev  0x0000051e       0xcb APP/Sess19/TASKCALC/CALC_PROG.o
+ .debug_abbrev  0x000005e9       0xa1 HAL/KBD/KPD_PROG.o
+ .debug_abbrev  0x0000068a      0x1ac HAL/LCD/LCD_PROG.o
+ .debug_abbrev  0x00000836       0xc9 MCAL/DIO/DIO_PROG.o
 
-.debug_line     0x00000000      0x867
+.debug_line     0x00000000      0xad9
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x116 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_line    0x00000116       0x67 APP/main.o
- .debug_line    0x0000017d      0x11e APP/Sess18/ASG2/ASS_PROG.o
- .debug_line    0x0000029b      0x3f7 HAL/LCD/LCD_PROG.o
- .debug_line    0x00000692      0x1d5 MCAL/DIO/DIO_PROG.o
+ .debug_line    0x00000116       0x47 APP/main.o
+ .debug_line    0x0000015d      0x154 APP/Sess19/TASKCALC/CALC_PROG.o
+ .debug_line    0x000002b1      0x1f7 HAL/KBD/KPD_PROG.o
+ .debug_line    0x000004a8      0x45c HAL/LCD/LCD_PROG.o
+ .debug_line    0x00000904      0x1d5 MCAL/DIO/DIO_PROG.o
 
-.debug_frame    0x00000000      0x1d4
+.debug_frame    0x00000000      0x238
  *(.debug_frame)
  .debug_frame   0x00000000       0x24 APP/main.o
- .debug_frame   0x00000024       0x24 APP/Sess18/ASG2/ASS_PROG.o
- .debug_frame   0x00000048      0x120 HAL/LCD/LCD_PROG.o
- .debug_frame   0x00000168       0x6c MCAL/DIO/DIO_PROG.o
+ .debug_frame   0x00000024       0x34 APP/Sess19/TASKCALC/CALC_PROG.o
+ .debug_frame   0x00000058       0x34 HAL/KBD/KPD_PROG.o
+ .debug_frame   0x0000008c      0x140 HAL/LCD/LCD_PROG.o
+ .debug_frame   0x000001cc       0x6c MCAL/DIO/DIO_PROG.o
 
-.debug_str      0x00000000      0x4dc
+.debug_str      0x00000000      0x52e
  *(.debug_str)
  .debug_str     0x00000000      0x196 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_str     0x00000196      0x17e APP/main.o
-                                0x1b2 (size before relaxing)
- .debug_str     0x00000314       0x86 APP/Sess18/ASG2/ASS_PROG.o
-                                0x225 (size before relaxing)
- .debug_str     0x0000039a       0xfd HAL/LCD/LCD_PROG.o
-                                0x2c4 (size before relaxing)
- .debug_str     0x00000497       0x45 MCAL/DIO/DIO_PROG.o
+ .debug_str     0x00000196      0x159 APP/main.o
+                                0x172 (size before relaxing)
+ .debug_str     0x000002ef       0xa4 APP/Sess19/TASKCALC/CALC_PROG.o
+                                0x21e (size before relaxing)
+ .debug_str     0x00000393       0x53 HAL/KBD/KPD_PROG.o
+                                0x1b8 (size before relaxing)
+ .debug_str     0x000003e6      0x111 HAL/LCD/LCD_PROG.o
+                                0x30b (size before relaxing)
+ .debug_str     0x000004f7       0x37 MCAL/DIO/DIO_PROG.o
                                 0x1c7 (size before relaxing)
 
-.debug_loc      0x00000000      0x936
+.debug_loc      0x00000000      0xa71
  *(.debug_loc)
- .debug_loc     0x00000000       0x45 APP/Sess18/ASG2/ASS_PROG.o
- .debug_loc     0x00000045      0x4fe HAL/LCD/LCD_PROG.o
- .debug_loc     0x00000543      0x3f3 MCAL/DIO/DIO_PROG.o
+ .debug_loc     0x00000000       0x73 APP/Sess19/TASKCALC/CALC_PROG.o
+ .debug_loc     0x00000073      0x60b HAL/LCD/LCD_PROG.o
+ .debug_loc     0x0000067e      0x3f3 MCAL/DIO/DIO_PROG.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -680,12 +754,13 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000       0xb8
+.debug_ranges   0x00000000       0xd8
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x10 APP/main.o
- .debug_ranges  0x00000010       0x10 APP/Sess18/ASG2/ASS_PROG.o
- .debug_ranges  0x00000020       0x68 HAL/LCD/LCD_PROG.o
- .debug_ranges  0x00000088       0x30 MCAL/DIO/DIO_PROG.o
+ .debug_ranges  0x00000010       0x10 APP/Sess19/TASKCALC/CALC_PROG.o
+ .debug_ranges  0x00000020       0x18 HAL/KBD/KPD_PROG.o
+ .debug_ranges  0x00000038       0x70 HAL/LCD/LCD_PROG.o
+ .debug_ranges  0x000000a8       0x30 MCAL/DIO/DIO_PROG.o
 
 .debug_macro
  *(.debug_macro)
