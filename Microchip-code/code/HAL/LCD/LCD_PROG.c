@@ -81,6 +81,7 @@ void LCD_sendData(u8 data){
 }
 
 void LCD_sendCmd(u8 cmd){
+	
 	LCD_Instruction('C');
 	
 	//DIO_setPinValue(LCD_RW,DIO_LOW);
@@ -205,11 +206,11 @@ void LCD_Shift(u8 direction){
 	if (direction==LCD_SHIFT_DIS_RIGHT)
 	{
 		//Shift right
-		LCD_sendCmd(0b000001110);
+		LCD_sendCmd(0b00011100);
 	}
 	else if (direction==LCD_SHIFT_DIS_LIFT)
 	{
 		//Shift left
-		LCD_sendCmd(0b000001110);
+		LCD_sendCmd(0b00011000);
 	}
 }

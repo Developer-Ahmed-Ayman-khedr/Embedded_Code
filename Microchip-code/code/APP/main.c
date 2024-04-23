@@ -8,7 +8,7 @@
 #include "STD_TYPES.h"
 #include "BIT_MATH.h"
 
-#include "Sess19/TASKLOGINSYSTEM/LOG_INT.h"
+#include "Sess18/TASKNEWCHARACTER/NEWCHARACTER_INT.h"
 
 int main(){
 	source_code();
