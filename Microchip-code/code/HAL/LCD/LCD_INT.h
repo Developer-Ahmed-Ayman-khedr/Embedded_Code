@@ -52,7 +52,7 @@ void LCD_sendNum(s32 num);
 
 void LCD_sendFloatNum(f32 num);
 
-void LCD_GoTo(u8 x, u8 y );
+void LCD_GoTo(u8 x, u8 line );
 
 void LCD_CreateNewCharacter(u8* ArrCustumCharachter, u8 CharLocation);
 
