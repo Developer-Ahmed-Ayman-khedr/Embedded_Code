@@ -192,6 +192,12 @@
     <Compile Include="APP\Sess19\TASKLOGINSYSTEM\LOG_PROG.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="APP\Sess20\sess_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess20\sess_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="HAL\7seg\SS_INT.h">
       <SubType>compile</SubType>
     </Compile>
@@ -225,6 +231,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="APP" />
+    <Folder Include="APP\Sess20" />
     <Folder Include="APP\Sess19" />
     <Folder Include="APP\Sess16\ASG1" />
     <Folder Include="APP\Sess17" />

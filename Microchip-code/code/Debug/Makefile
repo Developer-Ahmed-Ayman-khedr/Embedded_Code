@@ -34,6 +34,7 @@ LINKER_SCRIPT_DEP:=
 # Every subdirectory with source files must be described here
 SUBDIRS :=  \
 ../APP \
+../APP/Sess20 \
 ../APP/Sess19 \
 ../APP/Sess16/ASG1 \
 ../APP/Sess17 \
@@ -67,6 +68,7 @@ C_SRCS +=  \
 ../APP/Sess19/sess_PROG.c \
 ../APP/Sess19/TASKCALC/CALC_PROG.c \
 ../APP/Sess19/TASKLOGINSYSTEM/LOG_PROG.c \
+../APP/Sess20/sess_PROG.c \
 ../HAL/7seg/SS_PROG.c \
 ../HAL/KBD/KPD_PROG.c \
 ../HAL/LCD/LCD_PROG.c \
@@ -91,6 +93,7 @@ APP/Sess18/TASKNEWCHARACTER/NEWCHARACTER_PROG.o \
 APP/Sess19/sess_PROG.o \
 APP/Sess19/TASKCALC/CALC_PROG.o \
 APP/Sess19/TASKLOGINSYSTEM/LOG_PROG.o \
+APP/Sess20/sess_PROG.o \
 HAL/7seg/SS_PROG.o \
 HAL/KBD/KPD_PROG.o \
 HAL/LCD/LCD_PROG.o \
@@ -108,6 +111,7 @@ APP/Sess18/TASKNEWCHARACTER/NEWCHARACTER_PROG.o \
 APP/Sess19/sess_PROG.o \
 APP/Sess19/TASKCALC/CALC_PROG.o \
 APP/Sess19/TASKLOGINSYSTEM/LOG_PROG.o \
+APP/Sess20/sess_PROG.o \
 HAL/7seg/SS_PROG.o \
 HAL/KBD/KPD_PROG.o \
 HAL/LCD/LCD_PROG.o \
@@ -125,6 +129,7 @@ APP/Sess18/TASKNEWCHARACTER/NEWCHARACTER_PROG.d \
 APP/Sess19/sess_PROG.d \
 APP/Sess19/TASKCALC/CALC_PROG.d \
 APP/Sess19/TASKLOGINSYSTEM/LOG_PROG.d \
+APP/Sess20/sess_PROG.d \
 HAL/7seg/SS_PROG.d \
 HAL/KBD/KPD_PROG.d \
 HAL/LCD/LCD_PROG.d \
@@ -142,6 +147,7 @@ APP/Sess18/TASKNEWCHARACTER/NEWCHARACTER_PROG.d \
 APP/Sess19/sess_PROG.d \
 APP/Sess19/TASKCALC/CALC_PROG.d \
 APP/Sess19/TASKLOGINSYSTEM/LOG_PROG.d \
+APP/Sess20/sess_PROG.d \
 HAL/7seg/SS_PROG.d \
 HAL/KBD/KPD_PROG.d \
 HAL/LCD/LCD_PROG.d \
@@ -232,6 +238,13 @@ APP/Sess19/TASKCALC/CALC_PROG.o: ../APP/Sess19/TASKCALC/CALC_PROG.c
 	
 
 APP/Sess19/TASKLOGINSYSTEM/LOG_PROG.o: ../APP/Sess19/TASKLOGINSYSTEM/LOG_PROG.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"../LIB" -I"../MCAL/DIO" -I"../APP" -I"../HAL/7seg" -I"../HAL/LCD" -I"../HAL/KBD"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+APP/Sess20/sess_PROG.o: ../APP/Sess20/sess_PROG.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"../LIB" -I"../MCAL/DIO" -I"../APP" -I"../HAL/7seg" -I"../HAL/LCD" -I"../HAL/KBD"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
