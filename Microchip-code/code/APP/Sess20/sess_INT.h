@@ -16,9 +16,14 @@
 
 #include "LCD_INT.h"
 #include "KPD_INT.h"
+#include "EXT_INT.h"
+#include "GI_INT.h"
 
 int source_code();
 
+void shiftLCDright();
+
+void shiftLCDlift();
 
 
 

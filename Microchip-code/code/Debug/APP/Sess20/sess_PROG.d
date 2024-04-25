@@ -7,7 +7,7 @@ APP/Sess20/sess_PROG.d APP/Sess20/sess_PROG.o: ../APP/Sess20/sess_PROG.c \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
- ../HAL/KBD/KPD_INT.h
+ ../HAL/KBD/KPD_INT.h ../MCAL/EXT/EXT_INT.h ../MCAL/GI/GI_INT.h
 
 ../APP/Sess20/sess_INT.h:
 
@@ -34,3 +34,7 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
 
 ../HAL/KBD/KPD_INT.h:
+
+../MCAL/EXT/EXT_INT.h:
+
+../MCAL/GI/GI_INT.h:
