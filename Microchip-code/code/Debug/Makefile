@@ -49,6 +49,7 @@ SUBDIRS :=  \
 ../APP/Sess19/TASKCALC \
 ../APP/Sess19/TASKLOGINSYSTEM \
 ../APP/Sess21/TASK \
+../APP/Sess22TI1/TASKCOUNTER \
 ../HAL \
 ../HAL/LCD \
 ../HAL/7seg \
@@ -79,6 +80,7 @@ C_SRCS +=  \
 ../APP/Sess22TI1/SESSTI1_PROG.c \
 ../APP/Sess21/SESS_PROG.c \
 ../APP/Sess21/TASK/TASK_PROG.c \
+../APP/Sess22TI1/TASKCOUNTER/TASKCOUNTER_PROG.c \
 ../HAL/7seg/SS_PROG.c \
 ../HAL/KPD/KPD_PROG.c \
 ../HAL/LCD/LCD_PROG.c \
@@ -111,6 +113,7 @@ APP/Sess20/sess_PROG.o \
 APP/Sess22TI1/SESSTI1_PROG.o \
 APP/Sess21/SESS_PROG.o \
 APP/Sess21/TASK/TASK_PROG.o \
+APP/Sess22TI1/TASKCOUNTER/TASKCOUNTER_PROG.o \
 HAL/7seg/SS_PROG.o \
 HAL/KPD/KPD_PROG.o \
 HAL/LCD/LCD_PROG.o \
@@ -136,6 +139,7 @@ APP/Sess20/sess_PROG.o \
 APP/Sess22TI1/SESSTI1_PROG.o \
 APP/Sess21/SESS_PROG.o \
 APP/Sess21/TASK/TASK_PROG.o \
+APP/Sess22TI1/TASKCOUNTER/TASKCOUNTER_PROG.o \
 HAL/7seg/SS_PROG.o \
 HAL/KPD/KPD_PROG.o \
 HAL/LCD/LCD_PROG.o \
@@ -161,6 +165,7 @@ APP/Sess20/sess_PROG.d \
 APP/Sess22TI1/SESSTI1_PROG.d \
 APP/Sess21/SESS_PROG.d \
 APP/Sess21/TASK/TASK_PROG.d \
+APP/Sess22TI1/TASKCOUNTER/TASKCOUNTER_PROG.d \
 HAL/7seg/SS_PROG.d \
 HAL/KPD/KPD_PROG.d \
 HAL/LCD/LCD_PROG.d \
@@ -186,6 +191,7 @@ APP/Sess20/sess_PROG.d \
 APP/Sess22TI1/SESSTI1_PROG.d \
 APP/Sess21/SESS_PROG.d \
 APP/Sess21/TASK/TASK_PROG.d \
+APP/Sess22TI1/TASKCOUNTER/TASKCOUNTER_PROG.d \
 HAL/7seg/SS_PROG.d \
 HAL/KPD/KPD_PROG.d \
 HAL/LCD/LCD_PROG.d \
@@ -308,6 +314,13 @@ APP/Sess21/SESS_PROG.o: ../APP/Sess21/SESS_PROG.c
 	
 
 APP/Sess21/TASK/TASK_PROG.o: ../APP/Sess21/TASK/TASK_PROG.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"../LIB" -I"../MCAL/DIO" -I"../APP" -I"../HAL/7seg" -I"../HAL/LCD" -I"../HAL/KPD" -I"../MCAL/EXT" -I"../MCAL/GI" -I"../MCAL/ADC" -I"../MCAL/TIMER0"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+APP/Sess22TI1/TASKCOUNTER/TASKCOUNTER_PROG.o: ../APP/Sess22TI1/TASKCOUNTER/TASKCOUNTER_PROG.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"../LIB" -I"../MCAL/DIO" -I"../APP" -I"../HAL/7seg" -I"../HAL/LCD" -I"../HAL/KPD" -I"../MCAL/EXT" -I"../MCAL/GI" -I"../MCAL/ADC" -I"../MCAL/TIMER0"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

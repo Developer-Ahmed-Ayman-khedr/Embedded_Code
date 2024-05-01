@@ -3,26 +3,24 @@
  *
  * Created: 5/1/2024 6:46:06 PM
  *  Author: ahmed
- */ 
+ 
 
 #include "Sess22TI1/SESSTI1_INT.h"
 
 
 void toggleled_1(){
-	static u16 counter_1 = 0, counter_2 = 0;
+	static u16 counter = 0;
+	
 	//led2 0.5 sec
-	counter_1++;
-	if (counter_1==3906)
+	counter++;
+	if (counter%3125)
 	{
 		DIO_togglePinValue(DIO_PINC2);
-		counter_1 = 0 ;
 	}
 	//led2 1 sec
-	counter_2++;
-	if (counter_2==7812)
+	if (counter%3905)
 	{
 		DIO_togglePinValue(DIO_PINC3);
-		counter_2 = 0;
 	}
 }
 
@@ -44,3 +42,4 @@ int source_code()
 		
 	return 0;
 }
+*/ 

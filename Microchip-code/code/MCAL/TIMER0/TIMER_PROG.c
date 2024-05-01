@@ -22,7 +22,19 @@ void TIMER0_initNormal()
 
 void TIMER0_start(u8 prescaler)
 {
-	if(prescaler == TIMER0_DIV0)
+	if(prescaler == TIMER0_RISING)
+	{
+		CLEAR_BIT(TCCR0,CS00);
+		SET_BIT(TCCR0,CS01);
+		SET_BIT(TCCR0,CS02);
+	}
+	else if(prescaler == TIMER0_FALING)
+	{
+		SET_BIT(TCCR0,CS00);
+		SET_BIT(TCCR0,CS01);
+		SET_BIT(TCCR0,CS02);
+	}
+	else if(prescaler == TIMER0_DIV0)
 	{
 		SET_BIT(TCCR0,CS00);
 		CLEAR_BIT(TCCR0,CS01);
@@ -49,6 +61,13 @@ void TIMER0_start(u8 prescaler)
 	
 }
 
+void TIMER0_setPreload(u8 value){
+	TCNT0 = value;
+}
+
+u8 TIMER0_getCounter(){
+	return TCNT0;
+}
 
 void (*TIMER0_OvFunc)();
 
