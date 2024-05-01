@@ -103,9 +103,11 @@
       <Value>../APP</Value>
       <Value>../HAL/7seg</Value>
       <Value>../HAL/LCD</Value>
-      <Value>../HAL/KBD</Value>
+      <Value>../HAL/KPD</Value>
       <Value>../MCAL/EXT</Value>
       <Value>../MCAL/GI</Value>
+      <Value>../MCAL/ADC</Value>
+      <Value>../MCAL/TIMER0</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcc.compiler.optimization.level>
@@ -200,16 +202,34 @@
     <Compile Include="APP\Sess20\sess_PROG.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="APP\Sess22TI1\SESSTI1_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess22TI1\SESSTI1_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess21\SESS_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess21\SESS_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess21\TASK\TASK_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess21\TASK\TASK_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="HAL\7seg\SS_INT.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="HAL\7seg\SS_PROG.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="HAL\KBD\KPD_INT.h">
+    <Compile Include="HAL\KPD\KPD_INT.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="HAL\KBD\KPD_PROG.c">
+    <Compile Include="HAL\KPD\KPD_PROG.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="HAL\LCD\LCD_INT.h">
@@ -222,6 +242,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="LIB\STD_TYPES.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ADC\ADC_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ADC\ADC_PROG.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="MCAL\DIO\DIO_INT.h">
@@ -242,9 +268,17 @@
     <Compile Include="MCAL\GI\GI_PROG.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="MCAL\TIMER0\TIMER_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\TIMER0\TIMRE0_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="APP" />
+    <Folder Include="APP\Sess22TI1" />
+    <Folder Include="APP\Sess21" />
     <Folder Include="APP\Sess20" />
     <Folder Include="APP\Sess19" />
     <Folder Include="APP\Sess16\ASG1" />
@@ -257,15 +291,18 @@
     <Folder Include="APP\Sess18\TASKNEWCHARACTER" />
     <Folder Include="APP\Sess19\TASKCALC" />
     <Folder Include="APP\Sess19\TASKLOGINSYSTEM" />
+    <Folder Include="APP\Sess21\TASK" />
     <Folder Include="HAL" />
     <Folder Include="HAL\LCD" />
     <Folder Include="HAL\7seg" />
-    <Folder Include="HAL\KBD" />
+    <Folder Include="HAL\KPD" />
     <Folder Include="LIB" />
     <Folder Include="MCAL" />
     <Folder Include="MCAL\DIO" />
     <Folder Include="MCAL\EXT" />
     <Folder Include="MCAL\GI" />
+    <Folder Include="MCAL\ADC" />
+    <Folder Include="MCAL\TIMER0" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

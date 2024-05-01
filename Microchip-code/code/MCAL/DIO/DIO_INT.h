@@ -12,6 +12,9 @@
 #include "STD_TYPES.h"
 #include "BIT_MATH.h"
 
+#define F_CPU 16000000UL
+#include<util/delay.h>
+
 #define DIO_HIGH 1
 #define DIO_LOW 0
 

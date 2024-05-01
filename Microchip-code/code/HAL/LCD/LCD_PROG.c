@@ -3,6 +3,14 @@
  *
  * Created: 4/17/2024 6:15:02 PM
  *  Author: ahmed
+ 	
+ RS
+ high -> data
+ low -> command
+ 
+ RW
+ low -> write
+ high -> read
  */ 
 
 #include "LCD_INT.h"
@@ -32,23 +40,16 @@ void LCD_init(){
 }
 
 void LCD_Instruction(u8 type){
-	//RS
-	//high -> data
-	//low -> command
-	
-	//RW
-	//low -> write
-	//high -> read
-	
+
 	//Set registers to send data
-	if (type=='D')
+	if (type==LCD_DATA)
 	{
 		DIO_setPinValue(LCD_RW,DIO_LOW);
 		DIO_setPinValue(LCD_RS,DIO_HIGH);
 	}
 	
 	//Set registers to send command
-	else if (type=='C')
+	else if (type==LCD_CMD)
 	{
 		DIO_setPinValue(LCD_RW,DIO_LOW);
 		DIO_setPinValue(LCD_RS,DIO_LOW);
@@ -57,11 +58,8 @@ void LCD_Instruction(u8 type){
 
 void LCD_sendData(u8 data){
 	
-	LCD_Instruction('D');
-	
-	//DIO_setPinValue(LCD_RW,DIO_LOW);
-	//DIO_setPinValue(LCD_RS,DIO_HIGH);
-	
+	LCD_Instruction(LCD_DATA);
+		
 	//High bits
 	DIO_setPinValue(LCD_D4,GET_BIT(data,4));
 	DIO_setPinValue(LCD_D5,GET_BIT(data,5));
@@ -82,11 +80,8 @@ void LCD_sendData(u8 data){
 
 void LCD_sendCmd(u8 cmd){
 	
-	LCD_Instruction('C');
-	
-	//DIO_setPinValue(LCD_RW,DIO_LOW);
-	//DIO_setPinValue(LCD_RS,DIO_LOW);
-	
+	LCD_Instruction(LCD_CMD);
+		
 	//High bits
 	DIO_setPinValue(LCD_D4,GET_BIT(cmd,4));
 	DIO_setPinValue(LCD_D5,GET_BIT(cmd,5));
@@ -128,9 +123,7 @@ void LCD_sendStr(u8* str){
 
 void LCD_sendNum(s32 num){
 	u8 arr_numbers[10] ;
-	s8 i=0;
-	//u32 remainder=0;
-	
+	s8 i=0;	
 	if(num==0){
 		LCD_sendData('0');
 		return;
@@ -139,7 +132,6 @@ void LCD_sendNum(s32 num){
 	{
 		LCD_sendData('-');
 	}
-	else 
 	
 	while (num>0)
 	{

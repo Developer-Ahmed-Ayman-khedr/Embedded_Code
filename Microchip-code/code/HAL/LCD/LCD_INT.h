@@ -13,7 +13,7 @@
 #include "BIT_MATH.h"
 
 #include "DIO_INT.h"
-#include "SS_INT.h"
+
 
 //configuration
 #define LCD_D0 DIO_PIN
@@ -35,6 +35,9 @@
 
 #define LCD_SHIFT_DIS_RIGHT 0
 #define LCD_SHIFT_DIS_LIFT 1
+
+#define LCD_DATA 0
+#define LCD_CMD 1
 
 void LCD_init();
 
