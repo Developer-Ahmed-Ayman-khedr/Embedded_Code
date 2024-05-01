@@ -220,6 +220,12 @@
     <Compile Include="APP\Sess21\TASK\TASK_PROG.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="APP\Sess22TI1\TASKCOUNTER\TASKCOUNTER_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess22TI1\TASKCOUNTER\TASKCOUNTER_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="HAL\7seg\SS_INT.h">
       <SubType>compile</SubType>
     </Compile>
@@ -292,6 +298,7 @@
     <Folder Include="APP\Sess19\TASKCALC" />
     <Folder Include="APP\Sess19\TASKLOGINSYSTEM" />
     <Folder Include="APP\Sess21\TASK" />
+    <Folder Include="APP\Sess22TI1\TASKCOUNTER" />
     <Folder Include="HAL" />
     <Folder Include="HAL\LCD" />
     <Folder Include="HAL\7seg" />

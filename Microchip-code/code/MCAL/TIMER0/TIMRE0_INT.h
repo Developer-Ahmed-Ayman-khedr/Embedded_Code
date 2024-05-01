@@ -36,14 +36,22 @@
 #define TOIE0		0
 
 
+#define TIMER0_RISING	0
+#define TIMER0_FALING	1
 
-#define TIMER0_DIV0			0
-#define TIMER0_DIV8			1
-#define TIMER0_DIV64		2
-#define TIMER0_DIV256		3
+#define TIMER0_DIV0			2
+#define TIMER0_DIV8			3
+#define TIMER0_DIV64		4
+#define TIMER0_DIV256		5
 
 void TIMER0_initNormal();
+
+void TIMER0_setPreload(u8 value);
+
+u8 TIMER0_getCounter();
+
 void TIMER0_start(u8 prescaler);
+
 void TIMER_setcallbackOv(void (*ptr)());
 
 #endif /* TIMRE0_INT_H_ */
