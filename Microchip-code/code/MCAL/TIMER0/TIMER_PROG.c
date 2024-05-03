@@ -24,13 +24,13 @@ void TIMER0_start(u8 prescaler)
 {
 	if(prescaler == TIMER0_RISING)
 	{
-		CLEAR_BIT(TCCR0,CS00);
+		SET_BIT(TCCR0,CS00);
 		SET_BIT(TCCR0,CS01);
 		SET_BIT(TCCR0,CS02);
 	}
 	else if(prescaler == TIMER0_FALING)
 	{
-		SET_BIT(TCCR0,CS00);
+		CLEAR_BIT(TCCR0,CS00);
 		SET_BIT(TCCR0,CS01);
 		SET_BIT(TCCR0,CS02);
 	}

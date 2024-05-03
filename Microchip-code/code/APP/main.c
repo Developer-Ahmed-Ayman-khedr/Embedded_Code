@@ -5,9 +5,6 @@
  * Author : Ahmed
  */ 
 
-#include "STD_TYPES.h"
-#include "BIT_MATH.h"
-
 #include "Sess22TI1/TASKCOUNTER/TASKCOUNTER_INT.h"
 
 int main(){
