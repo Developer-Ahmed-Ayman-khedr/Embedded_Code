@@ -17,17 +17,17 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   6 .debug_info   00001656  00000000  00000000  000009c8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 000009eb  00000000  00000000  0000201e  2**0
+  7 .debug_abbrev 00000a05  00000000  00000000  0000201e  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00000c5d  00000000  00000000  00002a09  2**0
+  8 .debug_line   00000c5e  00000000  00000000  00002a23  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  00000468  00000000  00000000  00003668  2**2
+  9 .debug_frame  00000468  00000000  00000000  00003684  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    0000069b  00000000  00000000  00003ad0  2**0
+ 10 .debug_str    00000699  00000000  00000000  00003aec  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00000e7f  00000000  00000000  0000416b  2**0
+ 11 .debug_loc    00000e7f  00000000  00000000  00004185  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000160  00000000  00000000  00004fea  2**0
+ 12 .debug_ranges 00000160  00000000  00000000  00005004  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -96,7 +96,7 @@ Disassembly of section .text:
   8e:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
 00000092 <main>:
-#include "BIT_MATH.h"
+ */ 
 
 #include "Sess22TI1/TASKCOUNTER/TASKCOUNTER_INT.h"
 
@@ -155,254 +155,168 @@ int source_code()
   de:	f2 cf       	rjmp	.-28     	; 0xc4 <source_code+0x28>
 
 000000e0 <LCD_Instruction>:
-}
-
-void LCD_Instruction(u8 type){
-
-	//Set registers to send data
-	if (type==LCD_DATA)
+		LCD_sendCmd(0b00011100);
+	}
+	else if (direction==LCD_SHIFT_DIS_LIFT)
+	{
+		//Shift left
+		LCD_sendCmd(0b00011000);
   e0:	81 11       	cpse	r24, r1
   e2:	09 c0       	rjmp	.+18     	; 0xf6 <LCD_Instruction+0x16>
-	{
-		DIO_setPinValue(LCD_RW,DIO_LOW);
   e4:	60 e0       	ldi	r22, 0x00	; 0
   e6:	8a e0       	ldi	r24, 0x0A	; 10
   e8:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <DIO_setPinValue>
-		DIO_setPinValue(LCD_RS,DIO_HIGH);
   ec:	61 e0       	ldi	r22, 0x01	; 1
   ee:	89 e0       	ldi	r24, 0x09	; 9
   f0:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <DIO_setPinValue>
   f4:	08 95       	ret
-	}
-	
-	//Set registers to send command
-	else if (type==LCD_CMD)
   f6:	81 30       	cpi	r24, 0x01	; 1
   f8:	41 f4       	brne	.+16     	; 0x10a <LCD_Instruction+0x2a>
-	{
-		DIO_setPinValue(LCD_RW,DIO_LOW);
   fa:	60 e0       	ldi	r22, 0x00	; 0
   fc:	8a e0       	ldi	r24, 0x0A	; 10
   fe:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <DIO_setPinValue>
-		DIO_setPinValue(LCD_RS,DIO_LOW);
  102:	60 e0       	ldi	r22, 0x00	; 0
  104:	89 e0       	ldi	r24, 0x09	; 9
  106:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <DIO_setPinValue>
  10a:	08 95       	ret
 
 0000010c <LCD_pulse>:
-	LCD_sendCmd(0b00000001);
-}
-
-
-void LCD_pulse(){
-	DIO_setPinValue(LCD_E,DIO_HIGH);
  10c:	61 e0       	ldi	r22, 0x01	; 1
  10e:	8b e0       	ldi	r24, 0x0B	; 11
  110:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <DIO_setPinValue>
-	#else
-		//round up by default
-		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
-	#endif
-
-	__builtin_avr_delay_cycles(__ticks_dc);
  114:	8f e9       	ldi	r24, 0x9F	; 159
  116:	9f e0       	ldi	r25, 0x0F	; 15
  118:	01 97       	sbiw	r24, 0x01	; 1
  11a:	f1 f7       	brne	.-4      	; 0x118 <LCD_pulse+0xc>
  11c:	00 c0       	rjmp	.+0      	; 0x11e <LCD_pulse+0x12>
  11e:	00 00       	nop
-	_delay_ms(1);
-	DIO_setPinValue(LCD_E,DIO_LOW);
  120:	60 e0       	ldi	r22, 0x00	; 0
  122:	8b e0       	ldi	r24, 0x0B	; 11
  124:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <DIO_setPinValue>
  128:	08 95       	ret
 
 0000012a <LCD_sendData>:
-		DIO_setPinValue(LCD_RW,DIO_LOW);
-		DIO_setPinValue(LCD_RS,DIO_LOW);
-	}
-}
-
-void LCD_sendData(u8 data){
  12a:	cf 93       	push	r28
  12c:	c8 2f       	mov	r28, r24
-	
-	LCD_Instruction(LCD_DATA);
  12e:	80 e0       	ldi	r24, 0x00	; 0
  130:	0e 94 70 00 	call	0xe0	; 0xe0 <LCD_Instruction>
-		
-	//High bits
-	DIO_setPinValue(LCD_D4,GET_BIT(data,4));
  134:	c4 fb       	bst	r28, 4
  136:	66 27       	eor	r22, r22
  138:	60 f9       	bld	r22, 0
  13a:	84 e0       	ldi	r24, 0x04	; 4
  13c:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <DIO_setPinValue>
-	DIO_setPinValue(LCD_D5,GET_BIT(data,5));
  140:	c5 fb       	bst	r28, 5
  142:	66 27       	eor	r22, r22
  144:	60 f9       	bld	r22, 0
  146:	85 e0       	ldi	r24, 0x05	; 5
  148:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <DIO_setPinValue>
-	DIO_setPinValue(LCD_D6,GET_BIT(data,6));
  14c:	c6 fb       	bst	r28, 6
  14e:	66 27       	eor	r22, r22
  150:	60 f9       	bld	r22, 0
  152:	86 e0       	ldi	r24, 0x06	; 6
  154:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <DIO_setPinValue>
-	DIO_setPinValue(LCD_D7,GET_BIT(data,7));
  158:	6c 2f       	mov	r22, r28
  15a:	66 1f       	adc	r22, r22
  15c:	66 27       	eor	r22, r22
  15e:	66 1f       	adc	r22, r22
  160:	87 e0       	ldi	r24, 0x07	; 7
  162:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <DIO_setPinValue>
-	
-	LCD_pulse();
  166:	0e 94 86 00 	call	0x10c	; 0x10c <LCD_pulse>
-	
-	//Low bits
-	DIO_setPinValue(LCD_D4,GET_BIT(data,0));
  16a:	6c 2f       	mov	r22, r28
  16c:	61 70       	andi	r22, 0x01	; 1
  16e:	84 e0       	ldi	r24, 0x04	; 4
  170:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <DIO_setPinValue>
-	DIO_setPinValue(LCD_D5,GET_BIT(data,1));
  174:	c1 fb       	bst	r28, 1
  176:	66 27       	eor	r22, r22
  178:	60 f9       	bld	r22, 0
  17a:	85 e0       	ldi	r24, 0x05	; 5
  17c:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <DIO_setPinValue>
-	DIO_setPinValue(LCD_D6,GET_BIT(data,2));
  180:	c2 fb       	bst	r28, 2
  182:	66 27       	eor	r22, r22
  184:	60 f9       	bld	r22, 0
  186:	86 e0       	ldi	r24, 0x06	; 6
  188:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <DIO_setPinValue>
-	DIO_setPinValue(LCD_D7,GET_BIT(data,3));
  18c:	c3 fb       	bst	r28, 3
  18e:	66 27       	eor	r22, r22
  190:	60 f9       	bld	r22, 0
  192:	87 e0       	ldi	r24, 0x07	; 7
  194:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <DIO_setPinValue>
-	
-	LCD_pulse();
  198:	0e 94 86 00 	call	0x10c	; 0x10c <LCD_pulse>
-	
-}
  19c:	cf 91       	pop	r28
  19e:	08 95       	ret
 
 000001a0 <LCD_sendCmd>:
-
-void LCD_sendCmd(u8 cmd){
  1a0:	cf 93       	push	r28
  1a2:	c8 2f       	mov	r28, r24
-	
-	LCD_Instruction(LCD_CMD);
  1a4:	81 e0       	ldi	r24, 0x01	; 1
  1a6:	0e 94 70 00 	call	0xe0	; 0xe0 <LCD_Instruction>
-		
-	//High bits
-	DIO_setPinValue(LCD_D4,GET_BIT(cmd,4));
  1aa:	c4 fb       	bst	r28, 4
  1ac:	66 27       	eor	r22, r22
  1ae:	60 f9       	bld	r22, 0
  1b0:	84 e0       	ldi	r24, 0x04	; 4
  1b2:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <DIO_setPinValue>
-	DIO_setPinValue(LCD_D5,GET_BIT(cmd,5));
  1b6:	c5 fb       	bst	r28, 5
  1b8:	66 27       	eor	r22, r22
  1ba:	60 f9       	bld	r22, 0
  1bc:	85 e0       	ldi	r24, 0x05	; 5
  1be:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <DIO_setPinValue>
-	DIO_setPinValue(LCD_D6,GET_BIT(cmd,6));
  1c2:	c6 fb       	bst	r28, 6
  1c4:	66 27       	eor	r22, r22
  1c6:	60 f9       	bld	r22, 0
  1c8:	86 e0       	ldi	r24, 0x06	; 6
  1ca:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <DIO_setPinValue>
-	DIO_setPinValue(LCD_D7,GET_BIT(cmd,7));
  1ce:	6c 2f       	mov	r22, r28
  1d0:	66 1f       	adc	r22, r22
  1d2:	66 27       	eor	r22, r22
  1d4:	66 1f       	adc	r22, r22
  1d6:	87 e0       	ldi	r24, 0x07	; 7
  1d8:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <DIO_setPinValue>
-	
-	LCD_pulse();
  1dc:	0e 94 86 00 	call	0x10c	; 0x10c <LCD_pulse>
-	
-	//Low bits
-	DIO_setPinValue(LCD_D4,GET_BIT(cmd,0));
  1e0:	6c 2f       	mov	r22, r28
  1e2:	61 70       	andi	r22, 0x01	; 1
  1e4:	84 e0       	ldi	r24, 0x04	; 4
  1e6:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <DIO_setPinValue>
-	DIO_setPinValue(LCD_D5,GET_BIT(cmd,1));
  1ea:	c1 fb       	bst	r28, 1
  1ec:	66 27       	eor	r22, r22
  1ee:	60 f9       	bld	r22, 0
  1f0:	85 e0       	ldi	r24, 0x05	; 5
  1f2:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <DIO_setPinValue>
-	DIO_setPinValue(LCD_D6,GET_BIT(cmd,2));
  1f6:	c2 fb       	bst	r28, 2
  1f8:	66 27       	eor	r22, r22
  1fa:	60 f9       	bld	r22, 0
  1fc:	86 e0       	ldi	r24, 0x06	; 6
  1fe:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <DIO_setPinValue>
-	DIO_setPinValue(LCD_D7,GET_BIT(cmd,3));
  202:	c3 fb       	bst	r28, 3
  204:	66 27       	eor	r22, r22
  206:	60 f9       	bld	r22, 0
  208:	87 e0       	ldi	r24, 0x07	; 7
  20a:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <DIO_setPinValue>
-	
-	LCD_pulse();
  20e:	0e 94 86 00 	call	0x10c	; 0x10c <LCD_pulse>
-}
  212:	cf 91       	pop	r28
  214:	08 95       	ret
 
 00000216 <LCD_init>:
- */ 
-
-#include "LCD_INT.h"
-
-void LCD_init(){
-	DIO_setPinDir(LCD_D4,DIO_OUTPUT);
  216:	61 e0       	ldi	r22, 0x01	; 1
  218:	84 e0       	ldi	r24, 0x04	; 4
  21a:	0e 94 69 01 	call	0x2d2	; 0x2d2 <DIO_setPinDir>
-	DIO_setPinDir(LCD_D5,DIO_OUTPUT);
  21e:	61 e0       	ldi	r22, 0x01	; 1
  220:	85 e0       	ldi	r24, 0x05	; 5
  222:	0e 94 69 01 	call	0x2d2	; 0x2d2 <DIO_setPinDir>
-	DIO_setPinDir(LCD_D6,DIO_OUTPUT);
  226:	61 e0       	ldi	r22, 0x01	; 1
  228:	86 e0       	ldi	r24, 0x06	; 6
  22a:	0e 94 69 01 	call	0x2d2	; 0x2d2 <DIO_setPinDir>
-	DIO_setPinDir(LCD_D7,DIO_OUTPUT);
  22e:	61 e0       	ldi	r22, 0x01	; 1
  230:	87 e0       	ldi	r24, 0x07	; 7
  232:	0e 94 69 01 	call	0x2d2	; 0x2d2 <DIO_setPinDir>
-	
-	DIO_setPinDir(LCD_E,DIO_OUTPUT);
  236:	61 e0       	ldi	r22, 0x01	; 1
  238:	8b e0       	ldi	r24, 0x0B	; 11
  23a:	0e 94 69 01 	call	0x2d2	; 0x2d2 <DIO_setPinDir>
-	DIO_setPinDir(LCD_RW,DIO_OUTPUT);
  23e:	61 e0       	ldi	r22, 0x01	; 1
  240:	8a e0       	ldi	r24, 0x0A	; 10
  242:	0e 94 69 01 	call	0x2d2	; 0x2d2 <DIO_setPinDir>
-	DIO_setPinDir(LCD_RS,DIO_OUTPUT);
  246:	61 e0       	ldi	r22, 0x01	; 1
  248:	89 e0       	ldi	r24, 0x09	; 9
  24a:	0e 94 69 01 	call	0x2d2	; 0x2d2 <DIO_setPinDir>
-	
-	LCD_sendCmd(0b00000010);
  24e:	82 e0       	ldi	r24, 0x02	; 2
  250:	0e 94 d0 00 	call	0x1a0	; 0x1a0 <LCD_sendCmd>
  254:	2f ef       	ldi	r18, 0xFF	; 255
@@ -414,8 +328,6 @@ void LCD_init(){
  260:	e1 f7       	brne	.-8      	; 0x25a <LCD_init+0x44>
  262:	00 c0       	rjmp	.+0      	; 0x264 <LCD_init+0x4e>
  264:	00 00       	nop
-	_delay_ms(30);
-	LCD_sendCmd(0b00101000);
  266:	88 e2       	ldi	r24, 0x28	; 40
  268:	0e 94 d0 00 	call	0x1a0	; 0x1a0 <LCD_sendCmd>
  26c:	8f e9       	ldi	r24, 0x9F	; 159
@@ -424,9 +336,6 @@ void LCD_init(){
  272:	f1 f7       	brne	.-4      	; 0x270 <LCD_init+0x5a>
  274:	00 c0       	rjmp	.+0      	; 0x276 <LCD_init+0x60>
  276:	00 00       	nop
-	
-	_delay_ms(1);
-	LCD_sendCmd(0b00001111);
  278:	8f e0       	ldi	r24, 0x0F	; 15
  27a:	0e 94 d0 00 	call	0x1a0	; 0x1a0 <LCD_sendCmd>
  27e:	8f e9       	ldi	r24, 0x9F	; 159
@@ -435,9 +344,6 @@ void LCD_init(){
  284:	f1 f7       	brne	.-4      	; 0x282 <LCD_init+0x6c>
  286:	00 c0       	rjmp	.+0      	; 0x288 <LCD_init+0x72>
  288:	00 00       	nop
-	
-	_delay_ms(1);
-	LCD_sendCmd(0b000000001);
  28a:	81 e0       	ldi	r24, 0x01	; 1
  28c:	0e 94 d0 00 	call	0x1a0	; 0x1a0 <LCD_sendCmd>
  290:	8f e3       	ldi	r24, 0x3F	; 63
@@ -446,28 +352,19 @@ void LCD_init(){
  296:	f1 f7       	brne	.-4      	; 0x294 <LCD_init+0x7e>
  298:	00 c0       	rjmp	.+0      	; 0x29a <LCD_init+0x84>
  29a:	00 00       	nop
-	
-	_delay_ms(2);
-	LCD_sendCmd(0b00000110);
  29c:	86 e0       	ldi	r24, 0x06	; 6
  29e:	0e 94 d0 00 	call	0x1a0	; 0x1a0 <LCD_sendCmd>
  2a2:	08 95       	ret
 
 000002a4 <LCD_clearDis>:
-	
-	LCD_pulse();
-}
-
-void LCD_clearDis(){
-	LCD_sendCmd(0b00000001);
  2a4:	81 e0       	ldi	r24, 0x01	; 1
  2a6:	0e 94 d0 00 	call	0x1a0	; 0x1a0 <LCD_sendCmd>
  2aa:	08 95       	ret
 
 000002ac <LCD_sendStr>:
-	DIO_setPinValue(LCD_E,DIO_HIGH);
-	_delay_ms(1);
-	DIO_setPinValue(LCD_E,DIO_LOW);
+	DIO_setPinValue(LCD_D7,GET_BIT(cmd,3));
+	
+	LCD_pulse();
 }
 
 void LCD_sendStr(u8* str){
@@ -484,7 +381,7 @@ void LCD_sendStr(u8* str){
  2b8:	0e 94 95 00 	call	0x12a	; 0x12a <LCD_sendData>
 		i++;
  2bc:	cf 5f       	subi	r28, 0xFF	; 255
-	DIO_setPinValue(LCD_E,DIO_LOW);
+	LCD_pulse();
 }
 
 void LCD_sendStr(u8* str){
@@ -880,7 +777,7 @@ void DIO_setPinValue(u8 pinNum, u8 level){
  4fc:	08 95       	ret
 
 000004fe <__vector_1>:
-
+//Vector 3
 void (*EXT_int2Func)();
 
 //call back function to send the function from the main function
@@ -966,7 +863,7 @@ void EXT_setcallbackInt2(void (*ptr)()){
 0000059a <__vector_3>:
 }
 
-//Vector Table Function that belongs to INT0
+//Vector Table Function that belongs to INT2
 //number(in vector table) - 1
 void __vector_3() __attribute__((signal));
 void __vector_3(){
@@ -1043,7 +940,7 @@ void TIMER_setcallbackOv(void (*ptr)()){
  604:	81 11       	cpse	r24, r1
  606:	0a c0       	rjmp	.+20     	; 0x61c <TIMER0_start+0x18>
  608:	83 b7       	in	r24, 0x33	; 51
- 60a:	8e 7f       	andi	r24, 0xFE	; 254
+ 60a:	81 60       	ori	r24, 0x01	; 1
  60c:	83 bf       	out	0x33, r24	; 51
  60e:	83 b7       	in	r24, 0x33	; 51
  610:	82 60       	ori	r24, 0x02	; 2
@@ -1055,7 +952,7 @@ void TIMER_setcallbackOv(void (*ptr)()){
  61c:	81 30       	cpi	r24, 0x01	; 1
  61e:	51 f4       	brne	.+20     	; 0x634 <TIMER0_start+0x30>
  620:	83 b7       	in	r24, 0x33	; 51
- 622:	81 60       	ori	r24, 0x01	; 1
+ 622:	8e 7f       	andi	r24, 0xFE	; 254
  624:	83 bf       	out	0x33, r24	; 51
  626:	83 b7       	in	r24, 0x33	; 51
  628:	82 60       	ori	r24, 0x02	; 2

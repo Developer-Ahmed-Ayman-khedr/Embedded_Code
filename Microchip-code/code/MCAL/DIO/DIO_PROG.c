@@ -125,10 +125,12 @@ u8 DIO_readPinValue(u8 pinNum){
 	}
 }
 
+void DIO_togglePinValue(u8 pinNum){
+	DIO_setPinValue(pinNum,!DIO_readPinValue(pinNum));
+}
+
 void DIO_setPullUp(u8 pinNum){
 	DIO_setPinValue(pinNum,DIO_HIGH);
 }
 
-void DIO_togglePinValue(u8 pinNum){
-	DIO_setPinValue(pinNum,!DIO_readPinValue(pinNum));
-}
+
