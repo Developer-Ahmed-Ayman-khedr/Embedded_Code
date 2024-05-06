@@ -9,9 +9,6 @@
 #ifndef DIO_INT_H_
 #define DIO_INT_H_
 
-#include "STD_TYPES.h"
-#include "BIT_MATH.h"
-
 /******************************************
   INCLUDES
 *******************************************/
