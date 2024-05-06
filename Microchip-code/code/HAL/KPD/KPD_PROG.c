@@ -6,6 +6,7 @@
  */ 
 #include "KPD_INT.h"
 
+//Initialize
 void KPD_init()
 {
 	DIO_setPinDir(KPD_COL0, DIO_OUTPUT);
@@ -25,7 +26,7 @@ void KPD_init()
 	
 }
 
-
+//Read
 u8 KPD_read()
 {
 	DIO_setPinValue(KPD_COL0, DIO_LOW);

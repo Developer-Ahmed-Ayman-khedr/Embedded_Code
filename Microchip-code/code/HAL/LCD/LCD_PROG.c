@@ -181,7 +181,6 @@ void LCD_sendNum(s32 num){
 	while (num>0)
 	{
 		arr_numbers[i]=(num%10)+48;
-		
 		num=num/10;
 		i++;
 	}
