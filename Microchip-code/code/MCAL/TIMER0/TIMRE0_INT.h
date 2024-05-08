@@ -44,6 +44,11 @@
 #define TIMER0_DIV64		4
 #define TIMER0_DIV256		5
 
+#define TIMER0_NON_INVERTED 0
+#define TIMER0_INVERTED		1
+
+#define TIMER0_PWM_mode TIMER0_NON_INVERTED
+
 void TIMER0_initNormal();
 
 void TIMER0_setPreload(u8 value);
@@ -53,5 +58,13 @@ u8 TIMER0_getCounter();
 void TIMER0_start(u8 prescaler);
 
 void TIMER_setcallbackOv(void (*ptr)());
+
+//CTC
+void TIMER0_initCTC();
+void TIMER0_setOCR(u8 value);
+void TIMER_setcallbackCTC(void (*ptr)());
+
+//Fast PWM
+void TIMER0_initFPWM();
 
 #endif /* TIMRE0_INT_H_ */

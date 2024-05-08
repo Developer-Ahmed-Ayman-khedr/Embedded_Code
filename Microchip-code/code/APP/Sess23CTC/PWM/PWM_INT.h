@@ -1,14 +1,13 @@
 /*
- * SESST1_INT.h
+ * PWM_INT.h
  *
- * Created: 5/1/2024 6:44:08 PM
+ * Created: 5/8/2024 8:19:10 PM
  *  Author: ahmed
- 
+ */ 
 
 
-#ifndef TASKCOUNTER_INT_H_
-#define TASKCOUNTER_INT_H_
-
+#ifndef PWM_INT_H_
+#define PWM_INT_H_
 
 #include "DIO_INT.h"
 
@@ -22,6 +21,4 @@
 
 int source_code();
 
-
-#endif
-*/ 
+#endif /* PWM_INT_H_ */
