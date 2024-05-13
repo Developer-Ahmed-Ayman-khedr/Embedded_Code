@@ -238,6 +238,12 @@
     <Compile Include="APP\Sess23CTC\sess_PROG.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="APP\Sess24MOTOR\sess_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess24MOTOR\sess_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="HAL\7seg\SS_INT.h">
       <SubType>compile</SubType>
     </Compile>
@@ -295,6 +301,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="APP" />
+    <Folder Include="APP\Sess24MOTOR" />
     <Folder Include="APP\Sess23CTC" />
     <Folder Include="APP\Sess22TI1" />
     <Folder Include="APP\Sess21" />
