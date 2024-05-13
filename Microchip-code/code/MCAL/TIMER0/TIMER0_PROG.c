@@ -1,5 +1,5 @@
 /*
- * TIMER_PROG.c
+ * TIMER0_PROG.c
  *
  * Created: 5/1/2024 7:35:33 PM
  *  Author: ahmed
@@ -8,7 +8,7 @@
 #include "BIT_MATH.h"
 #include "STD_TYPES.h"
 
-#include "TIMRE0_INT.h"
+#include "TIMER0_INT.h"
 
 void TIMER0_initNormal()
 {
@@ -45,6 +45,25 @@ void TIMER0_initFPWM()
 		//Inverting
 		SET_BIT(TCCR0,COM00);
 		SET_BIT(TCCR0,COM01);
+	#endif
+	
+}
+
+void TIMER0_init_Phase_Correct_PWM()
+{
+	//select normal mode
+	SET_BIT(TCCR0,WGM00);
+	CLEAR_BIT(TCCR0,WGM01);
+	
+	//Set output mode
+	#if (TIMER0_PWM_mode==TIMER0_NON_INVERTED)
+	//Non inverting
+	CLEAR_BIT(TCCR0,COM00);
+	SET_BIT(TCCR0,COM01);
+	#elif (TIMER0_PWM_mode==TIMER0_INVERTED)
+	//Inverting
+	SET_BIT(TCCR0,COM00);
+	SET_BIT(TCCR0,COM01);
 	#endif
 	
 }
