@@ -18,9 +18,9 @@ int source_code()
 	
 	TIMER1_initFastPwmMod14();
 	
-	TIMER1_setFrequency(1000);
+	TIMER1_setFrequency(50);
 	
-	TIMER1_setOcr(249);
+	//TIMER1_setOcr(249);
 		
 	while (1)
 	{

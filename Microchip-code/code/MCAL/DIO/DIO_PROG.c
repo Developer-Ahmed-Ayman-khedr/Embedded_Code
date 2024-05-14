@@ -45,10 +45,10 @@ void DIO_setPinDir(u8 pinNum, u8 dir){
 	{
 		pinNum=pinNum-24;
 		if (dir==DIO_INPUT){
-			CLEAR_BIT(DDRC,pinNum);
+			CLEAR_BIT(DDRD,pinNum);
 		}
 		else if(dir==DIO_OUTPUT){
-			SET_BIT(DDRC,pinNum);
+			SET_BIT(DDRD,pinNum);
 		}
 	}
 }
