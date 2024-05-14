@@ -6,8 +6,8 @@
  */ 
 
 
-#ifndef TIMRE0_INT_H_
-#define TIMRE0_INT_H_
+#ifndef TIMER0_INT_H_
+#define TIMER0_INT_H_
 
 //Includes
 
@@ -66,5 +66,8 @@ void TIMER_setcallbackCTC(void (*ptr)());
 
 //Fast PWM
 void TIMER0_initFPWM();
+
+//Phase correct PWM
+void TIMER0_init_Phase_Correct_PWM();
 
 #endif /* TIMRE0_INT_H_ */

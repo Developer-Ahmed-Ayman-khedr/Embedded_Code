@@ -5,7 +5,7 @@
  * Author : Ahmed
  */ 
 
-#include "Sess24MOTOR/sess_INT.h"
+#include "Sess24MOTOR/SERVO/SERVO_INT.h"
 
 int main(){
 	source_code();
