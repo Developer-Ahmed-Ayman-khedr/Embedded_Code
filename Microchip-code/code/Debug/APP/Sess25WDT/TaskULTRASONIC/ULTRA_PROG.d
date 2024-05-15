@@ -1,4 +1,6 @@
-APP/main.d APP/main.o: ../APP/main.c \
+APP/Sess25WDT/TaskULTRASONIC/ULTRA_PROG.d \
+ APP/Sess25WDT/TaskULTRASONIC/ULTRA_PROG.o: \
+ ../APP/Sess25WDT/TaskULTRASONIC/ULTRA_PROG.c \
  ../APP/Sess25WDT/TaskULTRASONIC/ULTRA_INT.h ../MCAL/DIO/DIO_INT.h \
  ../LIB/STD_TYPES.h ../LIB/BIT_MATH.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \

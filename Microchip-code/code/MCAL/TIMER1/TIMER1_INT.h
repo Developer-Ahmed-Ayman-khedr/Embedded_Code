@@ -57,8 +57,21 @@
 
 #define TIFR				*((volatile u8*)0x58)
 #define ICF1		5
+
+
+//Prescaller
+#define TIMER1_DIV0		0
+#define TIMER1_DIV8		1
+#define TIMER1_DIV64	2
+#define TIMER1_DIV256	3
+#define TIMER1_DIV1028	4
 ///////////////////////////////////////////////////////////////
 
+
+//ICU
+
+#define TIMER1_ICU_RISING  1
+#define TIMER1_ICU_FALLING 0
 
 
 void TIMER1_initFastPwmMod14();
@@ -67,5 +80,13 @@ void TIMER1_setOcr(u16 value);
 
 //Note: prescaler = 64
 void TIMER1_setFrequency(u16 pwm_frequency);
+
+void TIMER1_InitIcu(u8 edge,u8 prescaller);
+
+u16 TIMER1_getICR();
+
+void TIMER1_setcallbackIcu(void (*ptr)());
+
+void TIMER1_setPreload(u16 value);
 
 #endif /* TIMER1_INT_H_ */
