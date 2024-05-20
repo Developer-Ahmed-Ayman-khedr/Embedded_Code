@@ -7,9 +7,6 @@
 
 #include "TIMER1_INT.h" 
 
-#include "BIT_MATH.h"
-#include "STD_TYPES.h"
-
 void TIMER1_initFastPwmMod14()
 {
 	//select mode 14(Fast PWM)
@@ -115,5 +112,4 @@ void TIMER1_setcallbackIcu(void (*ptr)()){
 void __vector_6() __attribute__((signal));
 void __vector_6(){
 	TIMER1_IcuFunc();
-	//LCD_Shift(LCD_SHIFT_DIS_LIFT);
 }
