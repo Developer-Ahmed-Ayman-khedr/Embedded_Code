@@ -1,16 +1,17 @@
 /*
- * ULTRA_INT.h
+ * sess_INT.h
  *
- * Created: 5/15/2024 9:59:33 PM
+ * Created: 5/20/2024 7:27:35 PM
  *  Author: ahmed
- 
+ *
 
 
-#ifndef ULTRA_INT_H_
-#define ULTRA_INT_H_
+#ifndef SESS_INT_H_
+#define SESS_INT_H_
+
 
 ******************************************
-  INCLUDES
+INCLUDES
 *******************************************
 
 #include "DIO_INT.h"
@@ -27,27 +28,27 @@
 
 #include "WDT_INT.h"
 
+#include "UART_INT.h"
+
 ******************************************
-  Global Data TYPES AND STRUCTURES
+Global Data TYPES AND STRUCTURES
 *******************************************
 
 
 ******************************************
-  GLOBAL CONSTANT MACROS
+GLOBAL CONSTANT MACROS
 *******************************************
 
 
 ******************************************
-  GLOBAL FUNCTIONS MACROS
+GLOBAL FUNCTIONS MACROS
 *******************************************
 
 
 ******************************************
-  GLOBAL FUNCTIONS Prototypes
+GLOBAL FUNCTIONS Prototypes
 *******************************************
 
 int source_code();
 
-
-#endif
-*/
+#endif */

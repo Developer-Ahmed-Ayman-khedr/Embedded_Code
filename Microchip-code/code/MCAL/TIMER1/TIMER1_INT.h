@@ -9,10 +9,21 @@
 #ifndef TIMER1_INT_H_
 #define TIMER1_INT_H_
 
-#include "DIO_INT.h"
-#include "BIT_MATH.h"
-#include "STD_TYPES.h"
 
+/******************************************
+  INCLUDES
+*******************************************/
+
+#include "DIO_INT.h"
+
+/******************************************
+  Global Data TYPES AND STRUCTURES
+*******************************************/
+
+
+/******************************************
+  GLOBAL CONSTANT MACROS
+*******************************************/
 
 #define TIMER1_PWM_INVERTING 	 0
 #define TIMER1_PWM_NON_INVERTING 1
@@ -73,12 +84,20 @@
 #define TIMER1_ICU_RISING  1
 #define TIMER1_ICU_FALLING 0
 
+/******************************************
+  GLOBAL FUNCTIONS MACROS
+*******************************************/
+
+
+/******************************************
+  GLOBAL FUNCTIONS Prototypes
+*******************************************/
 
 void TIMER1_initFastPwmMod14();
 
 void TIMER1_setOcr(u16 value);
 
-//Note: prescaler = 64
+//Note: prescaller = 64
 void TIMER1_setFrequency(u16 pwm_frequency);
 
 void TIMER1_InitIcu(u8 edge,u8 prescaller);

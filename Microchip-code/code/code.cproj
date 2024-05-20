@@ -110,6 +110,7 @@
       <Value>../MCAL/TIMER0</Value>
       <Value>../MCAL/TIMER1</Value>
       <Value>../MCAL/WDT</Value>
+      <Value>../MCAL/UART</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcc.compiler.optimization.level>
@@ -264,6 +265,18 @@
     <Compile Include="APP\Sess25WDT\TaskULTRASONIC\ULTRA_PROG.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="APP\Sess26UART\sess_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess26UART\sess_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess26UART\TASKKPDUART\TASKKPDUART_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess26UART\TASKKPDUART\TASKKPDUART_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="HAL\7seg\SS_INT.h">
       <SubType>compile</SubType>
     </Compile>
@@ -324,6 +337,12 @@
     <Compile Include="MCAL\TIMER1\TIMER1_INT.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="MCAL\UART\UART_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\UART\UART_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="MCAL\WDT\WDT_INT.h">
       <SubType>compile</SubType>
     </Compile>
@@ -333,6 +352,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="APP" />
+    <Folder Include="APP\Sess26UART" />
     <Folder Include="APP\Sess25WDT" />
     <Folder Include="APP\Sess24MOTOR" />
     <Folder Include="APP\Sess23CTC" />
@@ -355,6 +375,7 @@
     <Folder Include="APP\Sess23CTC\PWM" />
     <Folder Include="APP\Sess24MOTOR\SERVO" />
     <Folder Include="APP\Sess25WDT\TaskULTRASONIC" />
+    <Folder Include="APP\Sess26UART\TASKKPDUART" />
     <Folder Include="HAL" />
     <Folder Include="HAL\LCD" />
     <Folder Include="HAL\7seg" />
@@ -365,6 +386,7 @@
     <Folder Include="MCAL\EXT" />
     <Folder Include="MCAL\GI" />
     <Folder Include="MCAL\ADC" />
+    <Folder Include="MCAL\UART" />
     <Folder Include="MCAL\WDT" />
     <Folder Include="MCAL\TIMER1" />
     <Folder Include="MCAL\TIMER0" />
