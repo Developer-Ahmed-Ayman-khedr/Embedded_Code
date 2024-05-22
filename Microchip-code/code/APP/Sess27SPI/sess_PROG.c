@@ -1,11 +1,11 @@
 /*
- * TASKKPDUART_PROG.c
+ * sess_PROG.c
  *
- * Created: 5/20/2024 10:11:35 PM
+ * Created: 5/22/2024 5:48:59 PM
  *  Author: ahmed
- 
+ */ 
 
-#include "Sess26UART/TASKKPDUART/TASKKPDUART_INT.h"
+#include "Sess27SPI/sess_INT.h"
 
 int source_code()
 {
@@ -55,7 +55,7 @@ int source_code()
 				LCD_clearDis();
 				LCD_sendStr("Welcome");
 				UART_sendStr("Welcome");
-			} 
+			}
 			else
 			{
 				LCD_clearDis();
@@ -68,4 +68,3 @@ int source_code()
 	}
 	return 0;
 }
-*/ 

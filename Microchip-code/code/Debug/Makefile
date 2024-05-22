@@ -34,6 +34,7 @@ LINKER_SCRIPT_DEP:=
 # Every subdirectory with source files must be described here
 SUBDIRS :=  \
 ../APP \
+../APP/Sess27SPI \
 ../APP/Sess26UART \
 ../APP/Sess25WDT \
 ../APP/Sess24MOTOR \
@@ -100,6 +101,7 @@ C_SRCS +=  \
 ../APP/Sess25WDT/TaskULTRASONIC/ULTRA_PROG.c \
 ../APP/Sess26UART/sess_PROG.c \
 ../APP/Sess26UART/TASKKPDUART/TASKKPDUART_PROG.c \
+../APP/Sess27SPI/sess_PROG.c \
 ../HAL/7seg/SS_PROG.c \
 ../HAL/KPD/KPD_PROG.c \
 ../HAL/LCD/LCD_PROG.c \
@@ -144,6 +146,7 @@ APP/Sess25WDT/sess_PROG.o \
 APP/Sess25WDT/TaskULTRASONIC/ULTRA_PROG.o \
 APP/Sess26UART/sess_PROG.o \
 APP/Sess26UART/TASKKPDUART/TASKKPDUART_PROG.o \
+APP/Sess27SPI/sess_PROG.o \
 HAL/7seg/SS_PROG.o \
 HAL/KPD/KPD_PROG.o \
 HAL/LCD/LCD_PROG.o \
@@ -181,6 +184,7 @@ APP/Sess25WDT/sess_PROG.o \
 APP/Sess25WDT/TaskULTRASONIC/ULTRA_PROG.o \
 APP/Sess26UART/sess_PROG.o \
 APP/Sess26UART/TASKKPDUART/TASKKPDUART_PROG.o \
+APP/Sess27SPI/sess_PROG.o \
 HAL/7seg/SS_PROG.o \
 HAL/KPD/KPD_PROG.o \
 HAL/LCD/LCD_PROG.o \
@@ -218,6 +222,7 @@ APP/Sess25WDT/sess_PROG.d \
 APP/Sess25WDT/TaskULTRASONIC/ULTRA_PROG.d \
 APP/Sess26UART/sess_PROG.d \
 APP/Sess26UART/TASKKPDUART/TASKKPDUART_PROG.d \
+APP/Sess27SPI/sess_PROG.d \
 HAL/7seg/SS_PROG.d \
 HAL/KPD/KPD_PROG.d \
 HAL/LCD/LCD_PROG.d \
@@ -255,6 +260,7 @@ APP/Sess25WDT/sess_PROG.d \
 APP/Sess25WDT/TaskULTRASONIC/ULTRA_PROG.d \
 APP/Sess26UART/sess_PROG.d \
 APP/Sess26UART/TASKKPDUART/TASKKPDUART_PROG.d \
+APP/Sess27SPI/sess_PROG.d \
 HAL/7seg/SS_PROG.d \
 HAL/KPD/KPD_PROG.d \
 HAL/LCD/LCD_PROG.d \
@@ -443,6 +449,13 @@ APP/Sess26UART/sess_PROG.o: ../APP/Sess26UART/sess_PROG.c
 	
 
 APP/Sess26UART/TASKKPDUART/TASKKPDUART_PROG.o: ../APP/Sess26UART/TASKKPDUART/TASKKPDUART_PROG.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"../LIB" -I"../MCAL/DIO" -I"../APP" -I"../HAL/7seg" -I"../HAL/LCD" -I"../HAL/KPD" -I"../MCAL/EXT" -I"../MCAL/GI" -I"../MCAL/ADC" -I"../MCAL/TIMER0" -I"../MCAL/TIMER1" -I"../MCAL/WDT" -I"../MCAL/UART"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+APP/Sess27SPI/sess_PROG.o: ../APP/Sess27SPI/sess_PROG.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"../LIB" -I"../MCAL/DIO" -I"../APP" -I"../HAL/7seg" -I"../HAL/LCD" -I"../HAL/KPD" -I"../MCAL/EXT" -I"../MCAL/GI" -I"../MCAL/ADC" -I"../MCAL/TIMER0" -I"../MCAL/TIMER1" -I"../MCAL/WDT" -I"../MCAL/UART"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
