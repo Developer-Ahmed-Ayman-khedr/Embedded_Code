@@ -1,18 +1,14 @@
-APP/Sess27SPI/sess_PROG.d APP/Sess27SPI/sess_PROG.o: \
- ../APP/Sess27SPI/sess_PROG.c ../APP/Sess27SPI/sess_INT.h \
- ../MCAL/DIO/DIO_INT.h ../LIB/STD_TYPES.h ../LIB/BIT_MATH.h \
+MCAL/ADC/ADC_PROG.d MCAL/ADC/ADC_PROG.o: ../MCAL/ADC/ADC_PROG.c \
+ ../MCAL/ADC/ADC_INT.h ../MCAL/DIO/DIO_INT.h ../LIB/STD_TYPES.h \
+ ../LIB/BIT_MATH.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
- ../HAL/LCD/LCD_INT.h ../HAL/KPD/KPD_INT.h ../MCAL/ADC/ADC_INT.h \
- ../MCAL/GI/GI_INT.h ../MCAL/TIMER0/TIMER0_INT.h \
- ../MCAL/TIMER1/TIMER1_INT.h ../MCAL/WDT/WDT_INT.h \
- ../MCAL/UART/UART_INT.h
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h
 
-../APP/Sess27SPI/sess_INT.h:
+../MCAL/ADC/ADC_INT.h:
 
 ../MCAL/DIO/DIO_INT.h:
 
@@ -31,19 +27,3 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
-
-../HAL/LCD/LCD_INT.h:
-
-../HAL/KPD/KPD_INT.h:
-
-../MCAL/ADC/ADC_INT.h:
-
-../MCAL/GI/GI_INT.h:
-
-../MCAL/TIMER0/TIMER0_INT.h:
-
-../MCAL/TIMER1/TIMER1_INT.h:
-
-../MCAL/WDT/WDT_INT.h:
-
-../MCAL/UART/UART_INT.h:
