@@ -27,6 +27,7 @@ int source_code()
 		TIMER1_setOcr(499);
 		_delay_ms(1000);
 		TIMER1_setOcr(249);
+		//TIMER1_setOcr(375);
 		_delay_ms(1000);	
 	}
 	
