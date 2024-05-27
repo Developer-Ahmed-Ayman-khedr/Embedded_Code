@@ -3,31 +3,31 @@ code.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         0000055a  00000000  00000000  00000074  2**1
+  0 .text         000005a8  00000000  00000000  00000074  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000000  00800060  00800060  000005ce  2**0
+  1 .data         00000000  00800060  00800060  0000061c  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .bss          0000000c  00800060  00800060  000005ce  2**0
+  2 .bss          0000000e  00800060  00800060  0000061c  2**0
                   ALLOC
-  3 .comment      00000030  00000000  00000000  000005ce  2**0
+  3 .comment      00000030  00000000  00000000  0000061c  2**0
                   CONTENTS, READONLY
-  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000600  2**2
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  0000064c  2**2
                   CONTENTS, READONLY
-  5 .debug_aranges 000001d8  00000000  00000000  0000063c  2**0
+  5 .debug_aranges 00000228  00000000  00000000  00000688  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   00001166  00000000  00000000  00000814  2**0
+  6 .debug_info   00001346  00000000  00000000  000008b0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000a6f  00000000  00000000  0000197a  2**0
+  7 .debug_abbrev 00000bbe  00000000  00000000  00001bf6  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00000bee  00000000  00000000  000023e9  2**0
+  8 .debug_line   00000d5f  00000000  00000000  000027b4  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  000004ac  00000000  00000000  00002fd8  2**2
+  9 .debug_frame  00000588  00000000  00000000  00003514  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000706  00000000  00000000  00003484  2**0
+ 10 .debug_str    000007a3  00000000  00000000  00003a9c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00000bb1  00000000  00000000  00003b8a  2**0
+ 11 .debug_loc    00000d7d  00000000  00000000  0000423f  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000168  00000000  00000000  0000473b  2**0
+ 12 .debug_ranges 000001a8  00000000  00000000  00004fbc  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -46,7 +46,7 @@ Disassembly of section .text:
   28:	0c 94 5d 02 	jmp	0x4ba	; 0x4ba <__vector_10>
   2c:	0c 94 36 02 	jmp	0x46c	; 0x46c <__vector_11>
   30:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
-  34:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  34:	0c 94 ab 02 	jmp	0x556	; 0x556 <__vector_13>
   38:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
   3c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
   40:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
@@ -73,11 +73,11 @@ Disassembly of section .text:
   68:	1d 92       	st	X+, r1
 
 0000006a <.do_clear_bss_start>:
-  6a:	ac 36       	cpi	r26, 0x6C	; 108
+  6a:	ae 36       	cpi	r26, 0x6E	; 110
   6c:	b2 07       	cpc	r27, r18
   6e:	e1 f7       	brne	.-8      	; 0x68 <.do_clear_bss_loop>
   70:	0e 94 3e 00 	call	0x7c	; 0x7c <main>
-  74:	0c 94 ab 02 	jmp	0x556	; 0x556 <_exit>
+  74:	0c 94 d2 02 	jmp	0x5a4	; 0x5a4 <_exit>
 
 00000078 <__bad_interrupt>:
   78:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
@@ -914,8 +914,54 @@ void __vector_6(){
  552:	1f 90       	pop	r1
  554:	18 95       	reti
 
-00000556 <_exit>:
- 556:	f8 94       	cli
+00000556 <__vector_13>:
+}
 
-00000558 <__stop_program>:
- 558:	ff cf       	rjmp	.-2      	; 0x558 <__stop_program>
+//Vector Table Function that belongs to UART_INT
+//number(in vector table) - 1
+void __vector_13() __attribute__((signal));
+void __vector_13(){
+ 556:	1f 92       	push	r1
+ 558:	0f 92       	push	r0
+ 55a:	0f b6       	in	r0, 0x3f	; 63
+ 55c:	0f 92       	push	r0
+ 55e:	11 24       	eor	r1, r1
+ 560:	2f 93       	push	r18
+ 562:	3f 93       	push	r19
+ 564:	4f 93       	push	r20
+ 566:	5f 93       	push	r21
+ 568:	6f 93       	push	r22
+ 56a:	7f 93       	push	r23
+ 56c:	8f 93       	push	r24
+ 56e:	9f 93       	push	r25
+ 570:	af 93       	push	r26
+ 572:	bf 93       	push	r27
+ 574:	ef 93       	push	r30
+ 576:	ff 93       	push	r31
+	UART_INTFunc();
+ 578:	e0 91 6c 00 	lds	r30, 0x006C	; 0x80006c <UART_INTFunc>
+ 57c:	f0 91 6d 00 	lds	r31, 0x006D	; 0x80006d <UART_INTFunc+0x1>
+ 580:	09 95       	icall
+ 582:	ff 91       	pop	r31
+ 584:	ef 91       	pop	r30
+ 586:	bf 91       	pop	r27
+ 588:	af 91       	pop	r26
+ 58a:	9f 91       	pop	r25
+ 58c:	8f 91       	pop	r24
+ 58e:	7f 91       	pop	r23
+ 590:	6f 91       	pop	r22
+ 592:	5f 91       	pop	r21
+ 594:	4f 91       	pop	r20
+ 596:	3f 91       	pop	r19
+ 598:	2f 91       	pop	r18
+ 59a:	0f 90       	pop	r0
+ 59c:	0f be       	out	0x3f, r0	; 63
+ 59e:	0f 90       	pop	r0
+ 5a0:	1f 90       	pop	r1
+ 5a2:	18 95       	reti
+
+000005a4 <_exit>:
+ 5a4:	f8 94       	cli
+
+000005a6 <__stop_program>:
+ 5a6:	ff cf       	rjmp	.-2      	; 0x5a6 <__stop_program>

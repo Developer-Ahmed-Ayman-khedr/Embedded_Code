@@ -4,6 +4,7 @@
  * Created: 5/20/2024 7:30:58 PM
  *  Author: ahmed
  */ 
+
 #include "UART_INT.h"
 
 void UART_init()
@@ -61,4 +62,34 @@ u8 UART_receiveData()
 	}
 	
 	return UDR;
+}
+
+
+void UART_INT_init(u8 state)
+{
+	if (state==UART_ENABLE_RXC)
+	{
+		//Enable RXC
+		SET_BIT(UCSRB,RXCIE);
+	}
+	else if (state==UART_DISABLE_RXC)
+	{
+		//Disable RXC
+		CLEAR_BIT(UCSRB,RXCIE);
+	}
+}
+
+//pointer to UART Interrupt function
+void (*UART_INTFunc)();
+
+//call back function to send the function from the main function
+void UART_setcallbackINT(void (*ptr)()){
+	UART_INTFunc = ptr;
+}
+
+//Vector Table Function that belongs to UART_INT
+//number(in vector table) - 1
+void __vector_13() __attribute__((signal));
+void __vector_13(){
+	UART_INTFunc();
 }
