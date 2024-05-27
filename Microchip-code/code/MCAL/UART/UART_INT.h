@@ -62,6 +62,9 @@
 
 #define UART_NOT_RECEIVE	'x'
 
+#define UART_ENABLE_RXC 1
+#define UART_DISABLE_RXC 2
+
 /******************************************
   GLOBAL FUNCTIONS MACROS
 *******************************************/
@@ -78,5 +81,9 @@ void UART_sendData(u8 data);
 void UART_sendStr(u8* str);
 
 u8 UART_receiveData();
+
+void UART_INT_init(u8 state);
+
+void UART_setcallbackINT(void (*ptr)());
 
 #endif /* UART_INT_H_ */
