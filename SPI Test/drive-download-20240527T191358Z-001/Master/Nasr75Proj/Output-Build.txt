@@ -1,0 +1,37 @@
+﻿------ Build started: Project: Nasr75Proj, Configuration: Debug AVR ------
+Build started.
+Project "Nasr75Proj.cproj" (default targets):
+Target "PreBuildEvent" skipped, due to false condition; ('$(PreBuildEvent)'!='') was evaluated as (''!='').
+Target "CoreBuild" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Compiler.targets" from project "C:\Users\AMIT\Desktop\Nasr75\Nasr75Proj\Nasr75Proj\Nasr75Proj.cproj" (target "Build" depends on it):
+	Task "RunCompilerTask"
+		Shell Utils Path C:\Program Files (x86)\Atmel\Studio\7.0\shellUtils
+		C:\Program Files (x86)\Atmel\Studio\7.0\shellUtils\make.exe all --jobs 4 --output-sync 
+		Building file: ../APP/main.c
+		Invoking: AVR/GNU C Compiler : 5.4.0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"../LIB" -I"../MCAL/DIO" -I"../HAL/SS" -I"../HAL/LCD" -I"../HAL/KPD" -I"../MCAL/EXT" -I"../MCAL/GI" -I"../MCAL/TIMER0" -I"../MCAL/TIMER1"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "APP/main.d" -MT"APP/main.d" -MT"APP/main.o"   -o "APP/main.o" "../APP/main.c" 
+		Finished building: ../APP/main.c
+		Building target: Nasr75Proj.elf
+		Invoking: AVR/GNU Linker : 5.4.0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe" -o Nasr75Proj.elf  APP/main.o HAL/KPD/KPD_PROG.o HAL/LCD/LCD_PROG.o HAL/SS/SS_PROG.o MCAL/ADC/ADC_PROG.o MCAL/DIO/DIO_PROG.o MCAL/EXT/EXT_PROG.o MCAL/GI/GI_PROG.o MCAL/TIMER0/TIMER0_PROG.o MCAL/TIMER1/TIMER1_PROG.o   -Wl,-Map="Nasr75Proj.map" -Wl,--start-group -Wl,-lm  -Wl,--end-group -Wl,--gc-sections -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32"  
+		Finished building target: Nasr75Proj.elf
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures  "Nasr75Proj.elf" "Nasr75Proj.hex"
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objcopy.exe" -j .eeprom  --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0  --no-change-warnings -O ihex "Nasr75Proj.elf" "Nasr75Proj.eep" || exit 0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objdump.exe" -h -S "Nasr75Proj.elf" > "Nasr75Proj.lss"
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O srec -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures "Nasr75Proj.elf" "Nasr75Proj.srec"
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-size.exe" "Nasr75Proj.elf"
+		   text	   data	    bss	    dec	    hex	filename
+		    810	      0	      6	    816	    330	Nasr75Proj.elf
+	Done executing task "RunCompilerTask".
+	Task "RunOutputFileVerifyTask"
+				Program Memory Usage 	:	810 bytes   2.5 % Full
+				Data Memory Usage 		:	6 bytes   0.3 % Full
+				Warning: Memory Usage estimation may not be accurate if there are sections other than .text sections in ELF file
+	Done executing task "RunOutputFileVerifyTask".
+Done building target "CoreBuild" in project "Nasr75Proj.cproj".
+Target "PostBuildEvent" skipped, due to false condition; ('$(PostBuildEvent)' != '') was evaluated as ('' != '').
+Target "Build" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Avr.common.targets" from project "C:\Users\AMIT\Desktop\Nasr75\Nasr75Proj\Nasr75Proj\Nasr75Proj.cproj" (entry point):
+Done building target "Build" in project "Nasr75Proj.cproj".
+Done building project "Nasr75Proj.cproj".
+
+Build succeeded.
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
