@@ -3,30 +3,26 @@
  *
  * Created: 5/29/2024 6:43:56 PM
  *  Author: ahmed
- */ 
+ 
 
 #include "Sess29EEPROM/sess_INT.h"
 
 int source_code()
 {
-	I2C_init(MASTER);
-	//u8 RecevedData;
+	EEPROM_Init();
+	DIO_setPinDir(DIO_PINC6,DIO_OUTPUT);
+	u8 RecevedData = 0;
+	EEPROM_SendByte(1,0x1);
 	while (1)
 	{
-		I2C_sendByte(1,0x5);
 		_delay_ms(1000);
-		I2C_sendByte(0,0x5);
+		EEPROM_ReadByteNACK(&RecevedData,0x1);
 		_delay_ms(1000);
-		/*I2C_receiveByteACK(&RecevedData,0x1);
-		
-		if (RecevedData=='1')
+		if (RecevedData==1)
 		{
-			DIO_setPinValue(DIO_PINC2,DIO_HIGH);
+			DIO_togglePinValue(DIO_PINC6);
 		}
-		else if (RecevedData=='f')
-		{
-			DIO_setPinValue(DIO_PINC2,DIO_LOW);
-		}*/
 	}
 	return 0;
 }
+*/ 
