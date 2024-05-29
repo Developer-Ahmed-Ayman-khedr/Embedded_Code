@@ -56,6 +56,8 @@ APP\Sess27SPI\sess_PROG.c
 
 APP\Sess28I2C\sess_PROG.c
 
+APP\Sess29EEPROM\sess_PROG.c
+
 HAL\7seg\SS_PROG.c
 
 HAL\KPD\KPD_PROG.c

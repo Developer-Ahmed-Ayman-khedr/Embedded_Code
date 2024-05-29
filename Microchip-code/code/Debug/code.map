@@ -216,6 +216,12 @@ Discarded input sections
  .text          0x00000000        0x0 APP/Sess28I2C/sess_PROG.o
  .data          0x00000000        0x0 APP/Sess28I2C/sess_PROG.o
  .bss           0x00000000        0x0 APP/Sess28I2C/sess_PROG.o
+ .debug_line    0x00000000        0x0 APP/Sess28I2C/sess_PROG.o
+ .debug_str     0x00000000      0x11f APP/Sess28I2C/sess_PROG.o
+ .comment       0x00000000       0x31 APP/Sess28I2C/sess_PROG.o
+ .text          0x00000000        0x0 APP/Sess29EEPROM/sess_PROG.o
+ .data          0x00000000        0x0 APP/Sess29EEPROM/sess_PROG.o
+ .bss           0x00000000        0x0 APP/Sess29EEPROM/sess_PROG.o
  .text          0x00000000        0x0 HAL/7seg/SS_PROG.o
  .data          0x00000000        0x0 HAL/7seg/SS_PROG.o
  .bss           0x00000000        0x0 HAL/7seg/SS_PROG.o
@@ -701,6 +707,7 @@ LOAD APP/Sess26UART/TASKKPDUART/TASKKPDUART_PROG.o
 LOAD APP/Sess27SPI/BLUTOTH/sess_PROG.o
 LOAD APP/Sess27SPI/sess_PROG.o
 LOAD APP/Sess28I2C/sess_PROG.o
+LOAD APP/Sess29EEPROM/sess_PROG.o
 LOAD HAL/7seg/SS_PROG.o
 LOAD HAL/KPD/KPD_PROG.o
 LOAD HAL/LCD/LCD_PROG.o
@@ -899,7 +906,7 @@ END GROUP
  .text.main     0x0000007c        0xa APP/main.o
                 0x0000007c                main
  .text.source_code
-                0x00000086       0x3c APP/Sess28I2C/sess_PROG.o
+                0x00000086       0x3c APP/Sess29EEPROM/sess_PROG.o
                 0x00000086                source_code
  .text.__vector_1
                 0x000000c2       0x4e MCAL/EXT/EXT_PROG.o
@@ -1035,7 +1042,7 @@ END GROUP
  *(.comment)
  .comment       0x00000000       0x30 APP/main.o
                                  0x31 (size before relaxing)
- .comment       0x00000030       0x31 APP/Sess28I2C/sess_PROG.o
+ .comment       0x00000030       0x31 APP/Sess29EEPROM/sess_PROG.o
  .comment       0x00000030       0x31 MCAL/EXT/EXT_PROG.o
  .comment       0x00000030       0x31 MCAL/I2C/I2C_PROG.o
  .comment       0x00000030       0x31 MCAL/TIMER0/TIMER0_PROG.o
@@ -1067,7 +1074,7 @@ END GROUP
  .debug_aranges
                 0x00000000       0x20 APP/main.o
  .debug_aranges
-                0x00000020       0x20 APP/Sess28I2C/sess_PROG.o
+                0x00000020       0x20 APP/Sess29EEPROM/sess_PROG.o
  .debug_aranges
                 0x00000040       0x60 MCAL/EXT/EXT_PROG.o
  .debug_aranges
@@ -1086,7 +1093,7 @@ END GROUP
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_info    0x000004e6       0xb2 APP/main.o
- .debug_info    0x00000598      0x1cb APP/Sess28I2C/sess_PROG.o
+ .debug_info    0x00000598      0x1cb APP/Sess29EEPROM/sess_PROG.o
  .debug_info    0x00000763      0x20f MCAL/EXT/EXT_PROG.o
  .debug_info    0x00000972      0x1db MCAL/I2C/I2C_PROG.o
  .debug_info    0x00000b4d      0x208 MCAL/TIMER0/TIMER0_PROG.o
@@ -1097,55 +1104,55 @@ END GROUP
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x4a3 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_abbrev  0x000004a3       0x63 APP/main.o
- .debug_abbrev  0x00000506      0x129 APP/Sess28I2C/sess_PROG.o
+ .debug_abbrev  0x00000506      0x129 APP/Sess29EEPROM/sess_PROG.o
  .debug_abbrev  0x0000062f       0xad MCAL/EXT/EXT_PROG.o
  .debug_abbrev  0x000006dc       0xc8 MCAL/I2C/I2C_PROG.o
  .debug_abbrev  0x000007a4       0xea MCAL/TIMER0/TIMER0_PROG.o
  .debug_abbrev  0x0000088e       0xea MCAL/TIMER1/TIMER1_PROG.o
  .debug_abbrev  0x00000978      0x14f MCAL/UART/UART_PROG.o
 
-.debug_line     0x00000000      0xc00
+.debug_line     0x00000000      0xc06
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x116 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_line    0x00000116       0x66 APP/main.o
- .debug_line    0x0000017c      0x162 APP/Sess28I2C/sess_PROG.o
- .debug_line    0x000002de      0x1ac MCAL/EXT/EXT_PROG.o
- .debug_line    0x0000048a      0x1b5 MCAL/I2C/I2C_PROG.o
- .debug_line    0x0000063f      0x268 MCAL/TIMER0/TIMER0_PROG.o
- .debug_line    0x000008a7      0x1e8 MCAL/TIMER1/TIMER1_PROG.o
- .debug_line    0x00000a8f      0x171 MCAL/UART/UART_PROG.o
+ .debug_line    0x00000116       0x69 APP/main.o
+ .debug_line    0x0000017f      0x165 APP/Sess29EEPROM/sess_PROG.o
+ .debug_line    0x000002e4      0x1ac MCAL/EXT/EXT_PROG.o
+ .debug_line    0x00000490      0x1b5 MCAL/I2C/I2C_PROG.o
+ .debug_line    0x00000645      0x268 MCAL/TIMER0/TIMER0_PROG.o
+ .debug_line    0x000008ad      0x1e8 MCAL/TIMER1/TIMER1_PROG.o
+ .debug_line    0x00000a95      0x171 MCAL/UART/UART_PROG.o
 
 .debug_frame    0x00000000      0x544
  *(.debug_frame)
  .debug_frame   0x00000000       0x24 APP/main.o
- .debug_frame   0x00000024       0x24 APP/Sess28I2C/sess_PROG.o
+ .debug_frame   0x00000024       0x24 APP/Sess29EEPROM/sess_PROG.o
  .debug_frame   0x00000048      0x17c MCAL/EXT/EXT_PROG.o
  .debug_frame   0x000001c4       0x64 MCAL/I2C/I2C_PROG.o
  .debug_frame   0x00000228      0x164 MCAL/TIMER0/TIMER0_PROG.o
  .debug_frame   0x0000038c       0xdc MCAL/TIMER1/TIMER1_PROG.o
  .debug_frame   0x00000468       0xdc MCAL/UART/UART_PROG.o
 
-.debug_str      0x00000000      0x763
+.debug_str      0x00000000      0x766
  *(.debug_str)
  .debug_str     0x00000000      0x196 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_str     0x00000196      0x17e APP/main.o
                                 0x1b2 (size before relaxing)
- .debug_str     0x00000314       0x8d APP/Sess28I2C/sess_PROG.o
-                                0x22c (size before relaxing)
- .debug_str     0x000003a1       0xc5 MCAL/EXT/EXT_PROG.o
+ .debug_str     0x00000314       0x90 APP/Sess29EEPROM/sess_PROG.o
+                                0x22f (size before relaxing)
+ .debug_str     0x000003a4       0xc5 MCAL/EXT/EXT_PROG.o
                                 0x258 (size before relaxing)
- .debug_str     0x00000466       0x6e MCAL/I2C/I2C_PROG.o
+ .debug_str     0x00000469       0x6e MCAL/I2C/I2C_PROG.o
                                 0x232 (size before relaxing)
- .debug_str     0x000004d4      0x119 MCAL/TIMER0/TIMER0_PROG.o
+ .debug_str     0x000004d7      0x119 MCAL/TIMER0/TIMER0_PROG.o
                                 0x26c (size before relaxing)
- .debug_str     0x000005ed       0xd4 MCAL/TIMER1/TIMER1_PROG.o
+ .debug_str     0x000005f0       0xd4 MCAL/TIMER1/TIMER1_PROG.o
                                 0x26d (size before relaxing)
- .debug_str     0x000006c1       0xa2 MCAL/UART/UART_PROG.o
+ .debug_str     0x000006c4       0xa2 MCAL/UART/UART_PROG.o
                                 0x235 (size before relaxing)
 
 .debug_loc      0x00000000      0x9e7
  *(.debug_loc)
- .debug_loc     0x00000000       0x48 APP/Sess28I2C/sess_PROG.o
+ .debug_loc     0x00000000       0x48 APP/Sess29EEPROM/sess_PROG.o
  .debug_loc     0x00000048      0x341 MCAL/EXT/EXT_PROG.o
  .debug_loc     0x00000389      0x101 MCAL/I2C/I2C_PROG.o
  .debug_loc     0x0000048a      0x266 MCAL/TIMER0/TIMER0_PROG.o
@@ -1173,7 +1180,7 @@ END GROUP
 .debug_ranges   0x00000000      0x190
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x10 APP/main.o
- .debug_ranges  0x00000010       0x10 APP/Sess28I2C/sess_PROG.o
+ .debug_ranges  0x00000010       0x10 APP/Sess29EEPROM/sess_PROG.o
  .debug_ranges  0x00000020       0x50 MCAL/EXT/EXT_PROG.o
  .debug_ranges  0x00000070       0x30 MCAL/I2C/I2C_PROG.o
  .debug_ranges  0x000000a0       0x68 MCAL/TIMER0/TIMER0_PROG.o

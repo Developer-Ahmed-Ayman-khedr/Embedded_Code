@@ -5,7 +5,7 @@
  * Author : Ahmed
  */ 
 
-#include "Sess28I2C/sess_INT.h"
+#include "Sess29EEPROM/sess_INT.h"
 
 int main(){
 	source_code();
