@@ -5,9 +5,6 @@
  *  Author: ahmed
  */ 
 
-#include "BIT_MATH.h"
-#include "STD_TYPES.h"
-
 #include "TIMER0_INT.h"
 
 void TIMER0_initNormal()

@@ -1135,7 +1135,7 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x2465
+.debug_info     0x00000000     0x2481
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_info    0x000004e6       0xb2 APP/main.o
@@ -1146,9 +1146,9 @@ END GROUP
  .debug_info    0x00001904      0x1b2 MCAL/DIO/DIO_PROG.o
  .debug_info    0x00001ab6      0x20f MCAL/EXT/EXT_PROG.o
  .debug_info    0x00001cc5      0x1db MCAL/I2C/I2C_PROG.o
- .debug_info    0x00001ea0      0x208 MCAL/TIMER0/TIMER0_PROG.o
- .debug_info    0x000020a8      0x1dd MCAL/TIMER1/TIMER1_PROG.o
- .debug_info    0x00002285      0x1e0 MCAL/UART/UART_PROG.o
+ .debug_info    0x00001ea0      0x224 MCAL/TIMER0/TIMER0_PROG.o
+ .debug_info    0x000020c4      0x1dd MCAL/TIMER1/TIMER1_PROG.o
+ .debug_info    0x000022a1      0x1e0 MCAL/UART/UART_PROG.o
 
 .debug_abbrev   0x00000000      0xf15
  *(.debug_abbrev)
@@ -1214,7 +1214,7 @@ END GROUP
  .debug_str     0x00000711       0x71 MCAL/I2C/I2C_PROG.o
                                 0x232 (size before relaxing)
  .debug_str     0x00000782      0x119 MCAL/TIMER0/TIMER0_PROG.o
-                                0x26c (size before relaxing)
+                                0x2ac (size before relaxing)
  .debug_str     0x0000089b       0xd4 MCAL/TIMER1/TIMER1_PROG.o
                                 0x26d (size before relaxing)
  .debug_str     0x0000096f       0x75 MCAL/UART/UART_PROG.o
