@@ -9,9 +9,22 @@
 #ifndef TIMER0_INT_H_
 #define TIMER0_INT_H_
 
-//Includes
+/******************************************
+  INCLUDES
+*******************************************/
 
-#include "STD_TYPES.h"
+#include "DIO_INT.h"
+
+
+/******************************************
+  Global Data TYPES AND STRUCTURES
+*******************************************/
+
+
+/******************************************
+  GLOBAL CONSTANT MACROS
+*******************************************/
+
 
 //Timer/Counter Control Register
 #define TCCR0 		*((volatile u8*)0x53)
@@ -50,6 +63,15 @@
 #define TIMER0_INVERTED		1
 
 #define TIMER0_PWM_mode TIMER0_NON_INVERTED
+
+/******************************************
+  GLOBAL FUNCTIONS MACROS
+*******************************************/
+
+
+/******************************************
+  GLOBAL FUNCTIONS Prototypes
+*******************************************/
 
 void TIMER0_initNormal();
 
