@@ -360,7 +360,7 @@ Discarded input sections
  .text.TIMER0_init_Phase_Correct_PWM
                 0x00000000       0x1a MCAL/TIMER0/TIMER0_PROG.o
  .text.TIMER0_start
-                0x00000000       0xc0 MCAL/TIMER0/TIMER0_PROG.o
+                0x00000000       0xd8 MCAL/TIMER0/TIMER0_PROG.o
  .text.TIMER0_setPreload
                 0x00000000        0x4 MCAL/TIMER0/TIMER0_PROG.o
  .text.TIMER0_setOCR
@@ -1165,7 +1165,7 @@ END GROUP
  .debug_abbrev  0x00000cdc       0xea MCAL/TIMER1/TIMER1_PROG.o
  .debug_abbrev  0x00000dc6      0x14f MCAL/UART/UART_PROG.o
 
-.debug_line     0x00000000     0x1771
+.debug_line     0x00000000     0x1789
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x116 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_line    0x00000116       0x82 APP/main.o
@@ -1176,9 +1176,9 @@ END GROUP
  .debug_line    0x00000c7a      0x1d5 MCAL/DIO/DIO_PROG.o
  .debug_line    0x00000e4f      0x1ac MCAL/EXT/EXT_PROG.o
  .debug_line    0x00000ffb      0x1b5 MCAL/I2C/I2C_PROG.o
- .debug_line    0x000011b0      0x268 MCAL/TIMER0/TIMER0_PROG.o
- .debug_line    0x00001418      0x1e8 MCAL/TIMER1/TIMER1_PROG.o
- .debug_line    0x00001600      0x171 MCAL/UART/UART_PROG.o
+ .debug_line    0x000011b0      0x280 MCAL/TIMER0/TIMER0_PROG.o
+ .debug_line    0x00001430      0x1e8 MCAL/TIMER1/TIMER1_PROG.o
+ .debug_line    0x00001618      0x171 MCAL/UART/UART_PROG.o
 
 .debug_frame    0x00000000      0x780
  *(.debug_frame)
@@ -1220,7 +1220,7 @@ END GROUP
  .debug_str     0x0000096f       0x75 MCAL/UART/UART_PROG.o
                                 0x235 (size before relaxing)
 
-.debug_loc      0x00000000     0x1694
+.debug_loc      0x00000000     0x16ad
  *(.debug_loc)
  .debug_loc     0x00000000      0x22e APP/Sess29EEPROM/TASKEEPROMPASS/TASKEEPROMPASS_PROG.o
  .debug_loc     0x0000022e       0xf2 HAL/EEPROM/EEPROM_PROG.o
@@ -1228,9 +1228,9 @@ END GROUP
  .debug_loc     0x00000902      0x3f3 MCAL/DIO/DIO_PROG.o
  .debug_loc     0x00000cf5      0x341 MCAL/EXT/EXT_PROG.o
  .debug_loc     0x00001036      0x101 MCAL/I2C/I2C_PROG.o
- .debug_loc     0x00001137      0x266 MCAL/TIMER0/TIMER0_PROG.o
- .debug_loc     0x0000139d      0x12b MCAL/TIMER1/TIMER1_PROG.o
- .debug_loc     0x000014c8      0x1cc MCAL/UART/UART_PROG.o
+ .debug_loc     0x00001137      0x27f MCAL/TIMER0/TIMER0_PROG.o
+ .debug_loc     0x000013b6      0x12b MCAL/TIMER1/TIMER1_PROG.o
+ .debug_loc     0x000014e1      0x1cc MCAL/UART/UART_PROG.o
 
 .debug_macinfo
  *(.debug_macinfo)
