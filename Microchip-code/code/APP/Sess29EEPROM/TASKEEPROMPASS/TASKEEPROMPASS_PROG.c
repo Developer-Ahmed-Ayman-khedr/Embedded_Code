@@ -22,15 +22,6 @@ int source_code()
 	
 	while (1)
 	{
-		/*
-		//reset EEPROM
-		while (i2<4)
-		{
-			EEPROMRecevedData = 255;
-			_delay_ms(1000);
-			EEPROM_SendByte(&EEPROMRecevedData,i2);
-			i2++;
-		}*/
 		while (i2<4)
 		{
 			_delay_ms(1000);
