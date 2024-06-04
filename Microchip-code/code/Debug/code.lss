@@ -104,7 +104,6 @@ int main(){
 	source_code();
   92:	0e 94 4e 00 	call	0x9c	; 0x9c <source_code>
 	return 0;
-}
   96:	80 e0       	ldi	r24, 0x00	; 0
   98:	90 e0       	ldi	r25, 0x00	; 0
   9a:	08 95       	ret
@@ -164,8 +163,8 @@ int source_code()
   d2:	e1 f7       	brne	.-8      	; 0xcc <source_code+0x30>
   d4:	00 c0       	rjmp	.+0      	; 0xd6 <source_code+0x3a>
   d6:	00 00       	nop
-			i2++;
-		}*/
+	while (1)
+	{
 		while (i2<4)
 		{
 			_delay_ms(1000);
@@ -200,11 +199,11 @@ int source_code()
 			}
 			i = 0;
   f6:	00 e0       	ldi	r16, 0x00	; 0
-			EEPROMRecevedData = 255;
-			_delay_ms(1000);
-			EEPROM_SendByte(&EEPROMRecevedData,i2);
-			i2++;
-		}*/
+	BOOL flage=FALSE,EEPROM_flage = FALSE,Save_flage = FALSE;
+	u8 UART_RecevedData, KPD_RecevedData, Entered_Pass[4], i = 0, i2 = 0, EEPROMRecevedData;
+	
+	while (1)
+	{
 		while (i2<4)
   f8:	14 30       	cpi	r17, 0x04	; 4
   fa:	28 f3       	brcs	.-54     	; 0xc6 <source_code+0x2a>
