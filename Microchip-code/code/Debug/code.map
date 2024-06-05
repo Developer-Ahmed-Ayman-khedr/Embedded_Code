@@ -376,6 +376,8 @@ Discarded input sections
  .bss           0x00000000        0x0 MCAL/TIMER1/TIMER1_PROG.o
  .text.TIMER1_initFastPwmMod14
                 0x00000000       0x26 MCAL/TIMER1/TIMER1_PROG.o
+ .text.TIMER1_STOP
+                0x00000000       0x14 MCAL/TIMER1/TIMER1_PROG.o
  .text.TIMER1_setOcr
                 0x00000000        0x6 MCAL/TIMER1/TIMER1_PROG.o
  .text.TIMER1_setFrequency
@@ -1107,7 +1109,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x318
+.debug_aranges  0x00000000      0x320
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x20 APP/main.o
@@ -1128,14 +1130,14 @@ END GROUP
  .debug_aranges
                 0x000001f8       0x78 MCAL/TIMER0/TIMER0_PROG.o
  .debug_aranges
-                0x00000270       0x58 MCAL/TIMER1/TIMER1_PROG.o
+                0x00000270       0x60 MCAL/TIMER1/TIMER1_PROG.o
  .debug_aranges
-                0x000002c8       0x50 MCAL/UART/UART_PROG.o
+                0x000002d0       0x50 MCAL/UART/UART_PROG.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x2481
+.debug_info     0x00000000     0x2496
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_info    0x000004e6       0xb2 APP/main.o
@@ -1147,8 +1149,8 @@ END GROUP
  .debug_info    0x00001ab6      0x20f MCAL/EXT/EXT_PROG.o
  .debug_info    0x00001cc5      0x1db MCAL/I2C/I2C_PROG.o
  .debug_info    0x00001ea0      0x224 MCAL/TIMER0/TIMER0_PROG.o
- .debug_info    0x000020c4      0x1dd MCAL/TIMER1/TIMER1_PROG.o
- .debug_info    0x000022a1      0x1e0 MCAL/UART/UART_PROG.o
+ .debug_info    0x000020c4      0x1f2 MCAL/TIMER1/TIMER1_PROG.o
+ .debug_info    0x000022b6      0x1e0 MCAL/UART/UART_PROG.o
 
 .debug_abbrev   0x00000000      0xf15
  *(.debug_abbrev)
@@ -1165,7 +1167,7 @@ END GROUP
  .debug_abbrev  0x00000cdc       0xea MCAL/TIMER1/TIMER1_PROG.o
  .debug_abbrev  0x00000dc6      0x14f MCAL/UART/UART_PROG.o
 
-.debug_line     0x00000000     0x1789
+.debug_line     0x00000000     0x17ab
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x116 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_line    0x00000116       0x82 APP/main.o
@@ -1177,10 +1179,10 @@ END GROUP
  .debug_line    0x00000e4f      0x1ac MCAL/EXT/EXT_PROG.o
  .debug_line    0x00000ffb      0x1b5 MCAL/I2C/I2C_PROG.o
  .debug_line    0x000011b0      0x280 MCAL/TIMER0/TIMER0_PROG.o
- .debug_line    0x00001430      0x1e8 MCAL/TIMER1/TIMER1_PROG.o
- .debug_line    0x00001618      0x171 MCAL/UART/UART_PROG.o
+ .debug_line    0x00001430      0x20a MCAL/TIMER1/TIMER1_PROG.o
+ .debug_line    0x0000163a      0x171 MCAL/UART/UART_PROG.o
 
-.debug_frame    0x00000000      0x780
+.debug_frame    0x00000000      0x790
  *(.debug_frame)
  .debug_frame   0x00000000       0x24 APP/main.o
  .debug_frame   0x00000024       0x34 APP/Sess29EEPROM/TASKEEPROMPASS/TASKEEPROMPASS_PROG.o
@@ -1191,10 +1193,10 @@ END GROUP
  .debug_frame   0x00000284      0x17c MCAL/EXT/EXT_PROG.o
  .debug_frame   0x00000400       0x64 MCAL/I2C/I2C_PROG.o
  .debug_frame   0x00000464      0x164 MCAL/TIMER0/TIMER0_PROG.o
- .debug_frame   0x000005c8       0xdc MCAL/TIMER1/TIMER1_PROG.o
- .debug_frame   0x000006a4       0xdc MCAL/UART/UART_PROG.o
+ .debug_frame   0x000005c8       0xec MCAL/TIMER1/TIMER1_PROG.o
+ .debug_frame   0x000006b4       0xdc MCAL/UART/UART_PROG.o
 
-.debug_str      0x00000000      0x9e4
+.debug_str      0x00000000      0x9f0
  *(.debug_str)
  .debug_str     0x00000000      0x196 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_str     0x00000196      0x17e APP/main.o
@@ -1215,9 +1217,9 @@ END GROUP
                                 0x232 (size before relaxing)
  .debug_str     0x00000782      0x119 MCAL/TIMER0/TIMER0_PROG.o
                                 0x2ac (size before relaxing)
- .debug_str     0x0000089b       0xd4 MCAL/TIMER1/TIMER1_PROG.o
-                                0x26d (size before relaxing)
- .debug_str     0x0000096f       0x75 MCAL/UART/UART_PROG.o
+ .debug_str     0x0000089b       0xe0 MCAL/TIMER1/TIMER1_PROG.o
+                                0x279 (size before relaxing)
+ .debug_str     0x0000097b       0x75 MCAL/UART/UART_PROG.o
                                 0x235 (size before relaxing)
 
 .debug_loc      0x00000000     0x16ad
@@ -1250,7 +1252,7 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000      0x268
+.debug_ranges   0x00000000      0x270
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x10 APP/main.o
  .debug_ranges  0x00000010       0x10 APP/Sess29EEPROM/TASKEEPROMPASS/TASKEEPROMPASS_PROG.o
@@ -1261,8 +1263,8 @@ END GROUP
  .debug_ranges  0x000000f8       0x50 MCAL/EXT/EXT_PROG.o
  .debug_ranges  0x00000148       0x30 MCAL/I2C/I2C_PROG.o
  .debug_ranges  0x00000178       0x68 MCAL/TIMER0/TIMER0_PROG.o
- .debug_ranges  0x000001e0       0x48 MCAL/TIMER1/TIMER1_PROG.o
- .debug_ranges  0x00000228       0x40 MCAL/UART/UART_PROG.o
+ .debug_ranges  0x000001e0       0x50 MCAL/TIMER1/TIMER1_PROG.o
+ .debug_ranges  0x00000230       0x40 MCAL/UART/UART_PROG.o
 
 .debug_macro
  *(.debug_macro)

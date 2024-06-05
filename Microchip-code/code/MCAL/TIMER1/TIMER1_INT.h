@@ -95,6 +95,8 @@
 
 void TIMER1_initFastPwmMod14();
 
+void TIMER1_STOP();
+
 void TIMER1_setOcr(u16 value);
 
 //Note: prescaller = 64

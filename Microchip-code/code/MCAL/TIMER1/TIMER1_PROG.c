@@ -20,6 +20,12 @@ void TIMER1_initFastPwmMod14()
 	SET_BIT(TCCR1A,COM1A1);
 }
 
+void TIMER1_STOP(){
+		CLEAR_BIT(TCCR1B,CS10);
+		CLEAR_BIT(TCCR1B,CS11);
+		CLEAR_BIT(TCCR1B,CS12);
+}
+
 void TIMER1_setOcr(u16 value)
 {
 	OCR1A = value;
