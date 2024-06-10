@@ -1,63 +1,53 @@
 /*
- * sess_INT.h
+ * RTOS.h
  *
- * Created: 6/10/2024 6:17:21 PM
+ * Created: 6/10/2024 8:46:47 PM
  *  Author: ahmed
- */
+ */ 
 
 
-#ifndef SESS_INT_H_
-#define SESS_INT_H_
+#ifndef RTOS_H_
+#define RTOS_H_
 
 /******************************************
-INCLUDES
+  INCLUDES
 *******************************************/
 
 #include "DIO_INT.h"
-
-#include "LCD_INT.h"
-
-#include "KPD_INT.h"
-
-#include "ADC_INT.h"
 
 #include "GI_INT.h"
 
 #include "TIMER0_INT.h"
 
-#include "TIMER1_INT.h"
+/******************************************
+  Global Data TYPES AND STRUCTURES
+*******************************************/
 
-#include "WDT_INT.h"
-
-#include "UART_INT.h"
-
-#include "SPI_INT.h"
-
-#include "I2C_INT.h"
-
-#include "EEPROM_INT.h"
-
-#include "RTOS.h"
+typedef struct task
+{
+	u16 periodicity;
+	void (*ptrfunc)();	
+}task_t;
 
 /******************************************
-Global Data TYPES AND STRUCTURES
+  GLOBAL CONSTANT MACROS
+*******************************************/
+
+#define TASKS_COUNT 3
+
+/******************************************
+  GLOBAL FUNCTIONS MACROS
 *******************************************/
 
 
 /******************************************
-GLOBAL CONSTANT MACROS
+  GLOBAL FUNCTIONS Prototypes
 *******************************************/
 
+void RTOS_Init();
 
-/******************************************
-GLOBAL FUNCTIONS MACROS
-*******************************************/
+void RTOS_CreateTask(u16 period,void (*ptr)(), u8 priority);
 
+void RTOS_Start();
 
-/******************************************
-GLOBAL FUNCTIONS Prototypes
-*******************************************/
-
-int source_code();
-
-#endif  /* SESS_INT_H_ */
+#endif /* RTOS_H_ */

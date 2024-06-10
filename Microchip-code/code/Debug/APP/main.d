@@ -10,7 +10,7 @@ APP/main.d APP/main.o: ../APP/main.c ../APP/Sess32/sess_INT.h \
  ../MCAL/GI/GI_INT.h ../MCAL/TIMER0/TIMER0_INT.h \
  ../MCAL/TIMER1/TIMER1_INT.h ../MCAL/WDT/WDT_INT.h \
  ../MCAL/UART/UART_INT.h ../MCAL/SPI/SPI_INT.h ../MCAL/I2C/I2C_INT.h \
- ../HAL/EEPROM/EEPROM_INT.h
+ ../HAL/EEPROM/EEPROM_INT.h ../RTOS/RTOS.h
 
 ../APP/Sess32/sess_INT.h:
 
@@ -53,3 +53,5 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ../MCAL/I2C/I2C_INT.h:
 
 ../HAL/EEPROM/EEPROM_INT.h:
+
+../RTOS/RTOS.h:
