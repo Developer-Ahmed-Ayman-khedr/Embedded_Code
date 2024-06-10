@@ -46,8 +46,6 @@ typedef struct task
 
 void RTOS_Init();
 
-void RTOS_Schedular();
-
 void RTOS_CreateTask(u16 period,void (*ptr)(), u8 priority);
 
 void RTOS_Start();

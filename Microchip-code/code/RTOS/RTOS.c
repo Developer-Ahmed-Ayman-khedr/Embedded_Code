@@ -9,13 +9,7 @@
 
 task_t arrTasks[TASKS_COUNT];
 
-void RTOS_Init(){
-	GI_enable();
-	TIMER0_initNormal();
-	TIMER_setcallbackOv(RTOS_Schedular);
-}
-
-void RTOS_Schedular(){
+static void RTOS_Schedular(){
 	static u16 counter = 0;
 	counter++;
 	
@@ -25,6 +19,12 @@ void RTOS_Schedular(){
 			arrTasks[i].ptrfunc();
 		}
 	}
+}
+
+void RTOS_Init(){
+	GI_enable();
+	TIMER0_initNormal();
+	TIMER_setcallbackOv(RTOS_Schedular);
 }
 
 void RTOS_CreateTask(u16 period,void (*func)(), u8 priority){

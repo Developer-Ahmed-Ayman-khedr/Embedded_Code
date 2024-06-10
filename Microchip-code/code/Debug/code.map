@@ -986,7 +986,6 @@ END GROUP
                 0x0000066c                __vector_13
  .text.RTOS_Schedular
                 0x000006ba       0x5e RTOS/RTOS.o
-                0x000006ba                RTOS_Schedular
  .text.RTOS_Init
                 0x00000718       0x12 RTOS/RTOS.o
                 0x00000718                RTOS_Init
@@ -1042,7 +1041,7 @@ END GROUP
                 0x00800060                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
- .bss.counter.1780
+ .bss.counter.1777
                 0x00800060        0x2 RTOS/RTOS.o
  *(COMMON)
  COMMON         0x00800062        0x6 MCAL/EXT/EXT_PROG.o
@@ -1163,7 +1162,7 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x1466
+.debug_info     0x00000000     0x1465
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_info    0x000004e6       0xb2 APP/main.o
@@ -1174,9 +1173,9 @@ END GROUP
  .debug_info    0x00000c44      0x224 MCAL/TIMER0/TIMER0_PROG.o
  .debug_info    0x00000e68      0x1f2 MCAL/TIMER1/TIMER1_PROG.o
  .debug_info    0x0000105a      0x1e0 MCAL/UART/UART_PROG.o
- .debug_info    0x0000123a      0x22c RTOS/RTOS.o
+ .debug_info    0x0000123a      0x22b RTOS/RTOS.o
 
-.debug_abbrev   0x00000000      0xbfa
+.debug_abbrev   0x00000000      0xbf8
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x4a3 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_abbrev  0x000004a3       0x63 APP/main.o
@@ -1187,7 +1186,7 @@ END GROUP
  .debug_abbrev  0x00000787       0xea MCAL/TIMER0/TIMER0_PROG.o
  .debug_abbrev  0x00000871       0xea MCAL/TIMER1/TIMER1_PROG.o
  .debug_abbrev  0x0000095b      0x14f MCAL/UART/UART_PROG.o
- .debug_abbrev  0x00000aaa      0x150 RTOS/RTOS.o
+ .debug_abbrev  0x00000aaa      0x14e RTOS/RTOS.o
 
 .debug_line     0x00000000      0xd67
  *(.debug_line .debug_line.* .debug_line_end)
