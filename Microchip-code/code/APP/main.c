@@ -5,7 +5,7 @@
  * Author : Ahmed
  */ 
 
-#include "Sess29EEPROM/TASKEEPROMPASS/TASKEEPROMPASS_INT.h"
+#include "Sess32/sess_INT.h"
 
 int main(){
 	source_code();

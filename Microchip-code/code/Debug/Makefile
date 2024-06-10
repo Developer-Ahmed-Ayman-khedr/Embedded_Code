@@ -34,6 +34,7 @@ LINKER_SCRIPT_DEP:=
 # Every subdirectory with source files must be described here
 SUBDIRS :=  \
 ../APP \
+../APP/Sess32 \
 ../APP/Sess29EEPROM \
 ../APP/Sess28I2C \
 ../APP/Sess27SPI \
@@ -63,6 +64,7 @@ SUBDIRS :=  \
 ../APP/Sess26UART/TASKKPDUART \
 ../APP/Sess27SPI/BLUTOTH \
 ../APP/Sess29EEPROM/TASKEEPROMPASS \
+../APP/Sess32/TTL \
 ../HAL \
 ../HAL/LCD \
 ../HAL/7seg \
@@ -113,6 +115,8 @@ C_SRCS +=  \
 ../APP/Sess28I2C/sess_PROG.c \
 ../APP/Sess29EEPROM/sess_PROG.c \
 ../APP/Sess29EEPROM/TASKEEPROMPASS/TASKEEPROMPASS_PROG.c \
+../APP/Sess32/sess_PROG.c \
+../APP/Sess32/TTL/sess_PROG.c \
 ../HAL/7seg/SS_PROG.c \
 ../HAL/EEPROM/EEPROM_PROG.c \
 ../HAL/KPD/KPD_PROG.c \
@@ -165,6 +169,8 @@ APP/Sess27SPI/sess_PROG.o \
 APP/Sess28I2C/sess_PROG.o \
 APP/Sess29EEPROM/sess_PROG.o \
 APP/Sess29EEPROM/TASKEEPROMPASS/TASKEEPROMPASS_PROG.o \
+APP/Sess32/sess_PROG.o \
+APP/Sess32/TTL/sess_PROG.o \
 HAL/7seg/SS_PROG.o \
 HAL/EEPROM/EEPROM_PROG.o \
 HAL/KPD/KPD_PROG.o \
@@ -210,6 +216,8 @@ APP/Sess27SPI/sess_PROG.o \
 APP/Sess28I2C/sess_PROG.o \
 APP/Sess29EEPROM/sess_PROG.o \
 APP/Sess29EEPROM/TASKEEPROMPASS/TASKEEPROMPASS_PROG.o \
+APP/Sess32/sess_PROG.o \
+APP/Sess32/TTL/sess_PROG.o \
 HAL/7seg/SS_PROG.o \
 HAL/EEPROM/EEPROM_PROG.o \
 HAL/KPD/KPD_PROG.o \
@@ -255,6 +263,8 @@ APP/Sess27SPI/sess_PROG.d \
 APP/Sess28I2C/sess_PROG.d \
 APP/Sess29EEPROM/sess_PROG.d \
 APP/Sess29EEPROM/TASKEEPROMPASS/TASKEEPROMPASS_PROG.d \
+APP/Sess32/sess_PROG.d \
+APP/Sess32/TTL/sess_PROG.d \
 HAL/7seg/SS_PROG.d \
 HAL/EEPROM/EEPROM_PROG.d \
 HAL/KPD/KPD_PROG.d \
@@ -300,6 +310,8 @@ APP/Sess27SPI/sess_PROG.d \
 APP/Sess28I2C/sess_PROG.d \
 APP/Sess29EEPROM/sess_PROG.d \
 APP/Sess29EEPROM/TASKEEPROMPASS/TASKEEPROMPASS_PROG.d \
+APP/Sess32/sess_PROG.d \
+APP/Sess32/TTL/sess_PROG.d \
 HAL/7seg/SS_PROG.d \
 HAL/EEPROM/EEPROM_PROG.d \
 HAL/KPD/KPD_PROG.d \
@@ -526,6 +538,20 @@ APP/Sess29EEPROM/sess_PROG.o: ../APP/Sess29EEPROM/sess_PROG.c
 	
 
 APP/Sess29EEPROM/TASKEEPROMPASS/TASKEEPROMPASS_PROG.o: ../APP/Sess29EEPROM/TASKEEPROMPASS/TASKEEPROMPASS_PROG.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"../LIB" -I"../MCAL/DIO" -I"../APP" -I"../HAL/7seg" -I"../HAL/LCD" -I"../HAL/KPD" -I"../MCAL/EXT" -I"../MCAL/GI" -I"../MCAL/ADC" -I"../MCAL/TIMER0" -I"../MCAL/TIMER1" -I"../MCAL/WDT" -I"../MCAL/UART" -I"../MCAL/SPI" -I"../MCAL/I2C" -I"../HAL/EEPROM"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+APP/Sess32/sess_PROG.o: ../APP/Sess32/sess_PROG.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"../LIB" -I"../MCAL/DIO" -I"../APP" -I"../HAL/7seg" -I"../HAL/LCD" -I"../HAL/KPD" -I"../MCAL/EXT" -I"../MCAL/GI" -I"../MCAL/ADC" -I"../MCAL/TIMER0" -I"../MCAL/TIMER1" -I"../MCAL/WDT" -I"../MCAL/UART" -I"../MCAL/SPI" -I"../MCAL/I2C" -I"../HAL/EEPROM"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+APP/Sess32/TTL/sess_PROG.o: ../APP/Sess32/TTL/sess_PROG.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"../LIB" -I"../MCAL/DIO" -I"../APP" -I"../HAL/7seg" -I"../HAL/LCD" -I"../HAL/KPD" -I"../MCAL/EXT" -I"../MCAL/GI" -I"../MCAL/ADC" -I"../MCAL/TIMER0" -I"../MCAL/TIMER1" -I"../MCAL/WDT" -I"../MCAL/UART" -I"../MCAL/SPI" -I"../MCAL/I2C" -I"../HAL/EEPROM"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
