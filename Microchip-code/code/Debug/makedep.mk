@@ -64,6 +64,26 @@ APP\Sess32\sess_PROG.c
 
 APP\Sess32\TTL\sess_PROG.c
 
+APP\Sess33FREERTOS\sess_PROG.c
+
+FREERTOS\croutine.c
+
+FREERTOS\event_groups.c
+
+FREERTOS\heap_1.c
+
+FREERTOS\list.c
+
+FREERTOS\port.c
+
+FREERTOS\queue.c
+
+FREERTOS\stream_buffer.c
+
+FREERTOS\tasks.c
+
+FREERTOS\timers.c
+
 HAL\7seg\SS_PROG.c
 
 HAL\EEPROM\EEPROM_PROG.c
