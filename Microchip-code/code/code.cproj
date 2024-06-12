@@ -115,6 +115,7 @@
       <Value>../MCAL/I2C</Value>
       <Value>../HAL/EEPROM</Value>
       <Value>../RTOS</Value>
+      <Value>../FREERTOS</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcc.compiler.optimization.level>
@@ -323,6 +324,99 @@
     <Compile Include="APP\Sess32\TTL\sess_PROG.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="APP\Sess33FREERTOS\sess_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess33FREERTOS\sess_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\atomic.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\croutine.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\croutine.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\deprecated_definitions.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\event_groups.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\event_groups.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\FreeRTOS.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\FreeRTOSConfig.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\heap_1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\list.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\list.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\message_buffer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\mpu_prototypes.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\mpu_wrappers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\port.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\portable.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\portmacro.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\projdefs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\queue.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\queue.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\semphr.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\StackMacros.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\stack_macros.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\stream_buffer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\stream_buffer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\task.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\tasks.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\timers.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="FREERTOS\timers.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="HAL\7seg\SS_INT.h">
       <SubType>compile</SubType>
     </Compile>
@@ -422,6 +516,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="APP" />
+    <Folder Include="APP\Sess33FREERTOS" />
     <Folder Include="APP\Sess32" />
     <Folder Include="APP\Sess29EEPROM" />
     <Folder Include="APP\Sess28I2C" />
@@ -470,6 +565,7 @@
     <Folder Include="MCAL\WDT" />
     <Folder Include="MCAL\TIMER1" />
     <Folder Include="MCAL\TIMER0" />
+    <Folder Include="FREERTOS" />
     <Folder Include="RTOS" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
