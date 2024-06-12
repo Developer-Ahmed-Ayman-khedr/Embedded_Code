@@ -5,17 +5,15 @@
  *  Author: ahmed
  
 
-#include "Sess33FREERTOS/sess_INT.h"
+#include "Sess33FREERTOS/TASKSUSPEND/sess_INT.h"
 
 TaskHandle_t xHandle1;
 TaskHandle_t xHandle2;
-TaskHandle_t xHandle3;
 
 void task1(void * pvParameters){
 	while (1)
 	{
 		DIO_togglePinValue(DIO_PINC2);
-		vTaskSuspend(NULL);
 		vTaskDelay(500/portTICK_PERIOD_MS);
 	}
 }
@@ -24,18 +22,14 @@ void task2(void * pvParameters){
 	while (1)
 	{
 		DIO_togglePinValue(DIO_PINC7);
-		vTaskDelay(100/portTICK_PERIOD_MS);
-	}
-}
-
-void task3(void * pvParameters){
-	while (1)
-	{
-		DIO_togglePinValue(DIO_PINA3);
-		vTaskResume(xHandle1);
+		static u8 i=0;
+		if(i==6)
+		{
+			vTaskResume(xHandle1);
+		}
+		i++;
 		vTaskDelay(500/portTICK_PERIOD_MS);
 	}
-	
 }
 
 
@@ -51,16 +45,12 @@ int source_code()
 		"NAME",          * Text name for the task. *
 		100,      * Stack size in words, not bytes. *
 		NULL,    * Parameter passed into the task. *
-		1,	* Priority at which the task is created. *
-		&xHandle1 ); * Used to pass out the created task's handle. *
+		1, * Priority at which the task is created. *
+		&xHandle1 );  * Used to pass out the created task's handle. *
 		
 	xTaskCreate(task2,NULL,100,NULL,1,&xHandle2);
 	
-	xTaskCreate(task3,NULL,100,NULL,1,&xHandle3);
-	
-	vTaskSuspend(xHandle1);
-	
-	
+	vTaskSuspend(xHandle1);	
 	
 	vTaskStartScheduler();
 	//It never gets to this part.
@@ -70,5 +60,4 @@ int source_code()
 		
 	}
 	return 0;
-}
-*/ 
+}*/ 

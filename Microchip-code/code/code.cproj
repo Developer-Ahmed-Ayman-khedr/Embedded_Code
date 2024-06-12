@@ -330,6 +330,18 @@
     <Compile Include="APP\Sess33FREERTOS\sess_PROG.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="APP\Sess33FREERTOS\TASKSUSPENDBUTTON\sess_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess33FREERTOS\TASKSUSPENDBUTTON\sess_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess33FREERTOS\TASKSUSPEND\sess_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess33FREERTOS\TASKSUSPEND\sess_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="FREERTOS\atomic.h">
       <SubType>compile</SubType>
     </Compile>
@@ -548,6 +560,8 @@
     <Folder Include="APP\Sess27SPI\BLUTOTH" />
     <Folder Include="APP\Sess29EEPROM\TASKEEPROMPASS" />
     <Folder Include="APP\Sess32\TTL" />
+    <Folder Include="APP\Sess33FREERTOS\TASKSUSPENDBUTTON" />
+    <Folder Include="APP\Sess33FREERTOS\TASKSUSPEND" />
     <Folder Include="HAL" />
     <Folder Include="HAL\LCD" />
     <Folder Include="HAL\7seg" />
