@@ -43,6 +43,9 @@
 //Initialize
 void SS_init();
 
+//Deinitialize
+void SS_deinit();
+
 //Send
 void SS_writeNum(u8 num);
 

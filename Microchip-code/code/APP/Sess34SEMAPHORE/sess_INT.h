@@ -45,6 +45,8 @@ INCLUDES
 
 #include "task.h"
 
+#include "semphr.h"
+
 ******************************************
 Global Data TYPES AND STRUCTURES
 *******************************************

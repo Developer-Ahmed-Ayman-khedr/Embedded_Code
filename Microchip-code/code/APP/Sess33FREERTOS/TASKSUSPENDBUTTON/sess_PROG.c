@@ -3,7 +3,7 @@
  *
  * Created: 6/12/2024 6:17:36 PM
  *  Author: ahmed
- */ 
+ 
 
 #include "Sess33FREERTOS/TASKSUSPENDBUTTON/sess_INT.h"
 
@@ -59,12 +59,12 @@ int source_code()
 	DIO_setPinDir(DIO_PIND0,DIO_INPUT);
 	
 	xTaskCreate(
-		task1,       /* Function that implements the task. */
-		"NAME",          /* Text name for the task. */
-		100,      /* Stack size in words, not bytes. */
-		NULL,    /* Parameter passed into the task. */
-		1,/* Priority at which the task is created. */
-		&xHandle1 ); /* Used to pass out the created task's handle. */
+		task1,       * Function that implements the task. *
+		"NAME",          * Text name for the task. *
+		100,      * Stack size in words, not bytes. *
+		NULL,    * Parameter passed into the task. *
+		1,	* Priority at which the task is created. *
+		&xHandle1 ); * Used to pass out the created task's handle. *
 		
 	xTaskCreate(task2,NULL,100,NULL,1,&xHandle2);
 	
@@ -79,3 +79,4 @@ int source_code()
 	}
 	return 0;
 }
+*/ 
