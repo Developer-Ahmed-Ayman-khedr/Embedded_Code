@@ -41,9 +41,9 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
                               MCAL/WDT/WDT_PROG.o (__tablejump2__)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
-                              APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o (__do_copy_data)
+                              FREERTOS/tasks.o (__do_copy_data)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
-                              APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o (__do_clear_bss)
+                              APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o (__do_clear_bss)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodsi4.o) (__udivmodsi4)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(memcpy.o)
@@ -52,10 +52,10 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
 Allocating common symbols
 Common symbol       size              file
 
-xHandle2            0x2               APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
+A                   0x2               APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o
+xHandle2            0x2               APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o
 TIMER0_CTCFunc      0x2               MCAL/TIMER0/TIMER0_PROG.o
-xHandle1            0x2               APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
-xHandle3            0x2               APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
+xHandle1            0x2               APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o
 EXT_int1Func        0x2               MCAL/EXT/EXT_PROG.o
 UART_INTFunc        0x2               MCAL/UART/UART_PROG.o
 EXT_int2Func        0x2               MCAL/EXT/EXT_PROG.o
@@ -257,15 +257,33 @@ Discarded input sections
  .debug_line    0x00000000        0x0 APP/Sess33FREERTOS/sess_PROG.o
  .debug_str     0x00000000      0x124 APP/Sess33FREERTOS/sess_PROG.o
  .comment       0x00000000       0x31 APP/Sess33FREERTOS/sess_PROG.o
+ .text          0x00000000        0x0 APP/Sess33FREERTOS/TASKPUSHBUTTONS/sess_PROG.o
+ .data          0x00000000        0x0 APP/Sess33FREERTOS/TASKPUSHBUTTONS/sess_PROG.o
+ .bss           0x00000000        0x0 APP/Sess33FREERTOS/TASKPUSHBUTTONS/sess_PROG.o
+ .debug_line    0x00000000        0x0 APP/Sess33FREERTOS/TASKPUSHBUTTONS/sess_PROG.o
+ .debug_str     0x00000000      0x134 APP/Sess33FREERTOS/TASKPUSHBUTTONS/sess_PROG.o
+ .comment       0x00000000       0x31 APP/Sess33FREERTOS/TASKPUSHBUTTONS/sess_PROG.o
  .text          0x00000000        0x0 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
  .data          0x00000000        0x0 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
  .bss           0x00000000        0x0 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
+ .debug_line    0x00000000        0x0 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
+ .debug_str     0x00000000      0x136 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
+ .comment       0x00000000       0x31 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
  .text          0x00000000        0x0 APP/Sess33FREERTOS/TASKSUSPEND/sess_PROG.o
  .data          0x00000000        0x0 APP/Sess33FREERTOS/TASKSUSPEND/sess_PROG.o
  .bss           0x00000000        0x0 APP/Sess33FREERTOS/TASKSUSPEND/sess_PROG.o
  .debug_line    0x00000000        0x0 APP/Sess33FREERTOS/TASKSUSPEND/sess_PROG.o
  .debug_str     0x00000000      0x130 APP/Sess33FREERTOS/TASKSUSPEND/sess_PROG.o
  .comment       0x00000000       0x31 APP/Sess33FREERTOS/TASKSUSPEND/sess_PROG.o
+ .text          0x00000000        0x0 APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o
+ .data          0x00000000        0x0 APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o
+ .bss           0x00000000        0x0 APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o
+ .text          0x00000000        0x0 APP/Sess34SEMAPHORE/sess_PROG.o
+ .data          0x00000000        0x0 APP/Sess34SEMAPHORE/sess_PROG.o
+ .bss           0x00000000        0x0 APP/Sess34SEMAPHORE/sess_PROG.o
+ .debug_line    0x00000000        0x0 APP/Sess34SEMAPHORE/sess_PROG.o
+ .debug_str     0x00000000      0x125 APP/Sess34SEMAPHORE/sess_PROG.o
+ .comment       0x00000000       0x31 APP/Sess34SEMAPHORE/sess_PROG.o
  .text          0x00000000        0x0 FREERTOS/croutine.o
  .data          0x00000000        0x0 FREERTOS/croutine.o
  .bss           0x00000000        0x0 FREERTOS/croutine.o
@@ -319,6 +337,8 @@ Discarded input sections
  .text          0x00000000        0x0 FREERTOS/list.o
  .data          0x00000000        0x0 FREERTOS/list.o
  .bss           0x00000000        0x0 FREERTOS/list.o
+ .text.vListInsertEnd
+                0x00000000       0x42 FREERTOS/list.o
  .text          0x00000000        0x0 FREERTOS/port.o
  .data          0x00000000        0x0 FREERTOS/port.o
  .bss           0x00000000        0x0 FREERTOS/port.o
@@ -327,42 +347,20 @@ Discarded input sections
  .text          0x00000000        0x0 FREERTOS/queue.o
  .data          0x00000000        0x0 FREERTOS/queue.o
  .bss           0x00000000        0x0 FREERTOS/queue.o
- .text.prvIsQueueEmpty
-                0x00000000       0x1a FREERTOS/queue.o
- .text.prvIsQueueFull
-                0x00000000       0x1c FREERTOS/queue.o
- .text.prvCopyDataToQueue
-                0x00000000       0x92 FREERTOS/queue.o
  .text.prvCopyDataFromQueue
                 0x00000000       0x34 FREERTOS/queue.o
- .text.prvUnlockQueue
-                0x00000000       0x68 FREERTOS/queue.o
- .text.xQueueGenericReset
-                0x00000000       0xc0 FREERTOS/queue.o
- .text.prvInitialiseNewQueue
-                0x00000000       0x26 FREERTOS/queue.o
- .text.xQueueGenericCreate
-                0x00000000       0x82 FREERTOS/queue.o
- .text.xQueueCreateCountingSemaphore
-                0x00000000       0x2c FREERTOS/queue.o
- .text.xQueueGenericSend
-                0x00000000      0x124 FREERTOS/queue.o
  .text.xQueueGenericSendFromISR
                 0x00000000       0x84 FREERTOS/queue.o
  .text.xQueueGiveFromISR
                 0x00000000       0x70 FREERTOS/queue.o
  .text.xQueueReceive
                 0x00000000      0x11e FREERTOS/queue.o
- .text.xQueueSemaphoreTake
-                0x00000000      0x106 FREERTOS/queue.o
  .text.xQueuePeek
                 0x00000000      0x122 FREERTOS/queue.o
  .text.xQueueReceiveFromISR
                 0x00000000       0x7a FREERTOS/queue.o
  .text.xQueuePeekFromISR
                 0x00000000       0x2e FREERTOS/queue.o
- .text.uxQueueMessagesWaiting
-                0x00000000       0x10 FREERTOS/queue.o
  .text.uxQueueSpacesAvailable
                 0x00000000       0x16 FREERTOS/queue.o
  .text.uxQueueMessagesWaitingFromISR
@@ -373,16 +371,6 @@ Discarded input sections
                 0x00000000       0x10 FREERTOS/queue.o
  .text.xQueueIsQueueFullFromISR
                 0x00000000       0x12 FREERTOS/queue.o
- .debug_info    0x00000000     0x1563 FREERTOS/queue.o
- .debug_abbrev  0x00000000      0x227 FREERTOS/queue.o
- .debug_loc     0x00000000     0x19c9 FREERTOS/queue.o
- .debug_aranges
-                0x00000000       0xd0 FREERTOS/queue.o
- .debug_ranges  0x00000000      0x108 FREERTOS/queue.o
- .debug_line    0x00000000      0xaed FREERTOS/queue.o
- .debug_str     0x00000000      0x7f5 FREERTOS/queue.o
- .comment       0x00000000       0x31 FREERTOS/queue.o
- .debug_frame   0x00000000      0x314 FREERTOS/queue.o
  .text          0x00000000        0x0 FREERTOS/stream_buffer.o
  .data          0x00000000        0x0 FREERTOS/stream_buffer.o
  .bss           0x00000000        0x0 FREERTOS/stream_buffer.o
@@ -441,6 +429,10 @@ Discarded input sections
  .text          0x00000000        0x0 FREERTOS/tasks.o
  .data          0x00000000        0x0 FREERTOS/tasks.o
  .bss           0x00000000        0x0 FREERTOS/tasks.o
+ .text.prvTaskIsTaskSuspended
+                0x00000000       0x2e FREERTOS/tasks.o
+ .text.vTaskResume
+                0x00000000       0xcc FREERTOS/tasks.o
  .text.xTaskResumeFromISR
                 0x00000000       0xda FREERTOS/tasks.o
  .text.vTaskEndScheduler
@@ -455,22 +447,14 @@ Discarded input sections
                 0x00000000       0x10 FREERTOS/tasks.o
  .text.xTaskCatchUpTicks
                 0x00000000       0x32 FREERTOS/tasks.o
- .text.vTaskPlaceOnEventList
-                0x00000000       0x24 FREERTOS/tasks.o
+ .text.vTaskSuspend
+                0x00000000       0xc2 FREERTOS/tasks.o
  .text.vTaskPlaceOnUnorderedEventList
                 0x00000000       0x8c FREERTOS/tasks.o
- .text.xTaskRemoveFromEventList
-                0x00000000      0x17a FREERTOS/tasks.o
  .text.vTaskRemoveFromUnorderedEventList
                 0x00000000      0x14c FREERTOS/tasks.o
  .text.vTaskSetTimeOutState
                 0x00000000       0x20 FREERTOS/tasks.o
- .text.vTaskInternalSetTimeOutState
-                0x00000000       0x16 FREERTOS/tasks.o
- .text.xTaskCheckForTimeOut
-                0x00000000       0x7e FREERTOS/tasks.o
- .text.vTaskMissedYield
-                0x00000000        0x8 FREERTOS/tasks.o
  .text.xTaskGetCurrentTaskHandle
                 0x00000000        0xa FREERTOS/tasks.o
  .text.uxTaskResetEventItemValue
@@ -503,18 +487,20 @@ Discarded input sections
  .data          0x00000000        0x0 HAL/7seg/SS_PROG.o
  .bss           0x00000000        0x0 HAL/7seg/SS_PROG.o
  .text.SS_init  0x00000000       0x32 HAL/7seg/SS_PROG.o
+ .text.SS_deinit
+                0x00000000       0x2a HAL/7seg/SS_PROG.o
  .text.SS_writeNum
                 0x00000000       0xc0 HAL/7seg/SS_PROG.o
- .debug_info    0x00000000      0x382 HAL/7seg/SS_PROG.o
+ .debug_info    0x00000000      0x43a HAL/7seg/SS_PROG.o
  .debug_abbrev  0x00000000      0x134 HAL/7seg/SS_PROG.o
- .debug_loc     0x00000000      0x1b6 HAL/7seg/SS_PROG.o
+ .debug_loc     0x00000000      0x242 HAL/7seg/SS_PROG.o
  .debug_aranges
-                0x00000000       0x28 HAL/7seg/SS_PROG.o
- .debug_ranges  0x00000000       0x18 HAL/7seg/SS_PROG.o
- .debug_line    0x00000000      0x1e0 HAL/7seg/SS_PROG.o
- .debug_str     0x00000000      0x229 HAL/7seg/SS_PROG.o
+                0x00000000       0x30 HAL/7seg/SS_PROG.o
+ .debug_ranges  0x00000000       0x20 HAL/7seg/SS_PROG.o
+ .debug_line    0x00000000      0x211 HAL/7seg/SS_PROG.o
+ .debug_str     0x00000000      0x233 HAL/7seg/SS_PROG.o
  .comment       0x00000000       0x31 HAL/7seg/SS_PROG.o
- .debug_frame   0x00000000       0x44 HAL/7seg/SS_PROG.o
+ .debug_frame   0x00000000       0x54 HAL/7seg/SS_PROG.o
  .text          0x00000000        0x0 HAL/EEPROM/EEPROM_PROG.o
  .data          0x00000000        0x0 HAL/EEPROM/EEPROM_PROG.o
  .bss           0x00000000        0x0 HAL/EEPROM/EEPROM_PROG.o
@@ -859,8 +845,6 @@ Discarded input sections
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
  .text.libgcc.mul
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
- .text.libgcc.div
-                0x00000000       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
  .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
  .text.libgcc.prologue
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
@@ -1001,8 +985,6 @@ Discarded input sections
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(memcpy.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(memcpy.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(memcpy.o)
- .text.avr-libc
-                0x00000000       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(memcpy.o)
 
 Memory Configuration
 
@@ -1051,8 +1033,11 @@ LOAD APP/Sess29EEPROM/TASKEEPROMPASS/TASKEEPROMPASS_PROG.o
 LOAD APP/Sess32/sess_PROG.o
 LOAD APP/Sess32/TTL/sess_PROG.o
 LOAD APP/Sess33FREERTOS/sess_PROG.o
+LOAD APP/Sess33FREERTOS/TASKPUSHBUTTONS/sess_PROG.o
 LOAD APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
 LOAD APP/Sess33FREERTOS/TASKSUSPEND/sess_PROG.o
+LOAD APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o
+LOAD APP/Sess34SEMAPHORE/sess_PROG.o
 LOAD FREERTOS/croutine.o
 LOAD FREERTOS/event_groups.o
 LOAD FREERTOS/heap_1.o
@@ -1186,7 +1171,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x15a0
+.text           0x00000000     0x1b16
  *(.vectors)
  .vectors       0x00000000       0x54 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
                 0x00000000                __vector_default
@@ -1262,132 +1247,168 @@ END GROUP
  *(.text.*)
  .text.main     0x00000092        0xa APP/main.o
                 0x00000092                main
- .text.task1    0x0000009c       0x10 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
-                0x0000009c                task1
- .text.task2    0x000000ac       0x10 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
-                0x000000ac                task2
- .text.task3    0x000000bc       0x42 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
-                0x000000bc                task3
+ .text.Task1    0x0000009c       0x34 APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o
+                0x0000009c                Task1
+ .text.Task2    0x000000d0       0x50 APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o
+                0x000000d0                Task2
  .text.source_code
-                0x000000fe       0x8a APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
-                0x000000fe                source_code
+                0x00000120       0x6a APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o
+                0x00000120                source_code
  .text.pvPortMalloc
-                0x00000188       0x74 FREERTOS/heap_1.o
-                0x00000188                pvPortMalloc
+                0x0000018a       0x74 FREERTOS/heap_1.o
+                0x0000018a                pvPortMalloc
  .text.vPortFree
-                0x000001fc        0x2 FREERTOS/heap_1.o
-                0x000001fc                vPortFree
+                0x000001fe        0x2 FREERTOS/heap_1.o
+                0x000001fe                vPortFree
  .text.vListInitialise
-                0x000001fe       0x1c FREERTOS/list.o
-                0x000001fe                vListInitialise
+                0x00000200       0x1c FREERTOS/list.o
+                0x00000200                vListInitialise
  .text.vListInitialiseItem
-                0x0000021a        0x8 FREERTOS/list.o
-                0x0000021a                vListInitialiseItem
- .text.vListInsertEnd
-                0x00000222       0x42 FREERTOS/list.o
-                0x00000222                vListInsertEnd
+                0x0000021c        0x8 FREERTOS/list.o
+                0x0000021c                vListInitialiseItem
  .text.vListInsert
-                0x00000264       0x62 FREERTOS/list.o
-                0x00000264                vListInsert
+                0x00000224       0x62 FREERTOS/list.o
+                0x00000224                vListInsert
  .text.uxListRemove
-                0x000002c6       0x4e FREERTOS/list.o
-                0x000002c6                uxListRemove
+                0x00000286       0x4e FREERTOS/list.o
+                0x00000286                uxListRemove
  .text.prvSetupTimerInterrupt
-                0x00000314       0x12 FREERTOS/port.o
+                0x000002d4       0x12 FREERTOS/port.o
  .text.pxPortInitialiseStack
-                0x00000326       0xd8 FREERTOS/port.o
-                0x00000326                pxPortInitialiseStack
+                0x000002e6       0xd8 FREERTOS/port.o
+                0x000002e6                pxPortInitialiseStack
  .text.xPortStartScheduler
-                0x000003fe       0x5e FREERTOS/port.o
-                0x000003fe                xPortStartScheduler
+                0x000003be       0x5e FREERTOS/port.o
+                0x000003be                xPortStartScheduler
  .text.vPortYield
-                0x0000045c       0xb2 FREERTOS/port.o
-                0x0000045c                vPortYield
+                0x0000041c       0xb2 FREERTOS/port.o
+                0x0000041c                vPortYield
  .text.vPortYieldFromTick
-                0x0000050e       0xb8 FREERTOS/port.o
-                0x0000050e                vPortYieldFromTick
+                0x000004ce       0xb8 FREERTOS/port.o
+                0x000004ce                vPortYieldFromTick
  .text.__vector_7
-                0x000005c6        0x6 FREERTOS/port.o
-                0x000005c6                __vector_7
- .text.prvTaskIsTaskSuspended
-                0x000005cc       0x2e FREERTOS/tasks.o
+                0x00000586        0x6 FREERTOS/port.o
+                0x00000586                __vector_7
+ .text.prvIsQueueEmpty
+                0x0000058c       0x1a FREERTOS/queue.o
+ .text.prvIsQueueFull
+                0x000005a6       0x1c FREERTOS/queue.o
+ .text.prvCopyDataToQueue
+                0x000005c2       0x92 FREERTOS/queue.o
+ .text.prvUnlockQueue
+                0x00000654       0x68 FREERTOS/queue.o
+ .text.xQueueGenericReset
+                0x000006bc       0xc0 FREERTOS/queue.o
+                0x000006bc                xQueueGenericReset
+ .text.prvInitialiseNewQueue
+                0x0000077c       0x26 FREERTOS/queue.o
+ .text.xQueueGenericCreate
+                0x000007a2       0x82 FREERTOS/queue.o
+                0x000007a2                xQueueGenericCreate
+ .text.xQueueCreateCountingSemaphore
+                0x00000824       0x2c FREERTOS/queue.o
+                0x00000824                xQueueCreateCountingSemaphore
+ .text.xQueueGenericSend
+                0x00000850      0x124 FREERTOS/queue.o
+                0x00000850                xQueueGenericSend
+ .text.xQueueSemaphoreTake
+                0x00000974      0x106 FREERTOS/queue.o
+                0x00000974                xQueueSemaphoreTake
+ .text.uxQueueMessagesWaiting
+                0x00000a7a       0x10 FREERTOS/queue.o
+                0x00000a7a                uxQueueMessagesWaiting
  .text.prvResetNextTaskUnblockTime
-                0x000005fa       0x38 FREERTOS/tasks.o
+                0x00000a8a       0x38 FREERTOS/tasks.o
  .text.prvInitialiseNewTask
-                0x00000632       0xd2 FREERTOS/tasks.o
+                0x00000ac2       0xd2 FREERTOS/tasks.o
  .text.prvIdleTask
-                0x00000704        0xe FREERTOS/tasks.o
+                0x00000b94        0xe FREERTOS/tasks.o
  .text.prvInitialiseTaskLists
-                0x00000712       0x66 FREERTOS/tasks.o
+                0x00000ba2       0x66 FREERTOS/tasks.o
  .text.prvAddNewTaskToReadyList
-                0x00000778       0xfa FREERTOS/tasks.o
+                0x00000c08       0xfa FREERTOS/tasks.o
  .text.prvAddCurrentTaskToDelayedList
-                0x00000872      0x102 FREERTOS/tasks.o
+                0x00000d02      0x102 FREERTOS/tasks.o
  .text.xTaskCreate
-                0x00000974       0xb2 FREERTOS/tasks.o
-                0x00000974                xTaskCreate
- .text.vTaskResume
-                0x00000a26       0xcc FREERTOS/tasks.o
-                0x00000a26                vTaskResume
+                0x00000e04       0xb2 FREERTOS/tasks.o
+                0x00000e04                xTaskCreate
  .text.vTaskStartScheduler
-                0x00000af2       0x58 FREERTOS/tasks.o
-                0x00000af2                vTaskStartScheduler
+                0x00000eb6       0x58 FREERTOS/tasks.o
+                0x00000eb6                vTaskStartScheduler
  .text.vTaskSuspendAll
-                0x00000b4a        0xc FREERTOS/tasks.o
-                0x00000b4a                vTaskSuspendAll
+                0x00000f0e        0xc FREERTOS/tasks.o
+                0x00000f0e                vTaskSuspendAll
  .text.xTaskIncrementTick
-                0x00000b56      0x234 FREERTOS/tasks.o
-                0x00000b56                xTaskIncrementTick
+                0x00000f1a      0x234 FREERTOS/tasks.o
+                0x00000f1a                xTaskIncrementTick
  .text.xTaskResumeAll
-                0x00000d8a      0x1aa FREERTOS/tasks.o
-                0x00000d8a                xTaskResumeAll
+                0x0000114e      0x1aa FREERTOS/tasks.o
+                0x0000114e                xTaskResumeAll
  .text.vTaskDelay
-                0x00000f34       0x2c FREERTOS/tasks.o
-                0x00000f34                vTaskDelay
+                0x000012f8       0x2c FREERTOS/tasks.o
+                0x000012f8                vTaskDelay
  .text.vTaskSwitchContext
-                0x00000f60       0xa8 FREERTOS/tasks.o
-                0x00000f60                vTaskSwitchContext
- .text.vTaskSuspend
-                0x00001008       0xc2 FREERTOS/tasks.o
-                0x00001008                vTaskSuspend
+                0x00001324       0xa8 FREERTOS/tasks.o
+                0x00001324                vTaskSwitchContext
+ .text.vTaskPlaceOnEventList
+                0x000013cc       0x24 FREERTOS/tasks.o
+                0x000013cc                vTaskPlaceOnEventList
+ .text.xTaskRemoveFromEventList
+                0x000013f0      0x17a FREERTOS/tasks.o
+                0x000013f0                xTaskRemoveFromEventList
+ .text.vTaskInternalSetTimeOutState
+                0x0000156a       0x16 FREERTOS/tasks.o
+                0x0000156a                vTaskInternalSetTimeOutState
+ .text.xTaskCheckForTimeOut
+                0x00001580       0x7e FREERTOS/tasks.o
+                0x00001580                xTaskCheckForTimeOut
+ .text.vTaskMissedYield
+                0x000015fe        0x8 FREERTOS/tasks.o
+                0x000015fe                vTaskMissedYield
  .text.DIO_setPinDir
-                0x000010ca      0x116 MCAL/DIO/DIO_PROG.o
-                0x000010ca                DIO_setPinDir
+                0x00001606      0x116 MCAL/DIO/DIO_PROG.o
+                0x00001606                DIO_setPinDir
  .text.DIO_setPinValue
-                0x000011e0      0x116 MCAL/DIO/DIO_PROG.o
-                0x000011e0                DIO_setPinValue
+                0x0000171c      0x116 MCAL/DIO/DIO_PROG.o
+                0x0000171c                DIO_setPinValue
  .text.DIO_readPinValue
-                0x000012f6       0x6c MCAL/DIO/DIO_PROG.o
-                0x000012f6                DIO_readPinValue
+                0x00001832       0x6c MCAL/DIO/DIO_PROG.o
+                0x00001832                DIO_readPinValue
  .text.DIO_togglePinValue
-                0x00001362       0x18 MCAL/DIO/DIO_PROG.o
-                0x00001362                DIO_togglePinValue
+                0x0000189e       0x18 MCAL/DIO/DIO_PROG.o
+                0x0000189e                DIO_togglePinValue
  .text.__vector_1
-                0x0000137a       0x4e MCAL/EXT/EXT_PROG.o
-                0x0000137a                __vector_1
+                0x000018b6       0x4e MCAL/EXT/EXT_PROG.o
+                0x000018b6                __vector_1
  .text.__vector_2
-                0x000013c8       0x4e MCAL/EXT/EXT_PROG.o
-                0x000013c8                __vector_2
+                0x00001904       0x4e MCAL/EXT/EXT_PROG.o
+                0x00001904                __vector_2
  .text.__vector_3
-                0x00001416       0x4e MCAL/EXT/EXT_PROG.o
-                0x00001416                __vector_3
+                0x00001952       0x4e MCAL/EXT/EXT_PROG.o
+                0x00001952                __vector_3
  .text.__vector_11
-                0x00001464       0x4e MCAL/TIMER0/TIMER0_PROG.o
-                0x00001464                __vector_11
+                0x000019a0       0x4e MCAL/TIMER0/TIMER0_PROG.o
+                0x000019a0                __vector_11
  .text.__vector_10
-                0x000014b2       0x4e MCAL/TIMER0/TIMER0_PROG.o
-                0x000014b2                __vector_10
+                0x000019ee       0x4e MCAL/TIMER0/TIMER0_PROG.o
+                0x000019ee                __vector_10
  .text.__vector_6
-                0x00001500       0x4e MCAL/TIMER1/TIMER1_PROG.o
-                0x00001500                __vector_6
+                0x00001a3c       0x4e MCAL/TIMER1/TIMER1_PROG.o
+                0x00001a3c                __vector_6
  .text.__vector_13
-                0x0000154e       0x4e MCAL/UART/UART_PROG.o
-                0x0000154e                __vector_13
-                0x0000159c                . = ALIGN (0x2)
+                0x00001a8a       0x4e MCAL/UART/UART_PROG.o
+                0x00001a8a                __vector_13
+ .text.libgcc.div
+                0x00001ad8       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
+                0x00001ad8                __udivmodhi4
+ .text.avr-libc
+                0x00001b00       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(memcpy.o)
+                0x00001b00                memcpy
+                0x00001b12                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000159c        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x0000159c                _exit
-                0x0000159c                exit
+ .fini9         0x00001b12        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x00001b12                _exit
+                0x00001b12                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -1406,11 +1427,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000159c        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x00001b12        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000015a0                _etext = .
+                0x00001b16                _etext = .
 
-.data           0x00800060        0xc load address 0x000015a0
+.data           0x00800060        0x6 load address 0x00001b16
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -1421,88 +1442,85 @@ END GROUP
  *(.rodata)
  *(.rodata*)
  .rodata.str1.1
-                0x00800061        0x5 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
- .rodata.str1.1
-                0x00800066        0x5 FREERTOS/tasks.o
+                0x00800061        0x5 FREERTOS/tasks.o
  *(.gnu.linkonce.r*)
-                0x0080006c                . = ALIGN (0x2)
- *fill*         0x0080006b        0x1 
-                0x0080006c                _edata = .
-                0x0080006c                PROVIDE (__data_end, .)
+                0x00800066                . = ALIGN (0x2)
+                0x00800066                _edata = .
+                0x00800066                PROVIDE (__data_end, .)
 
-.bss            0x0080006c      0x6b5
-                0x0080006c                PROVIDE (__bss_start, .)
+.bss            0x00800066      0x6b5
+                0x00800066                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  .bss.pucAlignedHeap.2112
-                0x0080006c        0x2 FREERTOS/heap_1.o
+                0x00800066        0x2 FREERTOS/heap_1.o
  .bss.xNextFreeByte
-                0x0080006e        0x2 FREERTOS/heap_1.o
- .bss.ucHeap    0x00800070      0x640 FREERTOS/heap_1.o
+                0x00800068        0x2 FREERTOS/heap_1.o
+ .bss.ucHeap    0x0080006a      0x640 FREERTOS/heap_1.o
  .bss.uxSchedulerSuspended
-                0x008006b0        0x1 FREERTOS/tasks.o
+                0x008006aa        0x1 FREERTOS/tasks.o
  .bss.xIdleTaskHandle
-                0x008006b1        0x2 FREERTOS/tasks.o
+                0x008006ab        0x2 FREERTOS/tasks.o
  .bss.xNextTaskUnblockTime
-                0x008006b3        0x2 FREERTOS/tasks.o
+                0x008006ad        0x2 FREERTOS/tasks.o
  .bss.uxTaskNumber
-                0x008006b5        0x1 FREERTOS/tasks.o
+                0x008006af        0x1 FREERTOS/tasks.o
  .bss.xNumOfOverflows
-                0x008006b6        0x1 FREERTOS/tasks.o
+                0x008006b0        0x1 FREERTOS/tasks.o
  .bss.xYieldPending
-                0x008006b7        0x1 FREERTOS/tasks.o
+                0x008006b1        0x1 FREERTOS/tasks.o
  .bss.xPendedTicks
-                0x008006b8        0x2 FREERTOS/tasks.o
+                0x008006b2        0x2 FREERTOS/tasks.o
  .bss.xSchedulerRunning
-                0x008006ba        0x1 FREERTOS/tasks.o
+                0x008006b4        0x1 FREERTOS/tasks.o
  .bss.uxTopReadyPriority
-                0x008006bb        0x1 FREERTOS/tasks.o
+                0x008006b5        0x1 FREERTOS/tasks.o
  .bss.xTickCount
-                0x008006bc        0x2 FREERTOS/tasks.o
+                0x008006b6        0x2 FREERTOS/tasks.o
  .bss.uxCurrentNumberOfTasks
-                0x008006be        0x1 FREERTOS/tasks.o
+                0x008006b8        0x1 FREERTOS/tasks.o
  .bss.xSuspendedTaskList
-                0x008006bf        0x9 FREERTOS/tasks.o
+                0x008006b9        0x9 FREERTOS/tasks.o
  .bss.xPendingReadyList
-                0x008006c8        0x9 FREERTOS/tasks.o
+                0x008006c2        0x9 FREERTOS/tasks.o
  .bss.pxOverflowDelayedTaskList
-                0x008006d1        0x2 FREERTOS/tasks.o
+                0x008006cb        0x2 FREERTOS/tasks.o
  .bss.pxDelayedTaskList
-                0x008006d3        0x2 FREERTOS/tasks.o
+                0x008006cd        0x2 FREERTOS/tasks.o
  .bss.xDelayedTaskList2
-                0x008006d5        0x9 FREERTOS/tasks.o
+                0x008006cf        0x9 FREERTOS/tasks.o
  .bss.xDelayedTaskList1
-                0x008006de        0x9 FREERTOS/tasks.o
+                0x008006d8        0x9 FREERTOS/tasks.o
  .bss.pxReadyTasksLists
-                0x008006e7       0x24 FREERTOS/tasks.o
+                0x008006e1       0x24 FREERTOS/tasks.o
  .bss.pxCurrentTCB
-                0x0080070b        0x2 FREERTOS/tasks.o
-                0x0080070b                pxCurrentTCB
+                0x00800705        0x2 FREERTOS/tasks.o
+                0x00800705                pxCurrentTCB
  *(COMMON)
- COMMON         0x0080070d        0x6 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
-                0x0080070d                xHandle2
-                0x0080070f                xHandle1
-                0x00800711                xHandle3
- COMMON         0x00800713        0x6 MCAL/EXT/EXT_PROG.o
-                0x00800713                EXT_int1Func
-                0x00800715                EXT_int2Func
-                0x00800717                EXT_int0Func
- COMMON         0x00800719        0x4 MCAL/TIMER0/TIMER0_PROG.o
-                0x00800719                TIMER0_CTCFunc
-                0x0080071b                TIMER0_OvFunc
- COMMON         0x0080071d        0x2 MCAL/TIMER1/TIMER1_PROG.o
-                0x0080071d                TIMER1_IcuFunc
- COMMON         0x0080071f        0x2 MCAL/UART/UART_PROG.o
-                0x0080071f                UART_INTFunc
-                0x00800721                PROVIDE (__bss_end, .)
-                0x000015a0                __data_load_start = LOADADDR (.data)
-                0x000015ac                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x00800707        0x6 APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o
+                0x00800707                A
+                0x00800709                xHandle2
+                0x0080070b                xHandle1
+ COMMON         0x0080070d        0x6 MCAL/EXT/EXT_PROG.o
+                0x0080070d                EXT_int1Func
+                0x0080070f                EXT_int2Func
+                0x00800711                EXT_int0Func
+ COMMON         0x00800713        0x4 MCAL/TIMER0/TIMER0_PROG.o
+                0x00800713                TIMER0_CTCFunc
+                0x00800715                TIMER0_OvFunc
+ COMMON         0x00800717        0x2 MCAL/TIMER1/TIMER1_PROG.o
+                0x00800717                TIMER1_IcuFunc
+ COMMON         0x00800719        0x2 MCAL/UART/UART_PROG.o
+                0x00800719                UART_INTFunc
+                0x0080071b                PROVIDE (__bss_end, .)
+                0x00001b16                __data_load_start = LOADADDR (.data)
+                0x00001b1c                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800721        0x0
+.noinit         0x0080071b        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x00800721                _end = .
+                0x0080071b                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -1546,10 +1564,11 @@ END GROUP
  *(.comment)
  .comment       0x00000000       0x30 APP/main.o
                                  0x31 (size before relaxing)
- .comment       0x00000030       0x31 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
+ .comment       0x00000030       0x31 APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o
  .comment       0x00000030       0x31 FREERTOS/heap_1.o
  .comment       0x00000030       0x31 FREERTOS/list.o
  .comment       0x00000030       0x31 FREERTOS/port.o
+ .comment       0x00000030       0x31 FREERTOS/queue.o
  .comment       0x00000030       0x31 FREERTOS/tasks.o
  .comment       0x00000030       0x31 MCAL/DIO/DIO_PROG.o
  .comment       0x00000030       0x31 MCAL/EXT/EXT_PROG.o
@@ -1577,131 +1596,140 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x440
+.debug_aranges  0x00000000      0x508
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x20 APP/main.o
  .debug_aranges
-                0x00000020       0x38 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
+                0x00000020       0x30 APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o
  .debug_aranges
-                0x00000058       0x38 FREERTOS/heap_1.o
+                0x00000050       0x38 FREERTOS/heap_1.o
  .debug_aranges
-                0x00000090       0x40 FREERTOS/list.o
+                0x00000088       0x40 FREERTOS/list.o
  .debug_aranges
-                0x000000d0       0x50 FREERTOS/port.o
+                0x000000c8       0x50 FREERTOS/port.o
  .debug_aranges
-                0x00000120      0x158 FREERTOS/tasks.o
+                0x00000118       0xd0 FREERTOS/queue.o
  .debug_aranges
-                0x00000278       0x40 MCAL/DIO/DIO_PROG.o
+                0x000001e8      0x158 FREERTOS/tasks.o
  .debug_aranges
-                0x000002b8       0x60 MCAL/EXT/EXT_PROG.o
+                0x00000340       0x40 MCAL/DIO/DIO_PROG.o
  .debug_aranges
-                0x00000318       0x78 MCAL/TIMER0/TIMER0_PROG.o
+                0x00000380       0x60 MCAL/EXT/EXT_PROG.o
  .debug_aranges
-                0x00000390       0x60 MCAL/TIMER1/TIMER1_PROG.o
+                0x000003e0       0x78 MCAL/TIMER0/TIMER0_PROG.o
  .debug_aranges
-                0x000003f0       0x50 MCAL/UART/UART_PROG.o
+                0x00000458       0x60 MCAL/TIMER1/TIMER1_PROG.o
+ .debug_aranges
+                0x000004b8       0x50 MCAL/UART/UART_PROG.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x34ae
+.debug_info     0x00000000     0x49d0
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_info    0x000004e6       0xc0 APP/main.o
- .debug_info    0x000005a6      0x446 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
- .debug_info    0x000009ec      0x1a4 FREERTOS/heap_1.o
- .debug_info    0x00000b90      0x2d8 FREERTOS/list.o
- .debug_info    0x00000e68      0x24e FREERTOS/port.o
- .debug_info    0x000010b6     0x1a41 FREERTOS/tasks.o
- .debug_info    0x00002af7      0x1b2 MCAL/DIO/DIO_PROG.o
- .debug_info    0x00002ca9      0x20f MCAL/EXT/EXT_PROG.o
- .debug_info    0x00002eb8      0x224 MCAL/TIMER0/TIMER0_PROG.o
- .debug_info    0x000030dc      0x1f2 MCAL/TIMER1/TIMER1_PROG.o
- .debug_info    0x000032ce      0x1e0 MCAL/UART/UART_PROG.o
+ .debug_info    0x000005a6      0x405 APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o
+ .debug_info    0x000009ab      0x1a4 FREERTOS/heap_1.o
+ .debug_info    0x00000b4f      0x2d8 FREERTOS/list.o
+ .debug_info    0x00000e27      0x24e FREERTOS/port.o
+ .debug_info    0x00001075     0x1563 FREERTOS/queue.o
+ .debug_info    0x000025d8     0x1a41 FREERTOS/tasks.o
+ .debug_info    0x00004019      0x1b2 MCAL/DIO/DIO_PROG.o
+ .debug_info    0x000041cb      0x20f MCAL/EXT/EXT_PROG.o
+ .debug_info    0x000043da      0x224 MCAL/TIMER0/TIMER0_PROG.o
+ .debug_info    0x000045fe      0x1f2 MCAL/TIMER1/TIMER1_PROG.o
+ .debug_info    0x000047f0      0x1e0 MCAL/UART/UART_PROG.o
 
-.debug_abbrev   0x00000000     0x1107
+.debug_abbrev   0x00000000     0x1318
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x4a3 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_abbrev  0x000004a3       0x63 APP/main.o
- .debug_abbrev  0x00000506      0x14b APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
- .debug_abbrev  0x00000651      0x11c FREERTOS/heap_1.o
- .debug_abbrev  0x0000076d       0xff FREERTOS/list.o
- .debug_abbrev  0x0000086c      0x143 FREERTOS/port.o
- .debug_abbrev  0x000009af      0x2a5 FREERTOS/tasks.o
- .debug_abbrev  0x00000c54       0xe3 MCAL/DIO/DIO_PROG.o
- .debug_abbrev  0x00000d37       0xad MCAL/EXT/EXT_PROG.o
- .debug_abbrev  0x00000de4       0xea MCAL/TIMER0/TIMER0_PROG.o
- .debug_abbrev  0x00000ece       0xea MCAL/TIMER1/TIMER1_PROG.o
- .debug_abbrev  0x00000fb8      0x14f MCAL/UART/UART_PROG.o
+ .debug_abbrev  0x00000506      0x135 APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o
+ .debug_abbrev  0x0000063b      0x11c FREERTOS/heap_1.o
+ .debug_abbrev  0x00000757       0xff FREERTOS/list.o
+ .debug_abbrev  0x00000856      0x143 FREERTOS/port.o
+ .debug_abbrev  0x00000999      0x227 FREERTOS/queue.o
+ .debug_abbrev  0x00000bc0      0x2a5 FREERTOS/tasks.o
+ .debug_abbrev  0x00000e65       0xe3 MCAL/DIO/DIO_PROG.o
+ .debug_abbrev  0x00000f48       0xad MCAL/EXT/EXT_PROG.o
+ .debug_abbrev  0x00000ff5       0xea MCAL/TIMER0/TIMER0_PROG.o
+ .debug_abbrev  0x000010df       0xea MCAL/TIMER1/TIMER1_PROG.o
+ .debug_abbrev  0x000011c9      0x14f MCAL/UART/UART_PROG.o
 
-.debug_line     0x00000000     0x231c
+.debug_line     0x00000000     0x2dea
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x116 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_line    0x00000116       0x7d APP/main.o
- .debug_line    0x00000193      0x1e5 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
- .debug_line    0x00000378      0x1b4 FREERTOS/heap_1.o
- .debug_line    0x0000052c      0x1d7 FREERTOS/list.o
- .debug_line    0x00000703      0x2a4 FREERTOS/port.o
- .debug_line    0x000009a7      0xff9 FREERTOS/tasks.o
- .debug_line    0x000019a0      0x1d5 MCAL/DIO/DIO_PROG.o
- .debug_line    0x00001b75      0x1ac MCAL/EXT/EXT_PROG.o
- .debug_line    0x00001d21      0x280 MCAL/TIMER0/TIMER0_PROG.o
- .debug_line    0x00001fa1      0x20a MCAL/TIMER1/TIMER1_PROG.o
- .debug_line    0x000021ab      0x171 MCAL/UART/UART_PROG.o
+ .debug_line    0x00000116       0x7e APP/main.o
+ .debug_line    0x00000194      0x1c5 APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o
+ .debug_line    0x00000359      0x1b4 FREERTOS/heap_1.o
+ .debug_line    0x0000050d      0x1d7 FREERTOS/list.o
+ .debug_line    0x000006e4      0x2a4 FREERTOS/port.o
+ .debug_line    0x00000988      0xaed FREERTOS/queue.o
+ .debug_line    0x00001475      0xff9 FREERTOS/tasks.o
+ .debug_line    0x0000246e      0x1d5 MCAL/DIO/DIO_PROG.o
+ .debug_line    0x00002643      0x1ac MCAL/EXT/EXT_PROG.o
+ .debug_line    0x000027ef      0x280 MCAL/TIMER0/TIMER0_PROG.o
+ .debug_line    0x00002a6f      0x20a MCAL/TIMER1/TIMER1_PROG.o
+ .debug_line    0x00002c79      0x171 MCAL/UART/UART_PROG.o
 
-.debug_frame    0x00000000      0xc24
+.debug_frame    0x00000000      0xf28
  *(.debug_frame)
  .debug_frame   0x00000000       0x24 APP/main.o
- .debug_frame   0x00000024       0x54 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
- .debug_frame   0x00000078       0x60 FREERTOS/heap_1.o
- .debug_frame   0x000000d8       0x88 FREERTOS/list.o
- .debug_frame   0x00000160       0x84 FREERTOS/port.o
- .debug_frame   0x000001e4      0x52c FREERTOS/tasks.o
- .debug_frame   0x00000710       0x6c MCAL/DIO/DIO_PROG.o
- .debug_frame   0x0000077c      0x17c MCAL/EXT/EXT_PROG.o
- .debug_frame   0x000008f8      0x164 MCAL/TIMER0/TIMER0_PROG.o
- .debug_frame   0x00000a5c       0xec MCAL/TIMER1/TIMER1_PROG.o
- .debug_frame   0x00000b48       0xdc MCAL/UART/UART_PROG.o
+ .debug_frame   0x00000024       0x44 APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o
+ .debug_frame   0x00000068       0x60 FREERTOS/heap_1.o
+ .debug_frame   0x000000c8       0x88 FREERTOS/list.o
+ .debug_frame   0x00000150       0x84 FREERTOS/port.o
+ .debug_frame   0x000001d4      0x314 FREERTOS/queue.o
+ .debug_frame   0x000004e8      0x52c FREERTOS/tasks.o
+ .debug_frame   0x00000a14       0x6c MCAL/DIO/DIO_PROG.o
+ .debug_frame   0x00000a80      0x17c MCAL/EXT/EXT_PROG.o
+ .debug_frame   0x00000bfc      0x164 MCAL/TIMER0/TIMER0_PROG.o
+ .debug_frame   0x00000d60       0xec MCAL/TIMER1/TIMER1_PROG.o
+ .debug_frame   0x00000e4c       0xdc MCAL/UART/UART_PROG.o
 
-.debug_str      0x00000000     0x1337
+.debug_str      0x00000000     0x1728
  *(.debug_str)
  .debug_str     0x00000000      0x196 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_str     0x00000196      0x187 APP/main.o
                                 0x1c0 (size before relaxing)
- .debug_str     0x0000031d      0x135 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
-                                0x2e2 (size before relaxing)
- .debug_str     0x00000452       0xbe FREERTOS/heap_1.o
+ .debug_str     0x0000031d      0x183 APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o
+                                0x33b (size before relaxing)
+ .debug_str     0x000004a0       0xbe FREERTOS/heap_1.o
                                 0x23e (size before relaxing)
- .debug_str     0x00000510      0x13c FREERTOS/list.o
+ .debug_str     0x0000055e      0x13c FREERTOS/list.o
                                 0x2cd (size before relaxing)
- .debug_str     0x0000064c      0x11b FREERTOS/port.o
+ .debug_str     0x0000069a      0x11b FREERTOS/port.o
                                 0x2c6 (size before relaxing)
- .debug_str     0x00000767      0x834 FREERTOS/tasks.o
+ .debug_str     0x000007b5      0x48f FREERTOS/queue.o
+                                0x7f5 (size before relaxing)
+ .debug_str     0x00000c44      0x748 FREERTOS/tasks.o
                                 0xc36 (size before relaxing)
- .debug_str     0x00000f9b       0x42 MCAL/DIO/DIO_PROG.o
+ .debug_str     0x0000138c       0x42 MCAL/DIO/DIO_PROG.o
                                 0x207 (size before relaxing)
- .debug_str     0x00000fdd       0xc5 MCAL/EXT/EXT_PROG.o
+ .debug_str     0x000013ce       0xc5 MCAL/EXT/EXT_PROG.o
                                 0x258 (size before relaxing)
- .debug_str     0x000010a2      0x119 MCAL/TIMER0/TIMER0_PROG.o
+ .debug_str     0x00001493      0x119 MCAL/TIMER0/TIMER0_PROG.o
                                 0x2ac (size before relaxing)
- .debug_str     0x000011bb       0xe0 MCAL/TIMER1/TIMER1_PROG.o
+ .debug_str     0x000015ac       0xe0 MCAL/TIMER1/TIMER1_PROG.o
                                 0x279 (size before relaxing)
- .debug_str     0x0000129b       0x9c MCAL/UART/UART_PROG.o
+ .debug_str     0x0000168c       0x9c MCAL/UART/UART_PROG.o
                                 0x235 (size before relaxing)
 
-.debug_loc      0x00000000     0x303b
+.debug_loc      0x00000000     0x4986
  *(.debug_loc)
- .debug_loc     0x00000000       0x91 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
- .debug_loc     0x00000091      0x10f FREERTOS/heap_1.o
- .debug_loc     0x000001a0      0x145 FREERTOS/list.o
- .debug_loc     0x000002e5      0x2a0 FREERTOS/port.o
- .debug_loc     0x00000585     0x1e0c FREERTOS/tasks.o
- .debug_loc     0x00002391      0x3f3 MCAL/DIO/DIO_PROG.o
- .debug_loc     0x00002784      0x341 MCAL/EXT/EXT_PROG.o
- .debug_loc     0x00002ac5      0x27f MCAL/TIMER0/TIMER0_PROG.o
- .debug_loc     0x00002d44      0x12b MCAL/TIMER1/TIMER1_PROG.o
- .debug_loc     0x00002e6f      0x1cc MCAL/UART/UART_PROG.o
+ .debug_loc     0x00000000       0x13 APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o
+ .debug_loc     0x00000013      0x10f FREERTOS/heap_1.o
+ .debug_loc     0x00000122      0x145 FREERTOS/list.o
+ .debug_loc     0x00000267      0x2a0 FREERTOS/port.o
+ .debug_loc     0x00000507     0x19c9 FREERTOS/queue.o
+ .debug_loc     0x00001ed0     0x1e0c FREERTOS/tasks.o
+ .debug_loc     0x00003cdc      0x3f3 MCAL/DIO/DIO_PROG.o
+ .debug_loc     0x000040cf      0x341 MCAL/EXT/EXT_PROG.o
+ .debug_loc     0x00004410      0x27f MCAL/TIMER0/TIMER0_PROG.o
+ .debug_loc     0x0000468f      0x12b MCAL/TIMER1/TIMER1_PROG.o
+ .debug_loc     0x000047ba      0x1cc MCAL/UART/UART_PROG.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -1721,19 +1749,20 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000      0x3b0
+.debug_ranges   0x00000000      0x4b0
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x10 APP/main.o
- .debug_ranges  0x00000010       0x28 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o
- .debug_ranges  0x00000038       0x28 FREERTOS/heap_1.o
- .debug_ranges  0x00000060       0x30 FREERTOS/list.o
- .debug_ranges  0x00000090       0x40 FREERTOS/port.o
- .debug_ranges  0x000000d0      0x168 FREERTOS/tasks.o
- .debug_ranges  0x00000238       0x30 MCAL/DIO/DIO_PROG.o
- .debug_ranges  0x00000268       0x50 MCAL/EXT/EXT_PROG.o
- .debug_ranges  0x000002b8       0x68 MCAL/TIMER0/TIMER0_PROG.o
- .debug_ranges  0x00000320       0x50 MCAL/TIMER1/TIMER1_PROG.o
- .debug_ranges  0x00000370       0x40 MCAL/UART/UART_PROG.o
+ .debug_ranges  0x00000010       0x20 APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o
+ .debug_ranges  0x00000030       0x28 FREERTOS/heap_1.o
+ .debug_ranges  0x00000058       0x30 FREERTOS/list.o
+ .debug_ranges  0x00000088       0x40 FREERTOS/port.o
+ .debug_ranges  0x000000c8      0x108 FREERTOS/queue.o
+ .debug_ranges  0x000001d0      0x168 FREERTOS/tasks.o
+ .debug_ranges  0x00000338       0x30 MCAL/DIO/DIO_PROG.o
+ .debug_ranges  0x00000368       0x50 MCAL/EXT/EXT_PROG.o
+ .debug_ranges  0x000003b8       0x68 MCAL/TIMER0/TIMER0_PROG.o
+ .debug_ranges  0x00000420       0x50 MCAL/TIMER1/TIMER1_PROG.o
+ .debug_ranges  0x00000470       0x40 MCAL/UART/UART_PROG.o
 
 .debug_macro
  *(.debug_macro)

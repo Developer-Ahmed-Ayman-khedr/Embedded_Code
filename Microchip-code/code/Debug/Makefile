@@ -34,6 +34,7 @@ LINKER_SCRIPT_DEP:=
 # Every subdirectory with source files must be described here
 SUBDIRS :=  \
 ../APP \
+../APP/Sess34SEMAPHORE \
 ../APP/Sess33FREERTOS \
 ../APP/Sess32 \
 ../APP/Sess29EEPROM \
@@ -66,8 +67,10 @@ SUBDIRS :=  \
 ../APP/Sess27SPI/BLUTOTH \
 ../APP/Sess29EEPROM/TASKEEPROMPASS \
 ../APP/Sess32/TTL \
+../APP/Sess33FREERTOS/TASKPUSHBUTTONS \
 ../APP/Sess33FREERTOS/TASKSUSPENDBUTTON \
 ../APP/Sess33FREERTOS/TASKSUSPEND \
+../APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE \
 ../HAL \
 ../HAL/LCD \
 ../HAL/7seg \
@@ -123,8 +126,11 @@ C_SRCS +=  \
 ../APP/Sess32/sess_PROG.c \
 ../APP/Sess32/TTL/sess_PROG.c \
 ../APP/Sess33FREERTOS/sess_PROG.c \
+../APP/Sess33FREERTOS/TASKPUSHBUTTONS/sess_PROG.c \
 ../APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.c \
 ../APP/Sess33FREERTOS/TASKSUSPEND/sess_PROG.c \
+../APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.c \
+../APP/Sess34SEMAPHORE/sess_PROG.c \
 ../FREERTOS/croutine.c \
 ../FREERTOS/event_groups.c \
 ../FREERTOS/heap_1.c \
@@ -190,8 +196,11 @@ APP/Sess29EEPROM/TASKEEPROMPASS/TASKEEPROMPASS_PROG.o \
 APP/Sess32/sess_PROG.o \
 APP/Sess32/TTL/sess_PROG.o \
 APP/Sess33FREERTOS/sess_PROG.o \
+APP/Sess33FREERTOS/TASKPUSHBUTTONS/sess_PROG.o \
 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o \
 APP/Sess33FREERTOS/TASKSUSPEND/sess_PROG.o \
+APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o \
+APP/Sess34SEMAPHORE/sess_PROG.o \
 FREERTOS/croutine.o \
 FREERTOS/event_groups.o \
 FREERTOS/heap_1.o \
@@ -250,8 +259,11 @@ APP/Sess29EEPROM/TASKEEPROMPASS/TASKEEPROMPASS_PROG.o \
 APP/Sess32/sess_PROG.o \
 APP/Sess32/TTL/sess_PROG.o \
 APP/Sess33FREERTOS/sess_PROG.o \
+APP/Sess33FREERTOS/TASKPUSHBUTTONS/sess_PROG.o \
 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o \
 APP/Sess33FREERTOS/TASKSUSPEND/sess_PROG.o \
+APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o \
+APP/Sess34SEMAPHORE/sess_PROG.o \
 FREERTOS/croutine.o \
 FREERTOS/event_groups.o \
 FREERTOS/heap_1.o \
@@ -310,8 +322,11 @@ APP/Sess29EEPROM/TASKEEPROMPASS/TASKEEPROMPASS_PROG.d \
 APP/Sess32/sess_PROG.d \
 APP/Sess32/TTL/sess_PROG.d \
 APP/Sess33FREERTOS/sess_PROG.d \
+APP/Sess33FREERTOS/TASKPUSHBUTTONS/sess_PROG.d \
 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.d \
 APP/Sess33FREERTOS/TASKSUSPEND/sess_PROG.d \
+APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.d \
+APP/Sess34SEMAPHORE/sess_PROG.d \
 FREERTOS/croutine.d \
 FREERTOS/event_groups.d \
 FREERTOS/heap_1.d \
@@ -370,8 +385,11 @@ APP/Sess29EEPROM/TASKEEPROMPASS/TASKEEPROMPASS_PROG.d \
 APP/Sess32/sess_PROG.d \
 APP/Sess32/TTL/sess_PROG.d \
 APP/Sess33FREERTOS/sess_PROG.d \
+APP/Sess33FREERTOS/TASKPUSHBUTTONS/sess_PROG.d \
 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.d \
 APP/Sess33FREERTOS/TASKSUSPEND/sess_PROG.d \
+APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.d \
+APP/Sess34SEMAPHORE/sess_PROG.d \
 FREERTOS/croutine.d \
 FREERTOS/event_groups.d \
 FREERTOS/heap_1.d \
@@ -635,6 +653,13 @@ APP/Sess33FREERTOS/sess_PROG.o: ../APP/Sess33FREERTOS/sess_PROG.c
 	@echo Finished building: $<
 	
 
+APP/Sess33FREERTOS/TASKPUSHBUTTONS/sess_PROG.o: ../APP/Sess33FREERTOS/TASKPUSHBUTTONS/sess_PROG.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"../LIB" -I"../MCAL/DIO" -I"../APP" -I"../HAL/7seg" -I"../HAL/LCD" -I"../HAL/KPD" -I"../MCAL/EXT" -I"../MCAL/GI" -I"../MCAL/ADC" -I"../MCAL/TIMER0" -I"../MCAL/TIMER1" -I"../MCAL/WDT" -I"../MCAL/UART" -I"../MCAL/SPI" -I"../MCAL/I2C" -I"../HAL/EEPROM" -I"../RTOS" -I"../FREERTOS"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
 APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o: ../APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
@@ -643,6 +668,20 @@ APP/Sess33FREERTOS/TASKSUSPENDBUTTON/sess_PROG.o: ../APP/Sess33FREERTOS/TASKSUSP
 	
 
 APP/Sess33FREERTOS/TASKSUSPEND/sess_PROG.o: ../APP/Sess33FREERTOS/TASKSUSPEND/sess_PROG.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"../LIB" -I"../MCAL/DIO" -I"../APP" -I"../HAL/7seg" -I"../HAL/LCD" -I"../HAL/KPD" -I"../MCAL/EXT" -I"../MCAL/GI" -I"../MCAL/ADC" -I"../MCAL/TIMER0" -I"../MCAL/TIMER1" -I"../MCAL/WDT" -I"../MCAL/UART" -I"../MCAL/SPI" -I"../MCAL/I2C" -I"../HAL/EEPROM" -I"../RTOS" -I"../FREERTOS"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.o: ../APP/Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_PROG.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"../LIB" -I"../MCAL/DIO" -I"../APP" -I"../HAL/7seg" -I"../HAL/LCD" -I"../HAL/KPD" -I"../MCAL/EXT" -I"../MCAL/GI" -I"../MCAL/ADC" -I"../MCAL/TIMER0" -I"../MCAL/TIMER1" -I"../MCAL/WDT" -I"../MCAL/UART" -I"../MCAL/SPI" -I"../MCAL/I2C" -I"../HAL/EEPROM" -I"../RTOS" -I"../FREERTOS"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+APP/Sess34SEMAPHORE/sess_PROG.o: ../APP/Sess34SEMAPHORE/sess_PROG.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"../LIB" -I"../MCAL/DIO" -I"../APP" -I"../HAL/7seg" -I"../HAL/LCD" -I"../HAL/KPD" -I"../MCAL/EXT" -I"../MCAL/GI" -I"../MCAL/ADC" -I"../MCAL/TIMER0" -I"../MCAL/TIMER1" -I"../MCAL/WDT" -I"../MCAL/UART" -I"../MCAL/SPI" -I"../MCAL/I2C" -I"../HAL/EEPROM" -I"../RTOS" -I"../FREERTOS"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
