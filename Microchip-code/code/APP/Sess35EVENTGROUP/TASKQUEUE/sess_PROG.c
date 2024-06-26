@@ -1,41 +1,36 @@
 /*
  * sess_PROG.c
  *
- * Created: 6/12/2024 6:17:36 PM
+ * Created: 6/26/2024 6:17:36 PM
  *  Author: ahmed
  
 
-#include "Sess34SEMAPHORE/COUNTINGSEMAPHORE/sess_INT.h"
+#include "Sess35EVENTGROUP/TASKQUEUE/sess_INT.h"
 
 TaskHandle_t xHandle1;
 TaskHandle_t xHandle2;
 
-SemaphoreHandle_t A;
+EventGroupHandle_t MyEventGroup;
 
-//BOOL flag = TRUE;
+QueueHandle_t MyQueue;
 
 void Task1(void *pvParameters){
+	u8 var;
 	while (1)
 	{
-			u8 state = DIO_readPinValue(DIO_PIND2);
-			if (state==DIO_HIGH)
-			{
-				xSemaphoreGive(A);
-				while(DIO_readPinValue(DIO_PIND2)==DIO_HIGH);
-			}
+		var = 'b';
+		xQueueSend(MyQueue,&var,0);
 		vTaskDelay(500/portTICK_PERIOD_MS);
 	}
 }
 
 void Task2(void *pvParameters){
+	u8 var2;
 	while (1)
 	{
-		if( uxSemaphoreGetCount(A)==3 )
+		if (xQueueReceive( MyQueue, &var2, 0) == pdPASS)
 		{
-			DIO_togglePinValue(DIO_PINC2);
-			xSemaphoreTake(A,0);
-			xSemaphoreTake(A,0);
-			xSemaphoreTake(A,0);
+			UART_sendData(var2);
 		}
 		vTaskDelay(500/portTICK_PERIOD_MS);
 	}
@@ -43,6 +38,7 @@ void Task2(void *pvParameters){
 
 int source_code()
 {
+	UART_init();
 	DIO_setPinDir(DIO_PIND2,DIO_INPUT);
 	
 	DIO_setPinDir(DIO_PINC2,DIO_OUTPUT);
@@ -51,7 +47,7 @@ int source_code()
 		
 	xTaskCreate(Task2, NULL, 100, NULL, 1, &xHandle2);
 	
-	A = xSemaphoreCreateCounting(3,0);
+	MyQueue = xQueueCreate( 10, sizeof( u8 ) );
 	
 	vTaskStartScheduler();
 	//It never gets to this part.
