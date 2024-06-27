@@ -360,6 +360,30 @@
     <Compile Include="APP\Sess34SEMAPHORE\sess_PROG.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="APP\Sess35EVENTGROUP\sess_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess35EVENTGROUP\sess_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess35EVENTGROUP\TASKQUEUESTRING\sess_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess35EVENTGROUP\TASKQUEUESTRING\sess_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess35EVENTGROUP\TASKQUEUE\sess_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess35EVENTGROUP\TASKQUEUE\sess_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess35EVENTGROUP\TASKSOFTWARETIMERS\sess_INT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Sess35EVENTGROUP\TASKSOFTWARETIMERS\sess_PROG.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="FREERTOS\atomic.h">
       <SubType>compile</SubType>
     </Compile>
@@ -546,6 +570,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="APP" />
+    <Folder Include="APP\Sess35EVENTGROUP" />
     <Folder Include="APP\Sess34SEMAPHORE" />
     <Folder Include="APP\Sess33FREERTOS" />
     <Folder Include="APP\Sess32" />
@@ -583,6 +608,9 @@
     <Folder Include="APP\Sess33FREERTOS\TASKSUSPENDBUTTON" />
     <Folder Include="APP\Sess33FREERTOS\TASKSUSPEND" />
     <Folder Include="APP\Sess34SEMAPHORE\COUNTINGSEMAPHORE" />
+    <Folder Include="APP\Sess35EVENTGROUP\TASKSOFTWARETIMERS" />
+    <Folder Include="APP\Sess35EVENTGROUP\TASKQUEUESTRING" />
+    <Folder Include="APP\Sess35EVENTGROUP\TASKQUEUE" />
     <Folder Include="HAL" />
     <Folder Include="HAL\LCD" />
     <Folder Include="HAL\7seg" />

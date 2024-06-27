@@ -59,7 +59,7 @@
 #define configUSE_COUNTING_SEMAPHORES 1
 
 
-#define configUSE_TIMERS  0
+#define configUSE_TIMERS  1
 #define configTIMER_TASK_PRIORITY 1
 #define configTIMER_TASK_STACK_DEPTH 100
 #define configTIMER_QUEUE_LENGTH 10

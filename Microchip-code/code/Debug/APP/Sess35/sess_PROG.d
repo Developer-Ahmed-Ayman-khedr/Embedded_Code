@@ -1,6 +1,6 @@
-APP/main.d APP/main.o: ../APP/main.c \
- ../APP/Sess35EVENTGROUP/TASKSOFTWARETIMERS/sess_INT.h \
- ../MCAL/DIO/DIO_INT.h ../LIB/STD_TYPES.h ../LIB/BIT_MATH.h \
+APP/Sess35/sess_PROG.d APP/Sess35/sess_PROG.o: ../APP/Sess35/sess_PROG.c \
+ ../APP/Sess35/sess_INT.h ../MCAL/DIO/DIO_INT.h ../LIB/STD_TYPES.h \
+ ../LIB/BIT_MATH.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdint.h \
@@ -26,10 +26,9 @@ APP/main.d APP/main.o: ../APP/main.c \
  ../FREERTOS/deprecated_definitions.h ../FREERTOS/portmacro.h \
  ../FREERTOS/mpu_wrappers.h ../FREERTOS/FreeRTOSConfig.h \
  ../FREERTOS/task.h ../FREERTOS/list.h ../FREERTOS/semphr.h \
- ../FREERTOS/queue.h ../FREERTOS/task.h ../FREERTOS/event_groups.h \
- ../FREERTOS/timers.h ../FREERTOS/queue.h ../FREERTOS/timers.h
+ ../FREERTOS/queue.h ../FREERTOS/task.h
 
-../APP/Sess35EVENTGROUP/TASKSOFTWARETIMERS/sess_INT.h:
+../APP/Sess35/sess_INT.h:
 
 ../MCAL/DIO/DIO_INT.h:
 
@@ -116,11 +115,3 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ../FREERTOS/queue.h:
 
 ../FREERTOS/task.h:
-
-../FREERTOS/event_groups.h:
-
-../FREERTOS/timers.h:
-
-../FREERTOS/queue.h:
-
-../FREERTOS/timers.h:

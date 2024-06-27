@@ -47,6 +47,8 @@ INCLUDES
 
 #include "semphr.h"
 
+#include "event_groups.h"
+
 ******************************************
 Global Data TYPES AND STRUCTURES
 *******************************************
@@ -56,6 +58,8 @@ Global Data TYPES AND STRUCTURES
 GLOBAL CONSTANT MACROS
 *******************************************
 
+//Eventgroup Macros
+#define BIT_0 ( 1 << 0 )
 
 ******************************************
 GLOBAL FUNCTIONS MACROS
@@ -69,4 +73,4 @@ GLOBAL FUNCTIONS Prototypes
 int source_code();
 
 #endif 
- */
+*/
