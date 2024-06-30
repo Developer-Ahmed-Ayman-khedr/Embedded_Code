@@ -59,7 +59,6 @@
 
 #define UBRRL  	*((volatile u8*)(0x29))
 
-
 #define UART_NOT_RECEIVE	'x'
 
 #define UART_ENABLE_RXC 1
