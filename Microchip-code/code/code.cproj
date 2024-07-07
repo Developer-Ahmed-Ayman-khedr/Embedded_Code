@@ -561,10 +561,10 @@
     <Compile Include="MCAL\WDT\WDT_PROG.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="RTOS\RTOS.h">
+    <Compile Include="RTOS\RTOS.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="RTOS\RTOS.c">
+    <Compile Include="RTOS\RTOS.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
