@@ -59,7 +59,6 @@ EXT_int1Func        0x2               MCAL/EXT/EXT_PROG.o
 UART_INTFunc        0x2               MCAL/UART/UART_PROG.o
 EXT_int2Func        0x2               MCAL/EXT/EXT_PROG.o
 EXT_int0Func        0x2               MCAL/EXT/EXT_PROG.o
-arrTasks            0xc               RTOS/RTOS.o
 TIMER0_OvFunc       0x2               MCAL/TIMER0/TIMER0_PROG.o
 TIMER1_IcuFunc      0x2               MCAL/TIMER1/TIMER1_PROG.o
 
@@ -778,30 +777,6 @@ Discarded input sections
  .debug_str     0x00000000      0x1c2 MCAL/WDT/WDT_PROG.o
  .comment       0x00000000       0x31 MCAL/WDT/WDT_PROG.o
  .debug_frame   0x00000000       0x34 MCAL/WDT/WDT_PROG.o
- .text          0x00000000        0x0 RTOS/RTOS.o
- .data          0x00000000        0x0 RTOS/RTOS.o
- .bss           0x00000000        0x0 RTOS/RTOS.o
- .text.RTOS_Schedular
-                0x00000000       0x5e RTOS/RTOS.o
- .text.RTOS_Init
-                0x00000000       0x12 RTOS/RTOS.o
- .text.RTOS_CreateTask
-                0x00000000       0x1a RTOS/RTOS.o
- .text.RTOS_Start
-                0x00000000        0x8 RTOS/RTOS.o
- .bss.counter.1777
-                0x00000000        0x2 RTOS/RTOS.o
- .debug_info    0x00000000      0x22b RTOS/RTOS.o
- .debug_abbrev  0x00000000      0x14e RTOS/RTOS.o
- .debug_loc     0x00000000       0x57 RTOS/RTOS.o
- .debug_aranges
-                0x00000000       0x38 RTOS/RTOS.o
- .debug_ranges  0x00000000       0x28 RTOS/RTOS.o
- .debug_line    0x00000000      0x11a RTOS/RTOS.o
- .debug_str     0x00000000      0x262 RTOS/RTOS.o
- .comment       0x00000000       0x31 RTOS/RTOS.o
- .debug_frame   0x00000000       0x5c RTOS/RTOS.o
- COMMON         0x00000000        0xc RTOS/RTOS.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
@@ -1096,7 +1071,6 @@ LOAD MCAL/TIMER0/TIMER0_PROG.o
 LOAD MCAL/TIMER1/TIMER1_PROG.o
 LOAD MCAL/UART/UART_PROG.o
 LOAD MCAL/WDT/WDT_PROG.o
-LOAD RTOS/RTOS.o
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
 END GROUP
