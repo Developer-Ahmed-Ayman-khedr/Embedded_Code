@@ -235,7 +235,7 @@ void UltrasonicFunc(){
 	//falling
 	else if (edge==1){
 		TIMER0_start(TIMER0_STOP);
-		TimeOn = TIMER0_getCounts();
+		TimeOn = TIMER0_getCounter();
 
 		TONTime = Ttick*(TimeOn+(256*OvCounter));
 		dis = 17 * TONTime;
@@ -269,6 +269,7 @@ void HOLD_Start(){
 	_delay_us(11);
 	DIO_setPinValue(DIO_PINC6,DIO_LOW);
 }
+
 u32 HOLD_Retrun(){
 	return dis;
 }
@@ -511,6 +512,7 @@ else if (Passindex==4 && flag==1)
 	}
 	return FALSE;
 }
+
 BOOL DeleteUser(){
 	// define flag to delete user
 	 u8 deleteuserflag = FALSE , i2 = 0 , EEPROMRecevedData ;
@@ -542,6 +544,7 @@ void Code_APPInitDriversTask(void *pvParameters){
 		vTaskDelay(500/portTICK_PERIOD_MS);
 	}
 }
+
 void UARTInputTask(void *pvParameters){
 	u8 var = UART_NOT_RECEIVE;
 	while(1){
@@ -552,6 +555,7 @@ void UARTInputTask(void *pvParameters){
 		vTaskDelay(500/portTICK_PERIOD_MS);
 	}
 }
+
 void LoginTask(void * pvParameters ){
 	while(1)
 	{
@@ -564,6 +568,7 @@ void LoginTask(void * pvParameters ){
 		}
 	}
 }
+
 void OptionsTask(void *pvParameters){
 	u8 var2, read = 0;
 	while(1){
@@ -588,7 +593,7 @@ void OptionsTask(void *pvParameters){
 			}
 			else if(( uxBits & BIT_0 ) != 1){
 				LCD_sendStr("1.Light 2.Temp 3.Enter");
-				LCD_Goto(0,1);
+				LCD_GoTo(0,1);
 				if(INPUT_Read()==INPUT_Light){
 					LCD_sendData('1');
 				}
@@ -599,9 +604,9 @@ void OptionsTask(void *pvParameters){
 					LCD_sendData('3');
 				}
 				LCD_clearDis();
-				LCD_Goto(0,0);
+				LCD_GoTo(0,0);
 				LCD_sendStr("1.Hall 2.Entrance");
-				LCD_Goto(0,1);
+				LCD_GoTo(0,1);
 				if(INPUT_Read()=='1'){
 					LCD_sendData(INPUT_LIGHTINGROOM);
 					LIGHTING_Start(LIGHTINGROOM);
@@ -610,9 +615,9 @@ void OptionsTask(void *pvParameters){
 					LCD_sendData(INPUT_LIGHTINHALL);
 					LIGHTING_Start(LIGHTINHALL);
 				}
-				LCD_Goto(0,0);
+				LCD_GoTo(0,0);
 				TEMP_Check();
-				LCD_Goto(0,1);
+				LCD_GoTo(0,1);
 				LCD_sendStr("1 to return:  ");
 				read = INPUT_Read();
 				if(INPUT_Read()=='1'){
@@ -623,6 +628,7 @@ void OptionsTask(void *pvParameters){
 		vTaskDelay(500/portTICK_PERIOD_MS);
 	}
 }
+
 void DoorControlTask (void * pvParameters ){
 u8 DoorKey ;
 	while(1)

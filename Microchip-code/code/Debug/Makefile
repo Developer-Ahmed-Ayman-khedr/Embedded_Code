@@ -92,7 +92,8 @@ SUBDIRS :=  \
 ../MCAL/WDT \
 ../MCAL/TIMER1 \
 ../MCAL/TIMER0 \
-../FREERTOS
+../FREERTOS \
+../RTOS
 
 
 # Add inputs and outputs from these tool invocations to the build variables 
@@ -160,7 +161,8 @@ C_SRCS +=  \
 ../MCAL/TIMER0/TIMER0_PROG.c \
 ../MCAL/TIMER1/TIMER1_PROG.c \
 ../MCAL/UART/UART_PROG.c \
-../MCAL/WDT/WDT_PROG.c
+../MCAL/WDT/WDT_PROG.c \
+../RTOS/RTOS.c
 
 
 PREPROCESSING_SRCS += 
@@ -233,7 +235,8 @@ MCAL/SPI/SPI_PROG.o \
 MCAL/TIMER0/TIMER0_PROG.o \
 MCAL/TIMER1/TIMER1_PROG.o \
 MCAL/UART/UART_PROG.o \
-MCAL/WDT/WDT_PROG.o
+MCAL/WDT/WDT_PROG.o \
+RTOS/RTOS.o
 
 OBJS_AS_ARGS +=  \
 APP/main.o \
@@ -299,7 +302,8 @@ MCAL/SPI/SPI_PROG.o \
 MCAL/TIMER0/TIMER0_PROG.o \
 MCAL/TIMER1/TIMER1_PROG.o \
 MCAL/UART/UART_PROG.o \
-MCAL/WDT/WDT_PROG.o
+MCAL/WDT/WDT_PROG.o \
+RTOS/RTOS.o
 
 C_DEPS +=  \
 APP/main.d \
@@ -365,7 +369,8 @@ MCAL/SPI/SPI_PROG.d \
 MCAL/TIMER0/TIMER0_PROG.d \
 MCAL/TIMER1/TIMER1_PROG.d \
 MCAL/UART/UART_PROG.d \
-MCAL/WDT/WDT_PROG.d
+MCAL/WDT/WDT_PROG.d \
+RTOS/RTOS.d
 
 C_DEPS_AS_ARGS +=  \
 APP/main.d \
@@ -431,7 +436,8 @@ MCAL/SPI/SPI_PROG.d \
 MCAL/TIMER0/TIMER0_PROG.d \
 MCAL/TIMER1/TIMER1_PROG.d \
 MCAL/UART/UART_PROG.d \
-MCAL/WDT/WDT_PROG.d
+MCAL/WDT/WDT_PROG.d \
+RTOS/RTOS.d
 
 OUTPUT_FILE_PATH +=code.elf
 
@@ -889,6 +895,13 @@ MCAL/UART/UART_PROG.o: ../MCAL/UART/UART_PROG.c
 	
 
 MCAL/WDT/WDT_PROG.o: ../MCAL/WDT/WDT_PROG.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"../LIB" -I"../MCAL/DIO" -I"../APP" -I"../HAL/7seg" -I"../HAL/LCD" -I"../HAL/KPD" -I"../MCAL/EXT" -I"../MCAL/GI" -I"../MCAL/ADC" -I"../MCAL/TIMER0" -I"../MCAL/TIMER1" -I"../MCAL/WDT" -I"../MCAL/UART" -I"../MCAL/SPI" -I"../MCAL/I2C" -I"../HAL/EEPROM" -I"../RTOS" -I"../FREERTOS"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+RTOS/RTOS.o: ../RTOS/RTOS.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include" -I"../LIB" -I"../MCAL/DIO" -I"../APP" -I"../HAL/7seg" -I"../HAL/LCD" -I"../HAL/KPD" -I"../MCAL/EXT" -I"../MCAL/GI" -I"../MCAL/ADC" -I"../MCAL/TIMER0" -I"../MCAL/TIMER1" -I"../MCAL/WDT" -I"../MCAL/UART" -I"../MCAL/SPI" -I"../MCAL/I2C" -I"../HAL/EEPROM" -I"../RTOS" -I"../FREERTOS"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

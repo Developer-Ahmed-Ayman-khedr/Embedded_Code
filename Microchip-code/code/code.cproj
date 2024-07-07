@@ -561,6 +561,12 @@
     <Compile Include="MCAL\WDT\WDT_PROG.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="RTOS\RTOS.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RTOS\RTOS.h">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="APP" />
@@ -623,6 +629,7 @@
     <Folder Include="MCAL\TIMER1" />
     <Folder Include="MCAL\TIMER0" />
     <Folder Include="FREERTOS" />
+    <Folder Include="RTOS" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

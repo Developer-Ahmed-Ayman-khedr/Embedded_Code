@@ -59,6 +59,7 @@ EXT_int1Func        0x2               MCAL/EXT/EXT_PROG.o
 UART_INTFunc        0x2               MCAL/UART/UART_PROG.o
 EXT_int2Func        0x2               MCAL/EXT/EXT_PROG.o
 EXT_int0Func        0x2               MCAL/EXT/EXT_PROG.o
+arrTasks            0xc               RTOS/RTOS.o
 TIMER0_OvFunc       0x2               MCAL/TIMER0/TIMER0_PROG.o
 TIMER1_IcuFunc      0x2               MCAL/TIMER1/TIMER1_PROG.o
 
@@ -720,7 +721,7 @@ Discarded input sections
                 0x00000000        0x4 MCAL/TIMER0/TIMER0_PROG.o
  .text.TIMER0_getCounter
                 0x00000000        0x4 MCAL/TIMER0/TIMER0_PROG.o
- .text.TIMER_setcallbackOv
+ .text.TIMER0_setCallbackOv
                 0x00000000        0xa MCAL/TIMER0/TIMER0_PROG.o
  .text.TIMER_setcallbackCTC
                 0x00000000        0xa MCAL/TIMER0/TIMER0_PROG.o
@@ -777,6 +778,30 @@ Discarded input sections
  .debug_str     0x00000000      0x1c2 MCAL/WDT/WDT_PROG.o
  .comment       0x00000000       0x31 MCAL/WDT/WDT_PROG.o
  .debug_frame   0x00000000       0x34 MCAL/WDT/WDT_PROG.o
+ .text          0x00000000        0x0 RTOS/RTOS.o
+ .data          0x00000000        0x0 RTOS/RTOS.o
+ .bss           0x00000000        0x0 RTOS/RTOS.o
+ .text.RTOS_Schedular
+                0x00000000       0x5e RTOS/RTOS.o
+ .text.RTOS_Init
+                0x00000000       0x12 RTOS/RTOS.o
+ .text.RTOS_CreateTask
+                0x00000000       0x1a RTOS/RTOS.o
+ .text.RTOS_Start
+                0x00000000        0x8 RTOS/RTOS.o
+ .bss.counter.1777
+                0x00000000        0x2 RTOS/RTOS.o
+ .debug_info    0x00000000      0x23e RTOS/RTOS.o
+ .debug_abbrev  0x00000000      0x161 RTOS/RTOS.o
+ .debug_loc     0x00000000       0x57 RTOS/RTOS.o
+ .debug_aranges
+                0x00000000       0x38 RTOS/RTOS.o
+ .debug_ranges  0x00000000       0x28 RTOS/RTOS.o
+ .debug_line    0x00000000      0x11a RTOS/RTOS.o
+ .debug_str     0x00000000      0x262 RTOS/RTOS.o
+ .comment       0x00000000       0x31 RTOS/RTOS.o
+ .debug_frame   0x00000000       0x5c RTOS/RTOS.o
+ COMMON         0x00000000        0xc RTOS/RTOS.o
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
@@ -1071,6 +1096,7 @@ LOAD MCAL/TIMER0/TIMER0_PROG.o
 LOAD MCAL/TIMER1/TIMER1_PROG.o
 LOAD MCAL/UART/UART_PROG.o
 LOAD MCAL/WDT/WDT_PROG.o
+LOAD RTOS/RTOS.o
 START GROUP
 LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
 END GROUP
@@ -1771,7 +1797,7 @@ END GROUP
  .debug_frame   0x000010ac       0xec MCAL/TIMER1/TIMER1_PROG.o
  .debug_frame   0x00001198       0xdc MCAL/UART/UART_PROG.o
 
-.debug_str      0x00000000     0x1bc1
+.debug_str      0x00000000     0x1bc2
  *(.debug_str)
  .debug_str     0x00000000      0x196 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
  .debug_str     0x00000196      0x187 APP/main.o
@@ -1794,11 +1820,11 @@ END GROUP
                                 0x207 (size before relaxing)
  .debug_str     0x00001861       0xc5 MCAL/EXT/EXT_PROG.o
                                 0x258 (size before relaxing)
- .debug_str     0x00001926      0x119 MCAL/TIMER0/TIMER0_PROG.o
-                                0x2ac (size before relaxing)
- .debug_str     0x00001a3f       0xe0 MCAL/TIMER1/TIMER1_PROG.o
+ .debug_str     0x00001926      0x11a MCAL/TIMER0/TIMER0_PROG.o
+                                0x2ad (size before relaxing)
+ .debug_str     0x00001a40       0xe0 MCAL/TIMER1/TIMER1_PROG.o
                                 0x279 (size before relaxing)
- .debug_str     0x00001b1f       0xa2 MCAL/UART/UART_PROG.o
+ .debug_str     0x00001b20       0xa2 MCAL/UART/UART_PROG.o
                                 0x235 (size before relaxing)
 
 .debug_loc      0x00000000     0x5a71
