@@ -1698,7 +1698,7 @@ END GROUP
  .debug_str     0x00002308       0xa1 MCAL/TIMER1/TIMER1_PROG.o
                                 0x279 (size before relaxing)
  .debug_str     0x000023a9       0x67 MCAL/UART/UART_PROG.o
-                                0x235 (size before relaxing)
+                                0x24e (size before relaxing)
 
 .debug_loc      0x00000000     0x74f8
  *(.debug_loc)
