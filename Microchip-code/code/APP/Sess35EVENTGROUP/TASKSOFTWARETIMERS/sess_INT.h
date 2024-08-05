@@ -35,7 +35,7 @@ INCLUDES
 
 #include "I2C_INT.h"
 
-#include "EEPROM_INT.h"
+#include "ExternalEEPROM_INT.h"
 
 #include "RTOS.h"
 
