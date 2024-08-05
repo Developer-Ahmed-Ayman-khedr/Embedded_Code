@@ -11,7 +11,8 @@ APP/main.d APP/main.o: ../APP/main.c \
  ../MCAL/GI/GI_INT.h ../MCAL/TIMER0/TIMER0_INT.h \
  ../MCAL/TIMER1/TIMER1_INT.h ../MCAL/WDT/WDT_INT.h \
  ../MCAL/UART/UART_INT.h ../MCAL/SPI/SPI_INT.h ../MCAL/I2C/I2C_INT.h \
- ../HAL/EEPROM/EEPROM_INT.h ../RTOS/RTOS.h ../FREERTOS/FreeRTOS.h \
+ ../HAL/EXTERNALEEPROM/ExternalEEPROM_INT.h ../RTOS/RTOS.h \
+ ../FREERTOS/FreeRTOS.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
  ../FREERTOS/FreeRTOSConfig.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
@@ -69,7 +70,7 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 ../MCAL/I2C/I2C_INT.h:
 
-../HAL/EEPROM/EEPROM_INT.h:
+../HAL/EXTERNALEEPROM/ExternalEEPROM_INT.h:
 
 ../RTOS/RTOS.h:
 

@@ -1,13 +1,13 @@
 /*
- * EEPROM_INT.h
+ * EXTERNALEEPROM_INT.h
  *
  * Created: 5/29/2024 7:13:30 PM
  *  Author: ahmed
  */ 
 
 
-#ifndef EEPROM_INT_H_
-#define EEPROM_INT_H_
+#ifndef EXTERNALEEPROM_INT_h
+#define EXTERNALEEPROM_INT_h
 
 /******************************************
   INCLUDES
@@ -26,6 +26,12 @@
   GLOBAL CONSTANT MACROS
 *******************************************/
 
+//Enable ENTERNALEEPROM
+/*if ENTERNALEEPROM == 0x0 then it is disabled.*/
+
+/*if ENTERNALEEPROM == 0x1 then it is enabled.*/
+#define ENTERNALEEPROM 0x1
+
 /******************************************
   GLOBAL FUNCTIONS MACROS
 *******************************************/
@@ -35,10 +41,14 @@
   GLOBAL FUNCTIONS Prototypes
 *******************************************/
 
-void EEPROM_Init();
+#if (EXTERNALEEPROM==0x1)
 
-void EEPROM_SendByte(u8 byte,u16 location);
+void ENTERNALEEPROM_Init();
 
-void EEPROM_ReadByteNACK(u8* byte,u16 location);
+void ENTERNALEEPROM_SendByte(u8 byte,u16 location);
 
-#endif /* EEPROM_INT_H_ */
+void ENTERNALEEPROM_ReadByteNACK(u8* byte,u16 location);
+
+#endif
+
+#endif /* EXTERNALEEPROM_INT_h */
